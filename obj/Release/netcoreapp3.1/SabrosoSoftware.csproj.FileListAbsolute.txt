@@ -1,0 +1,13 @@
+C:\Users\Jeremy\Source\Repos\UDE-SOFTWARE\SabrosoSoftware\obj\Release\netcoreapp3.1\SabrosoSoftware.csproj.AssemblyReference.cache
+C:\Users\Jeremy\Source\Repos\UDE-SOFTWARE\SabrosoSoftware\obj\Release\netcoreapp3.1\SabrosoSoftware.Form1.resources
+C:\Users\Jeremy\Source\Repos\UDE-SOFTWARE\SabrosoSoftware\obj\Release\netcoreapp3.1\SabrosoSoftware.Main.resources
+C:\Users\Jeremy\Source\Repos\UDE-SOFTWARE\SabrosoSoftware\obj\Release\netcoreapp3.1\SabrosoSoftware.FormAbout.resources
+C:\Users\Jeremy\Source\Repos\UDE-SOFTWARE\SabrosoSoftware\obj\Release\netcoreapp3.1\SabrosoSoftware.FormClientes.resources
+C:\Users\Jeremy\Source\Repos\UDE-SOFTWARE\SabrosoSoftware\obj\Release\netcoreapp3.1\AppFormEncargos.FormEncargos.resources
+C:\Users\Jeremy\Source\Repos\UDE-SOFTWARE\SabrosoSoftware\obj\Release\netcoreapp3.1\SabrosoSoftware.FormProductos.resources
+C:\Users\Jeremy\Source\Repos\UDE-SOFTWARE\SabrosoSoftware\obj\Release\netcoreapp3.1\SabrosoSoftware.Properties.Resources.resources
+C:\Users\Jeremy\Source\Repos\UDE-SOFTWARE\SabrosoSoftware\obj\Release\netcoreapp3.1\SabrosoSoftware.csproj.GenerateResource.cache
+C:\Users\Jeremy\Source\Repos\UDE-SOFTWARE\SabrosoSoftware\obj\Release\netcoreapp3.1\SabrosoSoftware.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Jeremy\Source\Repos\UDE-SOFTWARE\SabrosoSoftware\obj\Release\netcoreapp3.1\SabrosoSoftware.AssemblyInfoInputs.cache
+C:\Users\Jeremy\Source\Repos\UDE-SOFTWARE\SabrosoSoftware\obj\Release\netcoreapp3.1\SabrosoSoftware.AssemblyInfo.cs
+C:\Users\Jeremy\Source\Repos\UDE-SOFTWARE\SabrosoSoftware\obj\Release\netcoreapp3.1\SabrosoSoftware.csproj.CoreCompileInputs.cache
