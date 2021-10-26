@@ -39,7 +39,7 @@ namespace SabrosoSoftware
             dtgvProductos.DataSource = cn.ConsultarTablaProductosDG();
         }
 
-        public int AgregarProducto(string nom, double pre)
+        public int AgregarProducto(string nom, int pre)
         {
 
             return cn.AgregarProducto(nom, pre);
@@ -48,8 +48,13 @@ namespace SabrosoSoftware
 
         private void btnAñadir_Click(object sender, EventArgs e)
         {
-            cn.AgregarProducto(txtNombre.Text, double.Parse(txtPrecio.Text));
+            cn.AgregarProducto(txtNombre.Text, int.Parse(txtPrecio.Text));
             dtgvProductos.DataSource = cn.ConsultarTablaProductosDG();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
 
     }

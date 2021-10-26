@@ -74,11 +74,11 @@ namespace SabrosoSoftware
             return flag;
         }
 
-        public int AgregarProducto(string nom, double pre)
+        public int AgregarProducto(string nom, int pre)
         {
             int flag = 0;
             con.Open();
-            string query = "insert into stock (id,nombre, precio) values ('','" + nom + "', " + pre.ToString() +  ")";
+            string query = "insert into stock (nombre, precio) values ('" + nom + "', " + pre.ToString() +  ")";
             MySqlCommand cmd = new MySqlCommand(query, con);
             flag = cmd.ExecuteNonQuery();
             con.Close();
@@ -87,7 +87,7 @@ namespace SabrosoSoftware
         }
 
 
-        public int AgregarEncargo(string nom, string dir, DateTime fecha)
+        public int AgregarEncargo(string nom, string dir, string  fecha)
         {
             int flag = 0;
             con.Open();

@@ -27,7 +27,7 @@ namespace AppFormEncargos
         }
         private void btnAñadir_Click(object sender, EventArgs e)
         {
-            cn.AgregarEncargo(txtNombre.Text, txtDireccion.Text);
+            cn.AgregarEncargo(txtNombre.Text, txtDireccion.Text, dtpFecha.Text);
             dtgvEncargos.DataSource = cn.ConsultarTablaClienteDG();
         }
 
@@ -51,11 +51,5 @@ namespace AppFormEncargos
 
         }
 
-        public int AgregarEncargo(string nom, string dir, DateTime fecha)
-        {
-
-
-            return cn.AgregarEncargo(string nom, string dir, DateTime fecha);
-        }
     }
 }

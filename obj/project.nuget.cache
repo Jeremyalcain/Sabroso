@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "xOfBQxFLpgE3GARvMNtSOr9xTfFYeZ8a+hWqq10M6W3iRamx2gsvXcHkIH3tjIEMbZUbsQGNAR8uROz4hhGr9Q==",
+  "dgSpecHash": "js14KwkrU27qhRLuIae8xCbouYjlzFwgL1KSYUZ0FBZJceWLMxULFWfdWKCGcF6ZnS21h9jBDL9aKzygy8J+xg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Jeremy\\Desktop\\Sabroso Software\\UDE-SOFTWARE\\SabrosoSoftware\\SabrosoSoftware.csproj",
+  "projectFilePath": "C:\\Users\\Jeremy\\Source\\Repos\\Sabroso\\SabrosoSoftware.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Jeremy\\.nuget\\packages\\bouncycastle.netcore\\1.8.5\\bouncycastle.netcore.1.8.5.nupkg.sha512",
     "C:\\Users\\Jeremy\\.nuget\\packages\\google.protobuf\\3.14.0\\google.protobuf.3.14.0.nupkg.sha512",

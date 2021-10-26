@@ -42,6 +42,7 @@ namespace AppFormEncargos
             this.btnEditar = new System.Windows.Forms.Button();
             this.dtgvEncargos = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.dtpFecha = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvEncargos)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -185,6 +186,7 @@ namespace AppFormEncargos
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Goldenrod;
+            this.panel1.Controls.Add(this.dtpFecha);
             this.panel1.Controls.Add(this.txtTelefono);
             this.panel1.Controls.Add(this.txtDireccion);
             this.panel1.Controls.Add(this.txtNombre);
@@ -200,6 +202,15 @@ namespace AppFormEncargos
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(250, 525);
             this.panel1.TabIndex = 23;
+            // 
+            // dtpFecha
+            // 
+            this.dtpFecha.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpFecha.Location = new System.Drawing.Point(89, 255);
+            this.dtpFecha.Name = "dtpFecha";
+            this.dtpFecha.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.dtpFecha.Size = new System.Drawing.Size(93, 23);
+            this.dtpFecha.TabIndex = 19;
             // 
             // FormEncargos
             // 
@@ -237,6 +248,7 @@ namespace AppFormEncargos
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.DataGridView dtgvEncargos;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.DateTimePicker dtpFecha;
     }
 }
 

@@ -30,23 +30,13 @@ namespace SabrosoSoftware
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAbout));
-            this.picLogoUDE = new System.Windows.Forms.PictureBox();
             this.picLogoUtu = new System.Windows.Forms.PictureBox();
             this.lblInformacionEspañol = new System.Windows.Forms.Label();
             this.lblInformacionIngles = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.picLogoUDE)).BeginInit();
+            this.picLogoUDE = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.picLogoUtu)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picLogoUDE)).BeginInit();
             this.SuspendLayout();
-            // 
-            // picLogoUDE
-            // 
-            this.picLogoUDE.Image = ((System.Drawing.Image)(resources.GetObject("picLogoUDE.Image")));
-            this.picLogoUDE.Location = new System.Drawing.Point(165, 35);
-            this.picLogoUDE.Name = "picLogoUDE";
-            this.picLogoUDE.Size = new System.Drawing.Size(204, 128);
-            this.picLogoUDE.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picLogoUDE.TabIndex = 3;
-            this.picLogoUDE.TabStop = false;
             // 
             // picLogoUtu
             // 
@@ -79,6 +69,16 @@ namespace SabrosoSoftware
             this.lblInformacionIngles.TabIndex = 9;
             this.lblInformacionIngles.Text = resources.GetString("lblInformacionIngles.Text");
             // 
+            // picLogoUDE
+            // 
+            this.picLogoUDE.Image = ((System.Drawing.Image)(resources.GetObject("picLogoUDE.Image")));
+            this.picLogoUDE.Location = new System.Drawing.Point(165, 35);
+            this.picLogoUDE.Name = "picLogoUDE";
+            this.picLogoUDE.Size = new System.Drawing.Size(204, 128);
+            this.picLogoUDE.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picLogoUDE.TabIndex = 3;
+            this.picLogoUDE.TabStop = false;
+            // 
             // FormAbout
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -93,8 +93,8 @@ namespace SabrosoSoftware
             this.Name = "FormAbout";
             this.Text = "FormAbout";
             this.Load += new System.EventHandler(this.FormAbout_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.picLogoUDE)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picLogoUtu)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picLogoUDE)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -102,10 +102,9 @@ namespace SabrosoSoftware
 
         #endregion
 
-        private System.Windows.Forms.LinkLabel linkLabel1;
-        private System.Windows.Forms.PictureBox picLogoUDE;
         private System.Windows.Forms.PictureBox picLogoUtu;
         private System.Windows.Forms.Label lblInformacionEspañol;
         private System.Windows.Forms.Label lblInformacionIngles;
+        private System.Windows.Forms.PictureBox picLogoUDE;
     }
 }

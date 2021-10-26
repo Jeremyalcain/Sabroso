@@ -44,7 +44,7 @@ namespace SabrosoSoftware
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            cn.EliminarCliente(id);
+            //cn.EliminarCliente(id);
             dtgvClientes.DataSource = cn.ConsultarTablaClienteDG();
 
         }
