@@ -141,6 +141,7 @@ namespace SabrosoSoftware
             con.Open();
             string query = "Delete from cliente where ID = '" + id + "''";
             MySqlCommand cmd = new MySqlCommand(query, con);
+
             flag = cmd.ExecuteNonQuery();
             con.Close();
 

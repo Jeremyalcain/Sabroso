@@ -194,5 +194,10 @@ namespace SabrosoSoftware
             pictureBox1.BringToFront();
 
         }
+
+        private void panelMenu_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

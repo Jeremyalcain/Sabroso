@@ -94,6 +94,7 @@ namespace SabrosoSoftware
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Size = new System.Drawing.Size(191, 525);
             this.panelMenu.TabIndex = 8;
+            this.panelMenu.Paint += new System.Windows.Forms.PaintEventHandler(this.panelMenu_Paint);
             // 
             // btnClientes
             // 

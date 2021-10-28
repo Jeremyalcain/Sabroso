@@ -43,7 +43,6 @@ namespace AppFormEncargos
             this.dtgvEncargos = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dtpFecha = new System.Windows.Forms.DateTimePicker();
-            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvEncargos)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -182,12 +181,12 @@ namespace AppFormEncargos
             this.dtgvEncargos.Name = "dtgvEncargos";
             this.dtgvEncargos.Size = new System.Drawing.Size(534, 412);
             this.dtgvEncargos.TabIndex = 20;
-            this.dtgvEncargos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvEncargos_CellContentClick);
+            this.dtgvEncargos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvEncargos_CellClick);
+            this.dtgvEncargos.RowStateChanged += new System.Windows.Forms.DataGridViewRowStateChangedEventHandler(this.dtgvEncargos_RowStateChanged);
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Goldenrod;
-            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.dtpFecha);
             this.panel1.Controls.Add(this.txtTelefono);
             this.panel1.Controls.Add(this.txtDireccion);
@@ -213,15 +212,6 @@ namespace AppFormEncargos
             this.dtpFecha.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.dtpFecha.Size = new System.Drawing.Size(93, 23);
             this.dtpFecha.TabIndex = 19;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(77, 469);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(45, 8);
-            this.button1.TabIndex = 20;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
             // 
             // FormEncargos
             // 
@@ -260,7 +250,6 @@ namespace AppFormEncargos
         private System.Windows.Forms.DataGridView dtgvEncargos;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DateTimePicker dtpFecha;
-        private System.Windows.Forms.Button button1;
     }
 }
 
