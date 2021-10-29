@@ -74,7 +74,7 @@ namespace AppFormEncargos
             // btnAñadir
             // 
             this.btnAñadir.Font = new System.Drawing.Font("Segoe UI", 9.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.btnAñadir.Location = new System.Drawing.Point(23, 353);
+            this.btnAñadir.Location = new System.Drawing.Point(23, 389);
             this.btnAñadir.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnAñadir.Name = "btnAñadir";
             this.btnAñadir.Size = new System.Drawing.Size(214, 53);
@@ -151,7 +151,7 @@ namespace AppFormEncargos
             // btnEliminar
             // 
             this.btnEliminar.Font = new System.Drawing.Font("Segoe UI", 9.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.btnEliminar.Location = new System.Drawing.Point(126, 448);
+            this.btnEliminar.Location = new System.Drawing.Point(120, 448);
             this.btnEliminar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(88, 27);
@@ -163,7 +163,7 @@ namespace AppFormEncargos
             // btnEditar
             // 
             this.btnEditar.Font = new System.Drawing.Font("Segoe UI", 9.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.btnEditar.Location = new System.Drawing.Point(14, 448);
+            this.btnEditar.Location = new System.Drawing.Point(24, 448);
             this.btnEditar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(88, 27);

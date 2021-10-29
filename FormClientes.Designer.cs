@@ -50,7 +50,7 @@ namespace SabrosoSoftware
             // btnEliminar
             // 
             this.btnEliminar.Font = new System.Drawing.Font("Segoe UI", 9.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.btnEliminar.Location = new System.Drawing.Point(128, 475);
+            this.btnEliminar.Location = new System.Drawing.Point(112, 459);
             this.btnEliminar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(88, 27);
@@ -62,7 +62,7 @@ namespace SabrosoSoftware
             // btnEditar
             // 
             this.btnEditar.Font = new System.Drawing.Font("Segoe UI", 9.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.btnEditar.Location = new System.Drawing.Point(16, 475);
+            this.btnEditar.Location = new System.Drawing.Point(16, 459);
             this.btnEditar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(88, 27);
@@ -156,7 +156,7 @@ namespace SabrosoSoftware
             // btnAñadir
             // 
             this.btnAñadir.Font = new System.Drawing.Font("Segoe UI", 9.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.btnAñadir.Location = new System.Drawing.Point(23, 348);
+            this.btnAñadir.Location = new System.Drawing.Point(23, 400);
             this.btnAñadir.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnAñadir.Name = "btnAñadir";
             this.btnAñadir.Size = new System.Drawing.Size(214, 53);
