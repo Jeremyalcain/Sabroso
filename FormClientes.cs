@@ -10,6 +10,8 @@ namespace SabrosoSoftware
 {
     public partial class FormClientes : Form
     {
+        
+
         ConexionSQL cn = new ConexionSQL();
 
         public FormClientes()
@@ -32,7 +34,7 @@ namespace SabrosoSoftware
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            cn.ModificarCliente(txtNombre.Text, txtApellido.Text, int.Parse(txtTelefono.Text), txtDireccion.Text);
+            cn.ModificarCliente(int.Parse(txtID2.Text), txtNombre.Text, txtApellido.Text, int.Parse(txtTelefono.Text), txtDireccion.Text);
             dtgvClientes.DataSource = cn.ConsultarTablaClienteDG();
 
         }
@@ -45,6 +47,7 @@ namespace SabrosoSoftware
         private void btnEliminar_Click(object sender, EventArgs e)
         {
             //cn.EliminarCliente(id);
+            cn.EliminarCliente(int.Parse(txtID.Text));
             dtgvClientes.DataSource = cn.ConsultarTablaClienteDG();
 
         }
@@ -62,17 +65,17 @@ namespace SabrosoSoftware
 
         }
 
-        public int EliminarCliente(string id)
+        public int EliminarCliente(int id)
         {
             
             return cn.EliminarCliente(id);
 
         }
 
-        public int ModificarCliente(string nom, string ape, int tel, string dire)
+        public int ModificarCliente(int id, string nom, string ape, int tel, string dire)
         {
 
-            return cn.ModificarCliente(nom, ape, tel, dire);
+            return cn.ModificarCliente(id, nom, ape, tel, dire);
 
         }
 

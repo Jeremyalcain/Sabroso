@@ -99,11 +99,11 @@ namespace SabrosoSoftware
             return flag;
         }
 
-        public int ModificarCliente(string nom, string ape, int tel, string dire)
+        public int ModificarCliente(int id, string nom, string ape, int tel, string dire)
         {
             int flag = 0;
             con.Open();
-            string query = "Update cliente set Nombre ='" + nom + "', Apellido ='" + ape + "', Telefono ='" + tel + "', Direccion ='" + dire + "')";
+            string query = "Update cliente set Nombre ='"+ nom +"', Apellido ='"+ ape +"', Telefono ='"+ tel +"', Direccion ='"+ dire + "'where id="+id+"";
 
             MySqlCommand cmd = new MySqlCommand(query, con);
             flag = cmd.ExecuteNonQuery();
@@ -132,14 +132,14 @@ namespace SabrosoSoftware
             MySqlCommand cmd = new MySqlCommand(query, con);
             flag = cmd.ExecuteNonQuery();
             con.Close();
-            return flag;
+            return flag; 
         }
 
-        public int EliminarCliente(string id)
+        public int EliminarCliente(int id)
         {
             int flag = 0;
             con.Open();
-            string query = "Delete from cliente where ID = '" + id + "''";
+            string query = "Delete from cliente where ID = '" +id+ "'"   ;
             MySqlCommand cmd = new MySqlCommand(query, con);
 
             flag = cmd.ExecuteNonQuery();
@@ -152,7 +152,7 @@ namespace SabrosoSoftware
         {
             int flag = 0;
             con.Open();
-            string query = "Delete from stock where ID = '" + id + "''";
+            string query = "Delete from stock where ID = '" + id + "'";
             MySqlCommand cmd = new MySqlCommand(query, con);
             flag = cmd.ExecuteNonQuery();
             con.Close();

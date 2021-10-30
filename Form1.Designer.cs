@@ -86,7 +86,7 @@ namespace SabrosoSoftware
             this.btnIniciar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnIniciar.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnIniciar.ForeColor = System.Drawing.Color.White;
-            this.btnIniciar.Location = new System.Drawing.Point(31, 369);
+            this.btnIniciar.Location = new System.Drawing.Point(30, 355);
             this.btnIniciar.Name = "btnIniciar";
             this.btnIniciar.Size = new System.Drawing.Size(236, 33);
             this.btnIniciar.TabIndex = 4;
@@ -100,7 +100,7 @@ namespace SabrosoSoftware
             this.btnSalir.BackColor = System.Drawing.Color.Goldenrod;
             this.btnSalir.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnSalir.ForeColor = System.Drawing.Color.White;
-            this.btnSalir.Location = new System.Drawing.Point(130, 415);
+            this.btnSalir.Location = new System.Drawing.Point(127, 401);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(35, 17);
             this.btnSalir.TabIndex = 5;

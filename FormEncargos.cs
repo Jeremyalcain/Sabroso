@@ -13,7 +13,6 @@ namespace AppFormEncargos
 {
     public partial class FormEncargos : Form
     {
-        string id;
 
         ConexionSQL cn = new ConexionSQL();
         public FormEncargos()
@@ -61,8 +60,6 @@ namespace AppFormEncargos
         private void dtgvEncargos_CellClick(object sender, DataGridViewCellEventArgs e)
         {
            
-            string valorPrimerCelda = dtgvEncargos.Rows[e.RowIndex].Cells[0].Value.ToString();
-            valorPrimerCelda = id;
 
         }
     }
