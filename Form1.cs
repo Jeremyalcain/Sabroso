@@ -38,9 +38,9 @@ namespace SabrosoSoftware
             codigo.Connection = conectar;
 
             string login_pass = txtPassword.Text;
-            MD5 md5 = MD5.Create();
+            SHA256 Sha256 = SHA256.Create();
             byte[] inputBytes = System.Text.Encoding.ASCII.GetBytes(login_pass);
-            byte[] hash = md5.ComputeHash(inputBytes);
+            byte[] hash = Sha256.ComputeHash(inputBytes);
             login_pass = BitConverter.ToString(hash).Replace("-", "");
 
             codigo.CommandText = ("SELECT * FROM admin WHERE nombreUsuario = '" + txtNombreUsuario.Text + "'and Password= '" + login_pass + "' ");
