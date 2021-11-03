@@ -34,7 +34,7 @@ namespace SabrosoSoftware
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            cn.ModificarCliente(int.Parse(txtID2.Text), txtNombre.Text, txtApellido.Text, int.Parse(txtTelefono.Text), txtDireccion.Text);
+            cn.ModificarCliente(int.Parse(txtID.Text), txtNombre.Text, txtApellido.Text, int.Parse(txtTelefono.Text), txtDireccion.Text);
             dtgvClientes.DataSource = cn.ConsultarTablaClienteDG();
 
         }

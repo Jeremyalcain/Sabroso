@@ -32,6 +32,7 @@ namespace SabrosoSoftware
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblID = new System.Windows.Forms.Label();
             this.txtDireccion = new System.Windows.Forms.TextBox();
             this.lblTelefono = new System.Windows.Forms.Label();
             this.txtTelefono = new System.Windows.Forms.TextBox();
@@ -44,8 +45,6 @@ namespace SabrosoSoftware
             this.lblClientes = new System.Windows.Forms.Label();
             this.dtgvClientes = new System.Windows.Forms.DataGridView();
             this.txtID = new System.Windows.Forms.TextBox();
-            this.lblID = new System.Windows.Forms.Label();
-            this.txtID2 = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvClientes)).BeginInit();
             this.SuspendLayout();
@@ -77,7 +76,7 @@ namespace SabrosoSoftware
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Transparent;
-            this.panel1.Controls.Add(this.txtID2);
+            this.panel1.Controls.Add(this.txtID);
             this.panel1.Controls.Add(this.lblID);
             this.panel1.Controls.Add(this.txtDireccion);
             this.panel1.Controls.Add(this.lblTelefono);
@@ -96,6 +95,19 @@ namespace SabrosoSoftware
             this.panel1.Size = new System.Drawing.Size(250, 525);
             this.panel1.TabIndex = 26;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // lblID
+            // 
+            this.lblID.AutoSize = true;
+            this.lblID.BackColor = System.Drawing.Color.Transparent;
+            this.lblID.Font = new System.Drawing.Font("Segoe UI", 9.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.lblID.ForeColor = System.Drawing.Color.Black;
+            this.lblID.Location = new System.Drawing.Point(49, 145);
+            this.lblID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblID.Name = "lblID";
+            this.lblID.Size = new System.Drawing.Size(26, 17);
+            this.lblID.TabIndex = 34;
+            this.lblID.Text = "ID:";
             // 
             // txtDireccion
             // 
@@ -224,32 +236,10 @@ namespace SabrosoSoftware
             // 
             // txtID
             // 
-            this.txtID.Location = new System.Drawing.Point(207, 463);
+            this.txtID.Location = new System.Drawing.Point(83, 142);
             this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(69, 23);
+            this.txtID.Size = new System.Drawing.Size(154, 23);
             this.txtID.TabIndex = 29;
-            // 
-            // lblID
-            // 
-            this.lblID.AutoSize = true;
-            this.lblID.BackColor = System.Drawing.Color.Transparent;
-            this.lblID.Font = new System.Drawing.Font("Segoe UI", 9.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.lblID.ForeColor = System.Drawing.Color.Black;
-            this.lblID.Location = new System.Drawing.Point(49, 145);
-            this.lblID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblID.Name = "lblID";
-            this.lblID.Size = new System.Drawing.Size(26, 17);
-            this.lblID.TabIndex = 34;
-            this.lblID.Text = "ID:";
-            // 
-            // txtID2
-            // 
-            this.txtID2.BackColor = System.Drawing.Color.White;
-            this.txtID2.Location = new System.Drawing.Point(83, 139);
-            this.txtID2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.txtID2.Name = "txtID2";
-            this.txtID2.Size = new System.Drawing.Size(154, 23);
-            this.txtID2.TabIndex = 35;
             // 
             // FormClientes
             // 
@@ -257,7 +247,6 @@ namespace SabrosoSoftware
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Goldenrod;
             this.ClientSize = new System.Drawing.Size(837, 525);
-            this.Controls.Add(this.txtID);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dtgvClientes);
@@ -269,7 +258,6 @@ namespace SabrosoSoftware
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvClientes)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -290,7 +278,6 @@ namespace SabrosoSoftware
         private System.Windows.Forms.TextBox txtTelefono;
         private System.Windows.Forms.Label lblDireccion;
         private System.Windows.Forms.TextBox txtID;
-        private System.Windows.Forms.TextBox txtID2;
         private System.Windows.Forms.Label lblID;
     }
 }

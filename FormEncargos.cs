@@ -29,7 +29,7 @@ namespace AppFormEncargos
         private void btnAñadir_Click(object sender, EventArgs e)
         {
             cn.AgregarEncargo(txtNombre.Text, txtDireccion.Text, dtpFecha.Text);
-            dtgvEncargos.DataSource = cn.ConsultarTablaClienteDG();
+            dtgvEncargos.DataSource = cn.ConsultarTablaEncargosDG();
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -44,12 +44,14 @@ namespace AppFormEncargos
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
+            cn.ModificarEncargos(int.Parse(txtID.Text), txtNombre.Text, txtDireccion.Text, dtpFecha.Text);
             dtgvEncargos.DataSource = cn.ConsultarTablaEncargosDG();
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-
+            cn.EliminarEncargo(txtID.Text);
+            dtgvEncargos.DataSource = cn.ConsultarTablaEncargosDG();
         }
 
         private void dtgvEncargos_RowStateChanged(object sender, DataGridViewRowStateChangedEventArgs e)
@@ -60,6 +62,11 @@ namespace AppFormEncargos
         private void dtgvEncargos_CellClick(object sender, DataGridViewCellEventArgs e)
         {
            
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
 
         }
     }

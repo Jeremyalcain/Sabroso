@@ -36,6 +36,7 @@ namespace SabrosoSoftware
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
+            cn.ModificarProductos(int.Parse(txtID.Text), txtNombre.Text, txtPrecio.Text);
             dtgvProductos.DataSource = cn.ConsultarTablaProductosDG();
         }
 
@@ -45,6 +46,7 @@ namespace SabrosoSoftware
             return cn.AgregarProducto(nom, pre);
 
         }
+
 
         private void btnAñadir_Click(object sender, EventArgs e)
         {
@@ -60,6 +62,17 @@ namespace SabrosoSoftware
         private void txtNombre_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void lblID_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            cn.EliminarProducto(txtID.Text);
+            dtgvProductos.DataSource = cn.ConsultarTablaProductosDG();
         }
     }
 }

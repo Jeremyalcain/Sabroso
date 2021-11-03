@@ -111,11 +111,11 @@ namespace SabrosoSoftware
             return flag;
         }
 
-        public int ModificarProductos(string nom, string pre)
+        public int ModificarProductos(int id, string nom, string pre)
         {
             int flag = 0;
             con.Open();
-            string query = "Update stock set Nombre ='" + nom + "', Precio ='" + pre + "')";
+            string query = "Update stock set Nombre ='" + nom + "', Precio ='" + pre + "'where id=" + id + "";
 
             MySqlCommand cmd = new MySqlCommand(query, con);
             flag = cmd.ExecuteNonQuery();
@@ -123,11 +123,11 @@ namespace SabrosoSoftware
             return flag;
         }
 
-        public int ModificarEncargos(string nom, string dire, DateTime fecha)
+        public int ModificarEncargos(int id, string nom, string dire, string fecha)
         {
             int flag = 0;
             con.Open();
-            string query = "Update encargos set Nombre ='" + nom + "', Direccion ='" + dire + "', Fecha ='" + fecha + "')";
+            string query = "Update encargos set Nombre ='" + nom + "', Direccion ='" + dire + "', Fecha ='" + fecha + "'where id=" + id + "";
 
             MySqlCommand cmd = new MySqlCommand(query, con);
             flag = cmd.ExecuteNonQuery();
@@ -139,7 +139,7 @@ namespace SabrosoSoftware
         {
             int flag = 0;
             con.Open();
-            string query = "Delete from cliente where ID = '" +id+ "'"   ;
+            string query = "Delete from cliente where ID = '" +id+ "'";
             MySqlCommand cmd = new MySqlCommand(query, con);
 
             flag = cmd.ExecuteNonQuery();
@@ -164,7 +164,7 @@ namespace SabrosoSoftware
         {
             int flag = 0;
             con.Open();
-            string query = "Delete from encargos where ID = '" + id + "''";
+            string query = "Delete from encargos where ID = '" + id + "'";
             MySqlCommand cmd = new MySqlCommand(query, con);
             flag = cmd.ExecuteNonQuery();
             con.Close();
