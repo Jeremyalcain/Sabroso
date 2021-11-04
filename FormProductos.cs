@@ -54,7 +54,7 @@ namespace SabrosoSoftware
 
         private void btnAñadir_Click(object sender, EventArgs e)
         {
-            cn.AgregarProducto(txtNombre.Text, int.Parse(txtPrecio.Text));
+            cn.AgregarProducto(txtNombre.Text, int.Parse(idProducto));
             dtgvProductos.DataSource = cn.ConsultarTablaProductosDG();
         }
 
@@ -84,6 +84,11 @@ namespace SabrosoSoftware
 
             idProducto = dtgvProductos.CurrentRow.Cells[0].Value.ToString();
             
+
+        }
+
+        private void domainUpDown1_SelectedItemChanged(object sender, EventArgs e)
+        {
 
         }
     }

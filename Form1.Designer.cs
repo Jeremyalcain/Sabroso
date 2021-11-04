@@ -39,6 +39,7 @@ namespace SabrosoSoftware
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.txtNombreUsuario = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lblRecuperarContraseña = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.picUsuario)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picPassword)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -141,6 +142,19 @@ namespace SabrosoSoftware
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
+            // lblRecuperarContraseña
+            // 
+            this.lblRecuperarContraseña.AutoSize = true;
+            this.lblRecuperarContraseña.BackColor = System.Drawing.Color.Goldenrod;
+            this.lblRecuperarContraseña.LinkColor = System.Drawing.Color.White;
+            this.lblRecuperarContraseña.Location = new System.Drawing.Point(12, 423);
+            this.lblRecuperarContraseña.Name = "lblRecuperarContraseña";
+            this.lblRecuperarContraseña.Size = new System.Drawing.Size(123, 15);
+            this.lblRecuperarContraseña.TabIndex = 8;
+            this.lblRecuperarContraseña.TabStop = true;
+            this.lblRecuperarContraseña.Text = "Recuperar Contraseña";
+            this.lblRecuperarContraseña.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblRecuperarContraseña_LinkClicked);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -148,6 +162,7 @@ namespace SabrosoSoftware
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(292, 447);
+            this.Controls.Add(this.lblRecuperarContraseña);
             this.Controls.Add(this.txtNombreUsuario);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.btnSalir);
@@ -179,6 +194,7 @@ namespace SabrosoSoftware
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.TextBox txtNombreUsuario;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.LinkLabel lblRecuperarContraseña;
     }
 }
 

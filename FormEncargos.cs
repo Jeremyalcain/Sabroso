@@ -45,13 +45,13 @@ namespace AppFormEncargos
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            cn.ModificarEncargos(int.Parse(txtID.Text), txtNombre.Text, txtDireccion.Text, dtpFecha.Text);
+            cn.ModificarEncargos(int.Parse(idEncargos), txtNombre.Text, txtDireccion.Text, dtpFecha.Text);
             dtgvEncargos.DataSource = cn.ConsultarTablaEncargosDG();
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            cn.EliminarEncargo(txtID.Text);
+            cn.EliminarEncargo(idEncargos);
             dtgvEncargos.DataSource = cn.ConsultarTablaEncargosDG();
         }
 
@@ -62,7 +62,7 @@ namespace AppFormEncargos
 
         private void dtgvEncargos_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-           
+            idEncargos = dtgvEncargos.CurrentRow.Cells[0].Value.ToString();
 
         }
 
@@ -73,7 +73,7 @@ namespace AppFormEncargos
 
         private void dtgvEncargos_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
-
+            
         }
     }
 }

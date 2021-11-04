@@ -17,7 +17,7 @@ namespace SabrosoSoftware
         public DataTable ConsultarTablaClienteDG()
         {
 
-            string query = "select id, nombre, apellido, telefono, direccion from cliente where eliminados=0";
+            string query = "select CI, nombre, apellido, telefono, direccion from cliente where eliminados=0";
             MySqlCommand cmd = new MySqlCommand(query,con);
             MySqlDataAdapter data = new MySqlDataAdapter(cmd);
             DataTable tabla = new DataTable();
@@ -33,7 +33,7 @@ namespace SabrosoSoftware
         public DataTable ConsultarTablaEncargosDG()
         {
 
-            string query = "select id, nombre, direccion, fecha from encargos where eliminados=0";
+            string query = "select nombre, direccion, fecha from encargos where eliminados=0";
             MySqlCommand cmd = new MySqlCommand(query, con);
             MySqlDataAdapter data = new MySqlDataAdapter(cmd);
             DataTable tabla = new DataTable();
@@ -49,7 +49,7 @@ namespace SabrosoSoftware
         public DataTable ConsultarTablaProductosDG()
         {
 
-            string query = "select id, nombre, precio from stock where eliminados=0";
+            string query = "select nombre, precio from stock where eliminados=0";
             MySqlCommand cmd = new MySqlCommand(query, con);
             MySqlDataAdapter data = new MySqlDataAdapter(cmd);
             DataTable tabla = new DataTable();
@@ -62,11 +62,11 @@ namespace SabrosoSoftware
 
         }
 
-        public int AgregarCliente(string nom, string ape, int tel, string dire)
+        public int AgregarCliente(string nom, string ape, int tel, string dire, int ci)
         {
             int flag = 0;
             con.Open();
-            string query = "insert into cliente (nombre, apellido, telefono, direccion) values ('" + nom + "','" + ape + "','" + tel + "','" + dire + "')";
+            string query = "insert into cliente (nombre, apellido, telefono, direccion, ci) values ('" + nom + "','" + ape + "','" + tel + "','" + dire + "', '" + ci + "')";
             MySqlCommand cmd = new MySqlCommand(query, con);
             flag = cmd.ExecuteNonQuery();
             con.Close();
@@ -99,11 +99,11 @@ namespace SabrosoSoftware
             return flag;
         }
 
-        public int ModificarCliente(int id, string nom, string ape, int tel, string dire)
+        public int ModificarCliente(int ciEliminar, string nom, string ape, int tel, string dire, int ci)
         {
             int flag = 0;
             con.Open();
-            string query = "Update cliente set Nombre ='"+ nom +"', Apellido ='"+ ape +"', Telefono ='"+ tel +"', Direccion ='"+ dire + "'where id="+id+"";
+            string query = "Update cliente set Nombre ='" + nom +"', Apellido ='"+ ape +"', Telefono ='"+ tel +"', Direccion ='"+ dire + "', CI ='" + ci + "'where CI=" + ciEliminar+"";
 
             MySqlCommand cmd = new MySqlCommand(query, con);
             flag = cmd.ExecuteNonQuery();
@@ -135,11 +135,11 @@ namespace SabrosoSoftware
             return flag; 
         }
 
-        public int EliminarCliente(int id)
+        public int EliminarCliente(int ci)
         {
             int flag = 0;
             con.Open();
-            string query = "Update cliente set eliminados='1' where ID = '" +id+ "'";
+            string query = "Update cliente set eliminados='1' where CI = '" +ci+ "'";
             MySqlCommand cmd = new MySqlCommand(query, con);
 
             flag = cmd.ExecuteNonQuery();
@@ -164,7 +164,7 @@ namespace SabrosoSoftware
         {
             int flag = 0;
             con.Open();
-            string query = "Update Encargo set eliminados='1' where ID = '" + id + "'";
+            string query = "Update encargos set eliminados='1' where ID = '" + id + "'";
             MySqlCommand cmd = new MySqlCommand(query, con);
             flag = cmd.ExecuteNonQuery();
             con.Close();

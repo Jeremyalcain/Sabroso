@@ -77,5 +77,10 @@ namespace SabrosoSoftware
         {
 
         }
+
+        private void lblRecuperarContraseña_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+
+        }
     }
 }

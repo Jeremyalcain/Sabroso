@@ -10,7 +10,7 @@ namespace SabrosoSoftware
 {
     public partial class FormClientes : Form
     {
-        
+        string ciCliente;
 
         ConexionSQL cn = new ConexionSQL();
 
@@ -34,7 +34,7 @@ namespace SabrosoSoftware
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            cn.ModificarCliente(int.Parse(txtID.Text), txtNombre.Text, txtApellido.Text, int.Parse(txtTelefono.Text), txtDireccion.Text);
+            cn.ModificarCliente(int.Parse(ciCliente), txtNombre.Text, txtApellido.Text, int.Parse(txtTelefono.Text), txtDireccion.Text, int.Parse(txtCi.Text));
             dtgvClientes.DataSource = cn.ConsultarTablaClienteDG();
 
         }
@@ -47,15 +47,15 @@ namespace SabrosoSoftware
         private void btnEliminar_Click(object sender, EventArgs e)
         {
             //cn.EliminarCliente(id);
-            cn.EliminarCliente(int.Parse(txtID.Text));
+            cn.EliminarCliente(int.Parse(ciCliente));
             dtgvClientes.DataSource = cn.ConsultarTablaClienteDG();
 
         }
 
         private void btnAñadir_Click(object sender, EventArgs e)
         {
-            //(nom,ape,tel,dire);
-            cn.AgregarCliente(txtNombre.Text, txtApellido.Text, int.Parse(txtTelefono.Text), txtDireccion.Text);
+            //(ci, nom, ape, tel, dire);
+            cn.AgregarCliente(txtNombre.Text, txtApellido.Text, int.Parse(txtTelefono.Text), txtDireccion.Text, int.Parse(txtCi.Text));
             dtgvClientes.DataSource = cn.ConsultarTablaClienteDG();
 
         }
@@ -72,20 +72,25 @@ namespace SabrosoSoftware
 
         }
 
-        public int ModificarCliente(int id, string nom, string ape, int tel, string dire)
+        public int ModificarCliente(int id, string nom, string ape, int tel, string dire, int ci)
         {
 
-            return cn.ModificarCliente(id, nom, ape, tel, dire);
+            return cn.ModificarCliente(id, nom, ape, tel, dire, ci);
 
         }
 
-        public int AgregarCliente(string nom, string ape, int tel, string dire)
+        public int AgregarCliente(string nom, string ape, int tel, string dire,int ci)
         {
 
 
-            return cn.AgregarCliente(nom,ape,tel,dire);
+            return cn.AgregarCliente(nom,ape,tel,dire,ci);
         }
 
+        private void dtgvClientes_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            ciCliente = dtgvClientes.CurrentRow.Cells[0].Value.ToString();
+
+        }
     }
 
 

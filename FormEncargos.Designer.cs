@@ -40,8 +40,6 @@ namespace AppFormEncargos
             this.btnEditar = new System.Windows.Forms.Button();
             this.dtgvEncargos = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.txtID = new System.Windows.Forms.TextBox();
-            this.lblID = new System.Windows.Forms.Label();
             this.dtpFecha = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvEncargos)).BeginInit();
             this.panel1.SuspendLayout();
@@ -49,7 +47,7 @@ namespace AppFormEncargos
             // 
             // txtDireccion
             // 
-            this.txtDireccion.Location = new System.Drawing.Point(89, 203);
+            this.txtDireccion.Location = new System.Drawing.Point(83, 159);
             this.txtDireccion.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.Size = new System.Drawing.Size(154, 23);
@@ -57,7 +55,7 @@ namespace AppFormEncargos
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(89, 174);
+            this.txtNombre.Location = new System.Drawing.Point(83, 130);
             this.txtNombre.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(154, 23);
@@ -81,7 +79,7 @@ namespace AppFormEncargos
             this.lblNombre.BackColor = System.Drawing.Color.Transparent;
             this.lblNombre.Font = new System.Drawing.Font("Segoe UI", 9.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
             this.lblNombre.ForeColor = System.Drawing.Color.Black;
-            this.lblNombre.Location = new System.Drawing.Point(20, 177);
+            this.lblNombre.Location = new System.Drawing.Point(14, 133);
             this.lblNombre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(61, 17);
@@ -94,7 +92,7 @@ namespace AppFormEncargos
             this.lblFecha.BackColor = System.Drawing.Color.Transparent;
             this.lblFecha.Font = new System.Drawing.Font("Segoe UI", 9.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
             this.lblFecha.ForeColor = System.Drawing.Color.Black;
-            this.lblFecha.Location = new System.Drawing.Point(33, 232);
+            this.lblFecha.Location = new System.Drawing.Point(27, 188);
             this.lblFecha.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblFecha.Name = "lblFecha";
             this.lblFecha.Size = new System.Drawing.Size(48, 17);
@@ -107,7 +105,7 @@ namespace AppFormEncargos
             this.lblDireccion.BackColor = System.Drawing.Color.Transparent;
             this.lblDireccion.Font = new System.Drawing.Font("Segoe UI", 9.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
             this.lblDireccion.ForeColor = System.Drawing.Color.Black;
-            this.lblDireccion.Location = new System.Drawing.Point(12, 203);
+            this.lblDireccion.Location = new System.Drawing.Point(6, 159);
             this.lblDireccion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDireccion.Name = "lblDireccion";
             this.lblDireccion.Size = new System.Drawing.Size(69, 17);
@@ -167,8 +165,6 @@ namespace AppFormEncargos
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Goldenrod;
-            this.panel1.Controls.Add(this.txtID);
-            this.panel1.Controls.Add(this.lblID);
             this.panel1.Controls.Add(this.dtpFecha);
             this.panel1.Controls.Add(this.txtDireccion);
             this.panel1.Controls.Add(this.txtNombre);
@@ -185,30 +181,10 @@ namespace AppFormEncargos
             this.panel1.TabIndex = 23;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // txtID
-            // 
-            this.txtID.Location = new System.Drawing.Point(88, 145);
-            this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(155, 23);
-            this.txtID.TabIndex = 38;
-            // 
-            // lblID
-            // 
-            this.lblID.AutoSize = true;
-            this.lblID.BackColor = System.Drawing.Color.Transparent;
-            this.lblID.Font = new System.Drawing.Font("Segoe UI", 9.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.lblID.ForeColor = System.Drawing.Color.Black;
-            this.lblID.Location = new System.Drawing.Point(55, 148);
-            this.lblID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblID.Name = "lblID";
-            this.lblID.Size = new System.Drawing.Size(26, 17);
-            this.lblID.TabIndex = 37;
-            this.lblID.Text = "ID:";
-            // 
             // dtpFecha
             // 
             this.dtpFecha.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFecha.Location = new System.Drawing.Point(89, 232);
+            this.dtpFecha.Location = new System.Drawing.Point(83, 188);
             this.dtpFecha.Name = "dtpFecha";
             this.dtpFecha.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.dtpFecha.Size = new System.Drawing.Size(93, 23);
@@ -249,8 +225,6 @@ namespace AppFormEncargos
         private System.Windows.Forms.DataGridView dtgvEncargos;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DateTimePicker dtpFecha;
-        private System.Windows.Forms.Label lblID;
-        private System.Windows.Forms.TextBox txtID;
     }
 }
 
