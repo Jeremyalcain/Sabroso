@@ -40,9 +40,9 @@ namespace AppFormEncargos
             this.btnEditar = new System.Windows.Forms.Button();
             this.dtgvEncargos = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtID = new System.Windows.Forms.TextBox();
             this.lblID = new System.Windows.Forms.Label();
             this.dtpFecha = new System.Windows.Forms.DateTimePicker();
-            this.txtID = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvEncargos)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -161,6 +161,7 @@ namespace AppFormEncargos
             this.dtgvEncargos.Size = new System.Drawing.Size(534, 412);
             this.dtgvEncargos.TabIndex = 20;
             this.dtgvEncargos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvEncargos_CellClick);
+            this.dtgvEncargos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvEncargos_CellContentClick_1);
             this.dtgvEncargos.RowStateChanged += new System.Windows.Forms.DataGridViewRowStateChangedEventHandler(this.dtgvEncargos_RowStateChanged);
             // 
             // panel1
@@ -184,6 +185,13 @@ namespace AppFormEncargos
             this.panel1.TabIndex = 23;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // txtID
+            // 
+            this.txtID.Location = new System.Drawing.Point(88, 145);
+            this.txtID.Name = "txtID";
+            this.txtID.Size = new System.Drawing.Size(155, 23);
+            this.txtID.TabIndex = 38;
+            // 
             // lblID
             // 
             this.lblID.AutoSize = true;
@@ -205,13 +213,6 @@ namespace AppFormEncargos
             this.dtpFecha.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.dtpFecha.Size = new System.Drawing.Size(93, 23);
             this.dtpFecha.TabIndex = 19;
-            // 
-            // txtID
-            // 
-            this.txtID.Location = new System.Drawing.Point(88, 145);
-            this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(155, 23);
-            this.txtID.TabIndex = 38;
             // 
             // FormEncargos
             // 

@@ -10,6 +10,10 @@ namespace SabrosoSoftware
 {
     public partial class FormProductos : Form
     {
+       
+        string idProducto;
+        
+        
         ConexionSQL cn = new ConexionSQL();
         public FormProductos()
         {
@@ -36,7 +40,7 @@ namespace SabrosoSoftware
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            cn.ModificarProductos(int.Parse(txtID.Text), txtNombre.Text, txtPrecio.Text);
+            cn.ModificarProductos(int.Parse(idProducto), txtNombre.Text, txtPrecio.Text);
             dtgvProductos.DataSource = cn.ConsultarTablaProductosDG();
         }
 
@@ -71,8 +75,16 @@ namespace SabrosoSoftware
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            cn.EliminarProducto(txtID.Text);
+            cn.EliminarProducto(idProducto);
             dtgvProductos.DataSource = cn.ConsultarTablaProductosDG();
+        }
+
+        private void dtgvProductos_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+            idProducto = dtgvProductos.CurrentRow.Cells[0].Value.ToString();
+            
+
         }
     }
 }

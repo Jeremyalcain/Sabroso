@@ -13,6 +13,7 @@ namespace AppFormEncargos
 {
     public partial class FormEncargos : Form
     {
+        string idEncargos;
 
         ConexionSQL cn = new ConexionSQL();
         public FormEncargos()
@@ -66,6 +67,11 @@ namespace AppFormEncargos
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void dtgvEncargos_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
 
         }

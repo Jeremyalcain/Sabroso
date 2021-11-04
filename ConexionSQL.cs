@@ -17,7 +17,7 @@ namespace SabrosoSoftware
         public DataTable ConsultarTablaClienteDG()
         {
 
-            string query = "select * from cliente";
+            string query = "select id, nombre, apellido, telefono, direccion from cliente where eliminados=0";
             MySqlCommand cmd = new MySqlCommand(query,con);
             MySqlDataAdapter data = new MySqlDataAdapter(cmd);
             DataTable tabla = new DataTable();
@@ -33,7 +33,7 @@ namespace SabrosoSoftware
         public DataTable ConsultarTablaEncargosDG()
         {
 
-            string query = "select * from encargos";
+            string query = "select id, nombre, direccion, fecha from encargos where eliminados=0";
             MySqlCommand cmd = new MySqlCommand(query, con);
             MySqlDataAdapter data = new MySqlDataAdapter(cmd);
             DataTable tabla = new DataTable();
@@ -49,7 +49,7 @@ namespace SabrosoSoftware
         public DataTable ConsultarTablaProductosDG()
         {
 
-            string query = "select * from stock";
+            string query = "select id, nombre, precio from stock where eliminados=0";
             MySqlCommand cmd = new MySqlCommand(query, con);
             MySqlDataAdapter data = new MySqlDataAdapter(cmd);
             DataTable tabla = new DataTable();
@@ -139,7 +139,7 @@ namespace SabrosoSoftware
         {
             int flag = 0;
             con.Open();
-            string query = "Delete from cliente where ID = '" +id+ "'";
+            string query = "Update cliente set eliminados='1' where ID = '" +id+ "'";
             MySqlCommand cmd = new MySqlCommand(query, con);
 
             flag = cmd.ExecuteNonQuery();
@@ -152,7 +152,7 @@ namespace SabrosoSoftware
         {
             int flag = 0;
             con.Open();
-            string query = "Delete from stock where ID = '" + id + "'";
+            string query = "Update Stock set eliminados='1' where ID = '" + id + "'";
             MySqlCommand cmd = new MySqlCommand(query, con);
             flag = cmd.ExecuteNonQuery();
             con.Close();
@@ -164,7 +164,7 @@ namespace SabrosoSoftware
         {
             int flag = 0;
             con.Open();
-            string query = "Delete from encargos where ID = '" + id + "'";
+            string query = "Update Encargo set eliminados='1' where ID = '" + id + "'";
             MySqlCommand cmd = new MySqlCommand(query, con);
             flag = cmd.ExecuteNonQuery();
             con.Close();

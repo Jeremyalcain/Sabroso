@@ -54,6 +54,7 @@ namespace SabrosoSoftware
             this.dtgvProductos.RowTemplate.Height = 25;
             this.dtgvProductos.Size = new System.Drawing.Size(534, 412);
             this.dtgvProductos.TabIndex = 0;
+            this.dtgvProductos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvProductos_CellClick);
             this.dtgvProductos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvProductos_CellContentClick);
             // 
             // panel1
