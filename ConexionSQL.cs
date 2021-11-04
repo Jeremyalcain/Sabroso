@@ -33,7 +33,7 @@ namespace SabrosoSoftware
         public DataTable ConsultarTablaEncargosDG()
         {
 
-            string query = "select nombre, direccion, fecha from encargos where eliminados=0";
+            string query = "select id, nombre, direccion, fecha from encargos where eliminados=0";
             MySqlCommand cmd = new MySqlCommand(query, con);
             MySqlDataAdapter data = new MySqlDataAdapter(cmd);
             DataTable tabla = new DataTable();
@@ -49,7 +49,7 @@ namespace SabrosoSoftware
         public DataTable ConsultarTablaProductosDG()
         {
 
-            string query = "select nombre, precio from stock where eliminados=0";
+            string query = "select id, nombre, precio from stock where eliminados=0";
             MySqlCommand cmd = new MySqlCommand(query, con);
             MySqlDataAdapter data = new MySqlDataAdapter(cmd);
             DataTable tabla = new DataTable();

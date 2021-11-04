@@ -29,6 +29,7 @@ namespace SabrosoSoftware
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dtgvProductos = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtPrecio = new System.Windows.Forms.TextBox();
@@ -45,7 +46,13 @@ namespace SabrosoSoftware
             // 
             // dtgvProductos
             // 
+            this.dtgvProductos.AllowUserToAddRows = false;
+            this.dtgvProductos.AllowUserToDeleteRows = false;
+            this.dtgvProductos.AllowUserToOrderColumns = true;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe Fluent Icons", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.dtgvProductos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dtgvProductos.BackgroundColor = System.Drawing.Color.White;
+            this.dtgvProductos.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dtgvProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgvProductos.Location = new System.Drawing.Point(21, 41);
             this.dtgvProductos.Name = "dtgvProductos";

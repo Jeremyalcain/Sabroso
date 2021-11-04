@@ -54,7 +54,7 @@ namespace SabrosoSoftware
 
         private void btnAñadir_Click(object sender, EventArgs e)
         {
-            cn.AgregarProducto(txtNombre.Text, int.Parse(idProducto));
+            cn.AgregarProducto(txtNombre.Text, int.Parse(txtPrecio.Text));
             dtgvProductos.DataSource = cn.ConsultarTablaProductosDG();
         }
 

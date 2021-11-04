@@ -101,7 +101,7 @@ namespace SabrosoSoftware
             this.btnSalir.BackColor = System.Drawing.Color.Goldenrod;
             this.btnSalir.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnSalir.ForeColor = System.Drawing.Color.White;
-            this.btnSalir.Location = new System.Drawing.Point(127, 401);
+            this.btnSalir.Location = new System.Drawing.Point(12, 421);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(35, 17);
             this.btnSalir.TabIndex = 5;
@@ -147,7 +147,7 @@ namespace SabrosoSoftware
             this.lblRecuperarContraseña.AutoSize = true;
             this.lblRecuperarContraseña.BackColor = System.Drawing.Color.Goldenrod;
             this.lblRecuperarContraseña.LinkColor = System.Drawing.Color.White;
-            this.lblRecuperarContraseña.Location = new System.Drawing.Point(12, 423);
+            this.lblRecuperarContraseña.Location = new System.Drawing.Point(157, 423);
             this.lblRecuperarContraseña.Name = "lblRecuperarContraseña";
             this.lblRecuperarContraseña.Size = new System.Drawing.Size(123, 15);
             this.lblRecuperarContraseña.TabIndex = 8;
