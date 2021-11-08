@@ -49,7 +49,7 @@ namespace SabrosoSoftware
         public DataTable ConsultarTablaProductosDG()
         {
 
-            string query = "select id, nombre, precio from stock where eliminados=0";
+            string query = "select id, nombre, precio, cantidad from stock where eliminados=0";
             MySqlCommand cmd = new MySqlCommand(query, con);
             MySqlDataAdapter data = new MySqlDataAdapter(cmd);
             DataTable tabla = new DataTable();
@@ -74,11 +74,11 @@ namespace SabrosoSoftware
             return flag;
         }
 
-        public int AgregarProducto(string nom, int pre)
+        public int AgregarProducto(string nom, int pre, string can)
         {
             int flag = 0;
             con.Open();
-            string query = "insert into stock (nombre, precio) values ('" + nom + "', " + pre.ToString() +  ")";
+            string query = "insert into stock (nombre, precio, cantidad) values ('" + nom + "', '" + pre.ToString() + "', '" + can + "')";
             MySqlCommand cmd = new MySqlCommand(query, con);
             flag = cmd.ExecuteNonQuery();
             con.Close();
@@ -111,11 +111,11 @@ namespace SabrosoSoftware
             return flag;
         }
 
-        public int ModificarProductos(int id, string nom, string pre)
+        public int ModificarProductos(int id, string nom, string pre, string can)
         {
             int flag = 0;
             con.Open();
-            string query = "Update stock set Nombre ='" + nom + "', Precio ='" + pre + "'where id=" + id + "";
+            string query = "Update stock set Nombre ='" + nom + "', Precio ='" + pre + "', Cantidad = '" + can + "', 'where id=" + id + "";
 
             MySqlCommand cmd = new MySqlCommand(query, con);
             flag = cmd.ExecuteNonQuery();

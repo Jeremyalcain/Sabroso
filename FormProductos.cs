@@ -40,22 +40,30 @@ namespace SabrosoSoftware
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            cn.ModificarProductos(int.Parse(idProducto), txtNombre.Text, txtPrecio.Text);
+            cn.ModificarProductos(int.Parse(idProducto), txtNombre.Text, txtPrecio.Text, txtCantidad.Text);
             dtgvProductos.DataSource = cn.ConsultarTablaProductosDG();
+            txtNombre.Clear();
+            txtPrecio.Clear();
+            txtCantidad.Clear();
+            txtNombre.Focus();
         }
 
-        public int AgregarProducto(string nom, int pre)
+        public int AgregarProducto(string nom, int pre, string can)
         {
 
-            return cn.AgregarProducto(nom, pre);
+            return cn.AgregarProducto(nom, pre, can);
 
         }
 
 
         private void btnAñadir_Click(object sender, EventArgs e)
         {
-            cn.AgregarProducto(txtNombre.Text, int.Parse(txtPrecio.Text));
+            cn.AgregarProducto(txtNombre.Text, int.Parse(txtPrecio.Text), txtCantidad.Text);
             dtgvProductos.DataSource = cn.ConsultarTablaProductosDG();
+            txtNombre.Clear();
+            txtPrecio.Clear();
+            txtCantidad.Clear();
+            txtNombre.Focus();
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -77,6 +85,10 @@ namespace SabrosoSoftware
         {
             cn.EliminarProducto(idProducto);
             dtgvProductos.DataSource = cn.ConsultarTablaProductosDG();
+            txtNombre.Clear();
+            txtPrecio.Clear();
+            txtCantidad.Clear();
+            txtNombre.Focus();
         }
 
         private void dtgvProductos_CellClick(object sender, DataGridViewCellEventArgs e)

@@ -36,6 +36,12 @@ namespace SabrosoSoftware
         {
             cn.ModificarCliente(int.Parse(ciCliente), txtNombre.Text, txtApellido.Text, int.Parse(txtTelefono.Text), txtDireccion.Text, int.Parse(txtCi.Text));
             dtgvClientes.DataSource = cn.ConsultarTablaClienteDG();
+            txtCi.Clear();
+            txtNombre.Clear();
+            txtApellido.Clear();
+            txtTelefono.Clear();
+            txtDireccion.Clear();
+            txtCi.Focus();
 
         }
 
@@ -49,6 +55,12 @@ namespace SabrosoSoftware
             //cn.EliminarCliente(id);
             cn.EliminarCliente(int.Parse(ciCliente));
             dtgvClientes.DataSource = cn.ConsultarTablaClienteDG();
+            txtCi.Clear();
+            txtNombre.Clear();
+            txtApellido.Clear();
+            txtTelefono.Clear();
+            txtDireccion.Clear();
+            txtCi.Focus();
 
         }
 
@@ -57,6 +69,12 @@ namespace SabrosoSoftware
             //(ci, nom, ape, tel, dire);
             cn.AgregarCliente(txtNombre.Text, txtApellido.Text, int.Parse(txtTelefono.Text), txtDireccion.Text, int.Parse(txtCi.Text));
             dtgvClientes.DataSource = cn.ConsultarTablaClienteDG();
+            txtCi.Clear();
+            txtNombre.Clear();
+            txtApellido.Clear();
+            txtTelefono.Clear();
+            txtDireccion.Clear();
+            txtCi.Focus();
 
         }
 

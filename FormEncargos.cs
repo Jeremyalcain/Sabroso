@@ -31,6 +31,9 @@ namespace AppFormEncargos
         {
             cn.AgregarEncargo(txtNombre.Text, txtDireccion.Text, dtpFecha.Text);
             dtgvEncargos.DataSource = cn.ConsultarTablaEncargosDG();
+            txtNombre.Clear();
+            txtDireccion.Clear();
+            txtNombre.Focus();
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -47,12 +50,19 @@ namespace AppFormEncargos
         {
             cn.ModificarEncargos(int.Parse(idEncargos), txtNombre.Text, txtDireccion.Text, dtpFecha.Text);
             dtgvEncargos.DataSource = cn.ConsultarTablaEncargosDG();
+            txtNombre.Clear();
+            txtDireccion.Clear();
+            txtNombre.Focus();
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
             cn.EliminarEncargo(idEncargos);
             dtgvEncargos.DataSource = cn.ConsultarTablaEncargosDG();
+            txtNombre.Clear();
+            txtDireccion.Clear();
+            txtNombre.Focus();
+
         }
 
         private void dtgvEncargos_RowStateChanged(object sender, DataGridViewRowStateChangedEventArgs e)
