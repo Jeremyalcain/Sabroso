@@ -136,3 +136,5 @@ C:\Users\59896\Source\Repos\Jeremyalcain\Sabroso\obj\Debug\netcoreapp3.1\Sabroso
 C:\Users\59896\Source\Repos\Jeremyalcain\Sabroso\obj\Debug\netcoreapp3.1\SabrosoSoftware.dll
 C:\Users\59896\Source\Repos\Jeremyalcain\Sabroso\obj\Debug\netcoreapp3.1\SabrosoSoftware.pdb
 C:\Users\59896\Source\Repos\Jeremyalcain\Sabroso\obj\Debug\netcoreapp3.1\SabrosoSoftware.genruntimeconfig.cache
+C:\Users\Jeremy\Source\Repos\Jeremyalcain\Sabroso\obj\Debug\netcoreapp3.1\SabrosoSoftware.FormEnviarEmail.resources
+C:\Users\Jeremy\Source\Repos\Jeremyalcain\Sabroso\obj\Debug\netcoreapp3.1\SabrosoSoftware.csproj.ResolveComReference.cache

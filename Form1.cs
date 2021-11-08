@@ -15,17 +15,11 @@ namespace SabrosoSoftware
     public partial class Form1 : Form
     {
 
-        
-
         public Form1()
         {
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void btnIniciar_Click(object sender, EventArgs e)
         {
@@ -68,6 +62,8 @@ namespace SabrosoSoftware
             conectar.Close();
 
         }
+      
+
         private void btnSalir_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -80,6 +76,8 @@ namespace SabrosoSoftware
 
         private void lblRecuperarContraseña_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            new FormEnviarEmail().Show();
+            this.Hide();
 
         }
     }
