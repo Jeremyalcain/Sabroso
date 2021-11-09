@@ -119,6 +119,7 @@ namespace SabrosoSoftware
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(204, 24);
             this.txtPassword.TabIndex = 6;
+            this.txtPassword.Text = "Uruguay1101";
             // 
             // txtNombreUsuario
             // 
@@ -131,6 +132,7 @@ namespace SabrosoSoftware
             this.txtNombreUsuario.Name = "txtNombreUsuario";
             this.txtNombreUsuario.Size = new System.Drawing.Size(204, 24);
             this.txtNombreUsuario.TabIndex = 6;
+            this.txtNombreUsuario.Text = "Sabroso";
             // 
             // pictureBox1
             // 

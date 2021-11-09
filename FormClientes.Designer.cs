@@ -255,6 +255,7 @@ namespace SabrosoSoftware
             this.Controls.Add(this.btnEditar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormClientes";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormClientes";
             this.Load += new System.EventHandler(this.FormClientes_Load);
             this.panel1.ResumeLayout(false);

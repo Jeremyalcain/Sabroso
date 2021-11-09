@@ -1,4 +1,5 @@
-﻿using SabrosoSoftware;
+﻿using Proyecto;
+using SabrosoSoftware;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -84,6 +85,11 @@ namespace AppFormEncargos
         private void dtgvEncargos_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
             
+        }
+
+        private void btnConstancia_Click(object sender, EventArgs e)
+        {
+            new CrearPDF().Show(); 
         }
     }
 }

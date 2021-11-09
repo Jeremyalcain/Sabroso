@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>SabrosoSoftware</id>
+    <version>1.0.0</version>
+    <authors>SabrosoSoftware</authors>
+    <description>Package Description</description>
+    <dependencies>
+      <group targetFramework="net5.0-windows7.0">
+        <dependency id="Microsoft.VisualBasic" version="10.3.0" exclude="Build,Analyzers" />
+        <dependency id="MySql.Data" version="8.0.25" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+    <frameworkReferences>
+      <group targetFramework="net5.0-windows7.0">
+        <frameworkReference name="Microsoft.WindowsDesktop.App.WindowsForms" />
+      </group>
+    </frameworkReferences>
+  </metadata>
+  <files>
+    <file src="C:\Users\Jeremy\Source\Repos\Jeremyalcain\Sabroso\bin\Debug\net5.0-windows\SabrosoSoftware.runtimeconfig.json" target="lib\net5.0-windows7.0\SabrosoSoftware.runtimeconfig.json" />
+    <file src="C:\Users\Jeremy\Source\Repos\Jeremyalcain\Sabroso\bin\Debug\net5.0-windows\SabrosoSoftware.dll" target="lib\net5.0-windows7.0\SabrosoSoftware.dll" />
+  </files>
+</package>

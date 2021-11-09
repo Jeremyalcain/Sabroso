@@ -41,6 +41,7 @@ namespace AppFormEncargos
             this.dtgvEncargos = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dtpFecha = new System.Windows.Forms.DateTimePicker();
+            this.btnConstancia = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvEncargos)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -190,12 +191,25 @@ namespace AppFormEncargos
             this.dtpFecha.Size = new System.Drawing.Size(93, 23);
             this.dtpFecha.TabIndex = 19;
             // 
+            // btnConstancia
+            // 
+            this.btnConstancia.Font = new System.Drawing.Font("Segoe UI", 9.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.btnConstancia.Location = new System.Drawing.Point(470, 448);
+            this.btnConstancia.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnConstancia.Name = "btnConstancia";
+            this.btnConstancia.Size = new System.Drawing.Size(88, 27);
+            this.btnConstancia.TabIndex = 24;
+            this.btnConstancia.Text = "Constancia";
+            this.btnConstancia.UseVisualStyleBackColor = true;
+            this.btnConstancia.Click += new System.EventHandler(this.btnConstancia_Click);
+            // 
             // FormEncargos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Goldenrod;
             this.ClientSize = new System.Drawing.Size(837, 525);
+            this.Controls.Add(this.btnConstancia);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.dtgvEncargos);
@@ -225,6 +239,7 @@ namespace AppFormEncargos
         private System.Windows.Forms.DataGridView dtgvEncargos;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DateTimePicker dtpFecha;
+        private System.Windows.Forms.Button btnConstancia;
     }
 }
 

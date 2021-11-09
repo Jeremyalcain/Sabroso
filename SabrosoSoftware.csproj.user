@@ -5,6 +5,9 @@
     <ShowAllFiles>false</ShowAllFiles>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Update="CrearPDF.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -18,9 +21,6 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="FormEncargos.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="FormEnviarEmail.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="FormProductos.cs">

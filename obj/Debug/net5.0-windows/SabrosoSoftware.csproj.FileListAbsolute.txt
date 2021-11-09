@@ -20,7 +20,6 @@ C:\Users\Jeremy\Source\Repos\Jeremyalcain\Sabroso\obj\Debug\net5.0-windows\Sabro
 C:\Users\Jeremy\Source\Repos\Jeremyalcain\Sabroso\obj\Debug\net5.0-windows\SabrosoSoftware.FormAbout.resources
 C:\Users\Jeremy\Source\Repos\Jeremyalcain\Sabroso\obj\Debug\net5.0-windows\SabrosoSoftware.FormClientes.resources
 C:\Users\Jeremy\Source\Repos\Jeremyalcain\Sabroso\obj\Debug\net5.0-windows\AppFormEncargos.FormEncargos.resources
-C:\Users\Jeremy\Source\Repos\Jeremyalcain\Sabroso\obj\Debug\net5.0-windows\SabrosoSoftware.FormEnviarEmail.resources
 C:\Users\Jeremy\Source\Repos\Jeremyalcain\Sabroso\obj\Debug\net5.0-windows\SabrosoSoftware.FormProductos.resources
 C:\Users\Jeremy\Source\Repos\Jeremyalcain\Sabroso\obj\Debug\net5.0-windows\SabrosoSoftware.Properties.Resources.resources
 C:\Users\Jeremy\Source\Repos\Jeremyalcain\Sabroso\obj\Debug\net5.0-windows\SabrosoSoftware.csproj.GenerateResource.cache
@@ -33,3 +32,6 @@ C:\Users\Jeremy\Source\Repos\Jeremyalcain\Sabroso\obj\Debug\net5.0-windows\Sabro
 C:\Users\Jeremy\Source\Repos\Jeremyalcain\Sabroso\obj\Debug\net5.0-windows\ref\SabrosoSoftware.dll
 C:\Users\Jeremy\Source\Repos\Jeremyalcain\Sabroso\obj\Debug\net5.0-windows\SabrosoSoftware.pdb
 C:\Users\Jeremy\Source\Repos\Jeremyalcain\Sabroso\obj\Debug\net5.0-windows\SabrosoSoftware.genruntimeconfig.cache
+C:\Users\Jeremy\source\repos\Jeremyalcain\Sabroso\obj\Debug\net5.0-windows\Proyecto.CrearPDF.resources
+C:\Users\Jeremy\Source\Repos\Jeremyalcain\Sabroso\bin\Debug\net5.0-windows\itextsharp.dll
+C:\Users\Jeremy\Source\Repos\Jeremyalcain\Sabroso\bin\Debug\net5.0-windows\itextsharp.xmlworker.dll
