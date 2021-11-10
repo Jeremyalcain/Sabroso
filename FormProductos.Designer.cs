@@ -29,9 +29,11 @@ namespace SabrosoSoftware
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dtgvProductos = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtCantidad = new System.Windows.Forms.TextBox();
+            this.lblCantidad = new System.Windows.Forms.Label();
             this.txtPrecio = new System.Windows.Forms.TextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.btnAñadir = new System.Windows.Forms.Button();
@@ -40,8 +42,6 @@ namespace SabrosoSoftware
             this.lblProductos = new System.Windows.Forms.Label();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
-            this.lblCantidad = new System.Windows.Forms.Label();
-            this.txtCantidad = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvProductos)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -51,14 +51,15 @@ namespace SabrosoSoftware
             this.dtgvProductos.AllowUserToAddRows = false;
             this.dtgvProductos.AllowUserToDeleteRows = false;
             this.dtgvProductos.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.dtgvProductos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.dtgvProductos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dtgvProductos.BackgroundColor = System.Drawing.Color.White;
             this.dtgvProductos.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dtgvProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgvProductos.Location = new System.Drawing.Point(21, 41);
             this.dtgvProductos.Name = "dtgvProductos";
             this.dtgvProductos.RowTemplate.Height = 25;
+            this.dtgvProductos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtgvProductos.Size = new System.Drawing.Size(534, 412);
             this.dtgvProductos.TabIndex = 0;
             this.dtgvProductos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvProductos_CellClick);
@@ -81,6 +82,27 @@ namespace SabrosoSoftware
             this.panel1.Size = new System.Drawing.Size(265, 525);
             this.panel1.TabIndex = 1;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // txtCantidad
+            // 
+            this.txtCantidad.Location = new System.Drawing.Point(83, 206);
+            this.txtCantidad.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtCantidad.Name = "txtCantidad";
+            this.txtCantidad.Size = new System.Drawing.Size(154, 23);
+            this.txtCantidad.TabIndex = 29;
+            // 
+            // lblCantidad
+            // 
+            this.lblCantidad.AutoSize = true;
+            this.lblCantidad.BackColor = System.Drawing.Color.Transparent;
+            this.lblCantidad.Font = new System.Drawing.Font("Segoe UI", 9.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.lblCantidad.ForeColor = System.Drawing.Color.Black;
+            this.lblCantidad.Location = new System.Drawing.Point(7, 209);
+            this.lblCantidad.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblCantidad.Name = "lblCantidad";
+            this.lblCantidad.Size = new System.Drawing.Size(69, 17);
+            this.lblCantidad.TabIndex = 28;
+            this.lblCantidad.Text = "Cantidad:";
             // 
             // txtPrecio
             // 
@@ -173,27 +195,6 @@ namespace SabrosoSoftware
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = true;
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
-            // 
-            // lblCantidad
-            // 
-            this.lblCantidad.AutoSize = true;
-            this.lblCantidad.BackColor = System.Drawing.Color.Transparent;
-            this.lblCantidad.Font = new System.Drawing.Font("Segoe UI", 9.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.lblCantidad.ForeColor = System.Drawing.Color.Black;
-            this.lblCantidad.Location = new System.Drawing.Point(7, 209);
-            this.lblCantidad.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblCantidad.Name = "lblCantidad";
-            this.lblCantidad.Size = new System.Drawing.Size(69, 17);
-            this.lblCantidad.TabIndex = 28;
-            this.lblCantidad.Text = "Cantidad:";
-            // 
-            // txtCantidad
-            // 
-            this.txtCantidad.Location = new System.Drawing.Point(83, 206);
-            this.txtCantidad.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.txtCantidad.Name = "txtCantidad";
-            this.txtCantidad.Size = new System.Drawing.Size(154, 23);
-            this.txtCantidad.TabIndex = 29;
             // 
             // FormProductos
             // 

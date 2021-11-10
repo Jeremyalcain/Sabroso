@@ -238,6 +238,7 @@ namespace SabrosoSoftware
             this.dtgvClientes.Location = new System.Drawing.Point(16, 41);
             this.dtgvClientes.Name = "dtgvClientes";
             this.dtgvClientes.RowTemplate.Height = 25;
+            this.dtgvClientes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtgvClientes.Size = new System.Drawing.Size(534, 412);
             this.dtgvClientes.TabIndex = 25;
             this.dtgvClientes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvClientes_CellClick);

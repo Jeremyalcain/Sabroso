@@ -30,11 +30,11 @@ namespace AppFormEncargos
         }
         private void btnAñadir_Click(object sender, EventArgs e)
         {
-            cn.AgregarEncargo(txtNombre.Text, txtDireccion.Text, dtpFecha.Text);
+            cn.AgregarEncargo(dtpFecha.Text, cbHorario.Text, txtDescripcion.Text);
             dtgvEncargos.DataSource = cn.ConsultarTablaEncargosDG();
-            txtNombre.Clear();
-            txtDireccion.Clear();
-            txtNombre.Focus();
+            txtDescripcion.Clear();
+
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -49,20 +49,16 @@ namespace AppFormEncargos
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            cn.ModificarEncargos(int.Parse(idEncargos), txtNombre.Text, txtDireccion.Text, dtpFecha.Text);
+            cn.ModificarEncargos(int.Parse(idEncargos), dtpFecha.Text, cbHorario.Text, txtDescripcion.Text);
             dtgvEncargos.DataSource = cn.ConsultarTablaEncargosDG();
-            txtNombre.Clear();
-            txtDireccion.Clear();
-            txtNombre.Focus();
+            txtDescripcion.Clear();
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
             cn.EliminarEncargo(idEncargos);
             dtgvEncargos.DataSource = cn.ConsultarTablaEncargosDG();
-            txtNombre.Clear();
-            txtDireccion.Clear();
-            txtNombre.Focus();
+            txtDescripcion.Clear();
 
         }
 
@@ -90,6 +86,11 @@ namespace AppFormEncargos
         private void btnConstancia_Click(object sender, EventArgs e)
         {
             new CrearPDF().Show(); 
+        }
+
+        private void txtDescripcion_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

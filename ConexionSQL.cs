@@ -33,7 +33,7 @@ namespace SabrosoSoftware
         public DataTable ConsultarTablaEncargosDG()
         {
 
-            string query = "select id, nombre, direccion, fecha from encargos where eliminados=0";
+            string query = "select id, fecha, horario, descripcion from encargos where eliminados=0";
             MySqlCommand cmd = new MySqlCommand(query, con);
             MySqlDataAdapter data = new MySqlDataAdapter(cmd);
             DataTable tabla = new DataTable();
@@ -87,11 +87,11 @@ namespace SabrosoSoftware
         }
 
 
-        public int AgregarEncargo(string nom, string dir, string  fecha)
+        public int AgregarEncargo(string fecha, string hora, string  desc)
         {
             int flag = 0;
             con.Open();
-            string query = "insert into encargos (nombre, direccion, fecha) values ('" + nom + "','" + dir + "','" + fecha + "')";
+            string query = "insert into encargos (fecha, horario, descripcion) values ('" + fecha + "','" + hora + "','" + desc + "')";
             MySqlCommand cmd = new MySqlCommand(query, con);
             flag = cmd.ExecuteNonQuery();
             con.Close();

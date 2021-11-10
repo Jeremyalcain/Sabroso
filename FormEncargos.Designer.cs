@@ -29,38 +29,22 @@ namespace AppFormEncargos
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtDireccion = new System.Windows.Forms.TextBox();
-            this.txtNombre = new System.Windows.Forms.TextBox();
             this.btnAñadir = new System.Windows.Forms.Button();
-            this.lblNombre = new System.Windows.Forms.Label();
+            this.lblHorario = new System.Windows.Forms.Label();
             this.lblFecha = new System.Windows.Forms.Label();
-            this.lblDireccion = new System.Windows.Forms.Label();
+            this.lblDescripcion = new System.Windows.Forms.Label();
             this.lblEncargo = new System.Windows.Forms.Label();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.dtgvEncargos = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.cbHorario = new System.Windows.Forms.ComboBox();
             this.dtpFecha = new System.Windows.Forms.DateTimePicker();
             this.btnConstancia = new System.Windows.Forms.Button();
+            this.txtDescripcion = new System.Windows.Forms.RichTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvEncargos)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // txtDireccion
-            // 
-            this.txtDireccion.Location = new System.Drawing.Point(83, 159);
-            this.txtDireccion.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.txtDireccion.Name = "txtDireccion";
-            this.txtDireccion.Size = new System.Drawing.Size(154, 23);
-            this.txtDireccion.TabIndex = 17;
-            // 
-            // txtNombre
-            // 
-            this.txtNombre.Location = new System.Drawing.Point(83, 130);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(154, 23);
-            this.txtNombre.TabIndex = 16;
             // 
             // btnAñadir
             // 
@@ -74,18 +58,18 @@ namespace AppFormEncargos
             this.btnAñadir.UseVisualStyleBackColor = true;
             this.btnAñadir.Click += new System.EventHandler(this.btnAñadir_Click);
             // 
-            // lblNombre
+            // lblHorario
             // 
-            this.lblNombre.AutoSize = true;
-            this.lblNombre.BackColor = System.Drawing.Color.Transparent;
-            this.lblNombre.Font = new System.Drawing.Font("Segoe UI", 9.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.lblNombre.ForeColor = System.Drawing.Color.Black;
-            this.lblNombre.Location = new System.Drawing.Point(14, 133);
-            this.lblNombre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(61, 17);
-            this.lblNombre.TabIndex = 14;
-            this.lblNombre.Text = "Nombre:";
+            this.lblHorario.AutoSize = true;
+            this.lblHorario.BackColor = System.Drawing.Color.Transparent;
+            this.lblHorario.Font = new System.Drawing.Font("Segoe UI", 9.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.lblHorario.ForeColor = System.Drawing.Color.Black;
+            this.lblHorario.Location = new System.Drawing.Point(14, 159);
+            this.lblHorario.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblHorario.Name = "lblHorario";
+            this.lblHorario.Size = new System.Drawing.Size(58, 17);
+            this.lblHorario.TabIndex = 14;
+            this.lblHorario.Text = "Horario:";
             // 
             // lblFecha
             // 
@@ -93,25 +77,25 @@ namespace AppFormEncargos
             this.lblFecha.BackColor = System.Drawing.Color.Transparent;
             this.lblFecha.Font = new System.Drawing.Font("Segoe UI", 9.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
             this.lblFecha.ForeColor = System.Drawing.Color.Black;
-            this.lblFecha.Location = new System.Drawing.Point(27, 188);
+            this.lblFecha.Location = new System.Drawing.Point(27, 127);
             this.lblFecha.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblFecha.Name = "lblFecha";
             this.lblFecha.Size = new System.Drawing.Size(48, 17);
             this.lblFecha.TabIndex = 13;
             this.lblFecha.Text = "Fecha:";
             // 
-            // lblDireccion
+            // lblDescripcion
             // 
-            this.lblDireccion.AutoSize = true;
-            this.lblDireccion.BackColor = System.Drawing.Color.Transparent;
-            this.lblDireccion.Font = new System.Drawing.Font("Segoe UI", 9.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.lblDireccion.ForeColor = System.Drawing.Color.Black;
-            this.lblDireccion.Location = new System.Drawing.Point(6, 159);
-            this.lblDireccion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblDireccion.Name = "lblDireccion";
-            this.lblDireccion.Size = new System.Drawing.Size(69, 17);
-            this.lblDireccion.TabIndex = 11;
-            this.lblDireccion.Text = "Direccion:";
+            this.lblDescripcion.AutoSize = true;
+            this.lblDescripcion.BackColor = System.Drawing.Color.Transparent;
+            this.lblDescripcion.Font = new System.Drawing.Font("Segoe UI", 9.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.lblDescripcion.ForeColor = System.Drawing.Color.Black;
+            this.lblDescripcion.Location = new System.Drawing.Point(14, 196);
+            this.lblDescripcion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblDescripcion.Name = "lblDescripcion";
+            this.lblDescripcion.Size = new System.Drawing.Size(83, 17);
+            this.lblDescripcion.TabIndex = 11;
+            this.lblDescripcion.Text = "Descripcion:";
             // 
             // lblEncargo
             // 
@@ -157,6 +141,7 @@ namespace AppFormEncargos
             this.dtgvEncargos.Location = new System.Drawing.Point(24, 30);
             this.dtgvEncargos.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.dtgvEncargos.Name = "dtgvEncargos";
+            this.dtgvEncargos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtgvEncargos.Size = new System.Drawing.Size(534, 412);
             this.dtgvEncargos.TabIndex = 20;
             this.dtgvEncargos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvEncargos_CellClick);
@@ -166,13 +151,13 @@ namespace AppFormEncargos
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Goldenrod;
+            this.panel1.Controls.Add(this.txtDescripcion);
+            this.panel1.Controls.Add(this.cbHorario);
             this.panel1.Controls.Add(this.dtpFecha);
-            this.panel1.Controls.Add(this.txtDireccion);
-            this.panel1.Controls.Add(this.txtNombre);
             this.panel1.Controls.Add(this.btnAñadir);
-            this.panel1.Controls.Add(this.lblNombre);
+            this.panel1.Controls.Add(this.lblHorario);
             this.panel1.Controls.Add(this.lblFecha);
-            this.panel1.Controls.Add(this.lblDireccion);
+            this.panel1.Controls.Add(this.lblDescripcion);
             this.panel1.Controls.Add(this.lblEncargo);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel1.Location = new System.Drawing.Point(587, 0);
@@ -182,10 +167,21 @@ namespace AppFormEncargos
             this.panel1.TabIndex = 23;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // cbHorario
+            // 
+            this.cbHorario.FormattingEnabled = true;
+            this.cbHorario.Items.AddRange(new object[] {
+            "Mañana",
+            "Tarde"});
+            this.cbHorario.Location = new System.Drawing.Point(83, 156);
+            this.cbHorario.Name = "cbHorario";
+            this.cbHorario.Size = new System.Drawing.Size(121, 23);
+            this.cbHorario.TabIndex = 20;
+            // 
             // dtpFecha
             // 
             this.dtpFecha.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFecha.Location = new System.Drawing.Point(83, 188);
+            this.dtpFecha.Location = new System.Drawing.Point(83, 127);
             this.dtpFecha.Name = "dtpFecha";
             this.dtpFecha.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.dtpFecha.Size = new System.Drawing.Size(93, 23);
@@ -202,6 +198,14 @@ namespace AppFormEncargos
             this.btnConstancia.Text = "Constancia";
             this.btnConstancia.UseVisualStyleBackColor = true;
             this.btnConstancia.Click += new System.EventHandler(this.btnConstancia_Click);
+            // 
+            // txtDescripcion
+            // 
+            this.txtDescripcion.Location = new System.Drawing.Point(14, 216);
+            this.txtDescripcion.Name = "txtDescripcion";
+            this.txtDescripcion.Size = new System.Drawing.Size(223, 96);
+            this.txtDescripcion.TabIndex = 21;
+            this.txtDescripcion.Text = "";
             // 
             // FormEncargos
             // 
@@ -227,12 +231,10 @@ namespace AppFormEncargos
         }
 
         #endregion
-        private System.Windows.Forms.TextBox txtDireccion;
-        private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Button btnAñadir;
-        private System.Windows.Forms.Label lblNombre;
+        private System.Windows.Forms.Label lblHorario;
         private System.Windows.Forms.Label lblFecha;
-        private System.Windows.Forms.Label lblDireccion;
+        private System.Windows.Forms.Label lblDescripcion;
         private System.Windows.Forms.Label lblEncargo;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnEditar;
@@ -240,6 +242,8 @@ namespace AppFormEncargos
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DateTimePicker dtpFecha;
         private System.Windows.Forms.Button btnConstancia;
+        private System.Windows.Forms.ComboBox cbHorario;
+        private System.Windows.Forms.RichTextBox txtDescripcion;
     }
 }
 
