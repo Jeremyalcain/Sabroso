@@ -51,7 +51,7 @@ namespace SabrosoSoftware
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(799, 0);
+            this.pictureBox1.Location = new System.Drawing.Point(916, 0);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(35, 35);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -62,7 +62,7 @@ namespace SabrosoSoftware
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(767, 0);
+            this.pictureBox2.Location = new System.Drawing.Point(884, 0);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(35, 35);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -73,7 +73,7 @@ namespace SabrosoSoftware
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(735, 0);
+            this.pictureBox3.Location = new System.Drawing.Point(852, 0);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(35, 35);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -179,9 +179,9 @@ namespace SabrosoSoftware
             this.panelForms.Controls.Add(this.pictureBox2);
             this.panelForms.Controls.Add(this.pictureBox1);
             this.panelForms.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panelForms.Location = new System.Drawing.Point(191, 0);
+            this.panelForms.Location = new System.Drawing.Point(189, 0);
             this.panelForms.Name = "panelForms";
-            this.panelForms.Size = new System.Drawing.Size(837, 525);
+            this.panelForms.Size = new System.Drawing.Size(951, 525);
             this.panelForms.TabIndex = 9;
             this.panelForms.Paint += new System.Windows.Forms.PaintEventHandler(this.panelForms_Paint);
             // 
@@ -192,7 +192,7 @@ namespace SabrosoSoftware
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1028, 525);
+            this.ClientSize = new System.Drawing.Size(1140, 525);
             this.Controls.Add(this.panelMenu);
             this.Controls.Add(this.panelForms);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

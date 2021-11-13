@@ -36,15 +36,15 @@ namespace SabrosoSoftware
             this.lblCi = new System.Windows.Forms.Label();
             this.txtDireccion = new System.Windows.Forms.TextBox();
             this.lblTelefono = new System.Windows.Forms.Label();
+            this.lblNombre = new System.Windows.Forms.Label();
             this.txtTelefono = new System.Windows.Forms.TextBox();
             this.lblDireccion = new System.Windows.Forms.Label();
-            this.txtApellido = new System.Windows.Forms.TextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.btnAñadir = new System.Windows.Forms.Button();
-            this.lblNombre = new System.Windows.Forms.Label();
-            this.lblApellido = new System.Windows.Forms.Label();
             this.lblClientes = new System.Windows.Forms.Label();
             this.dtgvClientes = new System.Windows.Forms.DataGridView();
+            this.btnBuscar = new System.Windows.Forms.Button();
+            this.txtBuscar = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvClientes)).BeginInit();
             this.SuspendLayout();
@@ -52,7 +52,7 @@ namespace SabrosoSoftware
             // btnEliminar
             // 
             this.btnEliminar.Font = new System.Drawing.Font("Segoe UI", 9.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.btnEliminar.Location = new System.Drawing.Point(112, 459);
+            this.btnEliminar.Location = new System.Drawing.Point(139, 459);
             this.btnEliminar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(88, 27);
@@ -64,7 +64,7 @@ namespace SabrosoSoftware
             // btnEditar
             // 
             this.btnEditar.Font = new System.Drawing.Font("Segoe UI", 9.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.btnEditar.Location = new System.Drawing.Point(16, 459);
+            this.btnEditar.Location = new System.Drawing.Point(43, 459);
             this.btnEditar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(88, 27);
@@ -76,20 +76,20 @@ namespace SabrosoSoftware
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.Controls.Add(this.btnEliminar);
             this.panel1.Controls.Add(this.txtCi);
             this.panel1.Controls.Add(this.lblCi);
             this.panel1.Controls.Add(this.txtDireccion);
+            this.panel1.Controls.Add(this.btnEditar);
             this.panel1.Controls.Add(this.lblTelefono);
+            this.panel1.Controls.Add(this.lblNombre);
             this.panel1.Controls.Add(this.txtTelefono);
             this.panel1.Controls.Add(this.lblDireccion);
-            this.panel1.Controls.Add(this.txtApellido);
             this.panel1.Controls.Add(this.txtNombre);
             this.panel1.Controls.Add(this.btnAñadir);
-            this.panel1.Controls.Add(this.lblNombre);
-            this.panel1.Controls.Add(this.lblApellido);
             this.panel1.Controls.Add(this.lblClientes);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel1.Location = new System.Drawing.Point(587, 0);
+            this.panel1.Location = new System.Drawing.Point(701, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(250, 525);
             this.panel1.TabIndex = 26;
@@ -103,6 +103,8 @@ namespace SabrosoSoftware
             this.txtCi.Name = "txtCi";
             this.txtCi.Size = new System.Drawing.Size(154, 23);
             this.txtCi.TabIndex = 35;
+            this.txtCi.TextChanged += new System.EventHandler(this.txtCi_TextChanged);
+            this.txtCi.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCi_KeyPress);
             // 
             // lblCi
             // 
@@ -120,7 +122,7 @@ namespace SabrosoSoftware
             // txtDireccion
             // 
             this.txtDireccion.BackColor = System.Drawing.Color.White;
-            this.txtDireccion.Location = new System.Drawing.Point(83, 281);
+            this.txtDireccion.Location = new System.Drawing.Point(83, 253);
             this.txtDireccion.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.Size = new System.Drawing.Size(154, 23);
@@ -132,21 +134,36 @@ namespace SabrosoSoftware
             this.lblTelefono.BackColor = System.Drawing.Color.Transparent;
             this.lblTelefono.Font = new System.Drawing.Font("Segoe UI", 9.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
             this.lblTelefono.ForeColor = System.Drawing.Color.Black;
-            this.lblTelefono.Location = new System.Drawing.Point(17, 243);
+            this.lblTelefono.Location = new System.Drawing.Point(17, 227);
             this.lblTelefono.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTelefono.Name = "lblTelefono";
             this.lblTelefono.Size = new System.Drawing.Size(65, 17);
             this.lblTelefono.TabIndex = 30;
             this.lblTelefono.Text = "Telefono:";
             // 
+            // lblNombre
+            // 
+            this.lblNombre.AutoSize = true;
+            this.lblNombre.BackColor = System.Drawing.Color.Transparent;
+            this.lblNombre.Font = new System.Drawing.Font("Segoe UI", 9.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.lblNombre.ForeColor = System.Drawing.Color.Black;
+            this.lblNombre.Location = new System.Drawing.Point(15, 175);
+            this.lblNombre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(126, 17);
+            this.lblNombre.TabIndex = 23;
+            this.lblNombre.Text = "Nombre y apellido:";
+            // 
             // txtTelefono
             // 
             this.txtTelefono.BackColor = System.Drawing.Color.White;
-            this.txtTelefono.Location = new System.Drawing.Point(83, 240);
+            this.txtTelefono.Location = new System.Drawing.Point(83, 224);
             this.txtTelefono.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(154, 23);
             this.txtTelefono.TabIndex = 29;
+            this.txtTelefono.TextChanged += new System.EventHandler(this.txtTelefono_TextChanged);
+            this.txtTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelefono_KeyPress);
             // 
             // lblDireccion
             // 
@@ -154,30 +171,23 @@ namespace SabrosoSoftware
             this.lblDireccion.BackColor = System.Drawing.Color.Transparent;
             this.lblDireccion.Font = new System.Drawing.Font("Segoe UI", 9.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
             this.lblDireccion.ForeColor = System.Drawing.Color.Black;
-            this.lblDireccion.Location = new System.Drawing.Point(15, 284);
+            this.lblDireccion.Location = new System.Drawing.Point(15, 256);
             this.lblDireccion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDireccion.Name = "lblDireccion";
             this.lblDireccion.Size = new System.Drawing.Size(69, 17);
             this.lblDireccion.TabIndex = 28;
             this.lblDireccion.Text = "Direccion:";
             // 
-            // txtApellido
-            // 
-            this.txtApellido.BackColor = System.Drawing.Color.White;
-            this.txtApellido.Location = new System.Drawing.Point(83, 199);
-            this.txtApellido.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.txtApellido.Name = "txtApellido";
-            this.txtApellido.Size = new System.Drawing.Size(154, 23);
-            this.txtApellido.TabIndex = 27;
-            // 
             // txtNombre
             // 
             this.txtNombre.BackColor = System.Drawing.Color.White;
-            this.txtNombre.Location = new System.Drawing.Point(83, 161);
+            this.txtNombre.Location = new System.Drawing.Point(83, 195);
             this.txtNombre.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(154, 23);
             this.txtNombre.TabIndex = 25;
+            this.txtNombre.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);
+            this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
             // 
             // btnAñadir
             // 
@@ -190,32 +200,6 @@ namespace SabrosoSoftware
             this.btnAñadir.Text = "Añadir";
             this.btnAñadir.UseVisualStyleBackColor = true;
             this.btnAñadir.Click += new System.EventHandler(this.btnAñadir_Click);
-            // 
-            // lblNombre
-            // 
-            this.lblNombre.AutoSize = true;
-            this.lblNombre.BackColor = System.Drawing.Color.Transparent;
-            this.lblNombre.Font = new System.Drawing.Font("Segoe UI", 9.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.lblNombre.ForeColor = System.Drawing.Color.Black;
-            this.lblNombre.Location = new System.Drawing.Point(21, 161);
-            this.lblNombre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(61, 17);
-            this.lblNombre.TabIndex = 23;
-            this.lblNombre.Text = "Nombre:";
-            // 
-            // lblApellido
-            // 
-            this.lblApellido.AutoSize = true;
-            this.lblApellido.BackColor = System.Drawing.Color.Transparent;
-            this.lblApellido.Font = new System.Drawing.Font("Segoe UI", 9.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.lblApellido.ForeColor = System.Drawing.Color.Black;
-            this.lblApellido.Location = new System.Drawing.Point(21, 199);
-            this.lblApellido.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblApellido.Name = "lblApellido";
-            this.lblApellido.Size = new System.Drawing.Size(63, 17);
-            this.lblApellido.TabIndex = 21;
-            this.lblApellido.Text = "Apellido:";
             // 
             // lblClientes
             // 
@@ -235,25 +219,42 @@ namespace SabrosoSoftware
             this.dtgvClientes.BackgroundColor = System.Drawing.Color.White;
             this.dtgvClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgvClientes.GridColor = System.Drawing.Color.White;
-            this.dtgvClientes.Location = new System.Drawing.Point(16, 41);
+            this.dtgvClientes.Location = new System.Drawing.Point(12, 55);
             this.dtgvClientes.Name = "dtgvClientes";
             this.dtgvClientes.RowTemplate.Height = 25;
             this.dtgvClientes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgvClientes.Size = new System.Drawing.Size(534, 412);
+            this.dtgvClientes.Size = new System.Drawing.Size(668, 442);
             this.dtgvClientes.TabIndex = 25;
             this.dtgvClientes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvClientes_CellClick);
             this.dtgvClientes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvClientes_CellContentClick);
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.Location = new System.Drawing.Point(201, 12);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(128, 23);
+            this.btnBuscar.TabIndex = 28;
+            this.btnBuscar.Text = "Buscar Cliente";
+            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            // 
+            // txtBuscar
+            // 
+            this.txtBuscar.Location = new System.Drawing.Point(21, 12);
+            this.txtBuscar.Name = "txtBuscar";
+            this.txtBuscar.Size = new System.Drawing.Size(184, 23);
+            this.txtBuscar.TabIndex = 27;
             // 
             // FormClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Goldenrod;
-            this.ClientSize = new System.Drawing.Size(837, 525);
-            this.Controls.Add(this.btnEliminar);
+            this.ClientSize = new System.Drawing.Size(951, 525);
+            this.Controls.Add(this.btnBuscar);
+            this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dtgvClientes);
-            this.Controls.Add(this.btnEditar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormClientes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -263,6 +264,7 @@ namespace SabrosoSoftware
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvClientes)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -271,11 +273,9 @@ namespace SabrosoSoftware
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox txtApellido;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Button btnAñadir;
         private System.Windows.Forms.Label lblNombre;
-        private System.Windows.Forms.Label lblApellido;
         private System.Windows.Forms.Label lblClientes;
         private System.Windows.Forms.DataGridView dtgvClientes;
         private System.Windows.Forms.TextBox txtDireccion;
@@ -284,5 +284,7 @@ namespace SabrosoSoftware
         private System.Windows.Forms.Label lblDireccion;
         private System.Windows.Forms.TextBox txtCi;
         private System.Windows.Forms.Label lblCi;
+        private System.Windows.Forms.Button btnBuscar;
+        private System.Windows.Forms.TextBox txtBuscar;
     }
 }

@@ -34,11 +34,10 @@ namespace SabrosoSoftware
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            cn.ModificarCliente(int.Parse(ciCliente), txtNombre.Text, txtApellido.Text, int.Parse(txtTelefono.Text), txtDireccion.Text, int.Parse(txtCi.Text));
+            cn.ModificarCliente(int.Parse(ciCliente), txtNombre.Text, int.Parse(txtTelefono.Text), txtDireccion.Text, int.Parse(txtCi.Text));
             dtgvClientes.DataSource = cn.ConsultarTablaClienteDG();
             txtCi.Clear();
             txtNombre.Clear();
-            txtApellido.Clear();
             txtTelefono.Clear();
             txtDireccion.Clear();
             txtCi.Focus();
@@ -52,12 +51,19 @@ namespace SabrosoSoftware
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            //cn.EliminarCliente(id);
-            cn.EliminarCliente(int.Parse(ciCliente));
+            DialogResult result = DialogResult.No;  
+            result = MessageBox.Show("¿Esta seguro que quiere eliminar el cliente?", "Eliminar Cliente!", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+
+            if (result != DialogResult.No)
+            {
+
+                cn.EliminarCliente(int.Parse(ciCliente));
+
+            }
+
             dtgvClientes.DataSource = cn.ConsultarTablaClienteDG();
             txtCi.Clear();
             txtNombre.Clear();
-            txtApellido.Clear();
             txtTelefono.Clear();
             txtDireccion.Clear();
             txtCi.Focus();
@@ -67,11 +73,10 @@ namespace SabrosoSoftware
         private void btnAñadir_Click(object sender, EventArgs e)
         {
             //(ci, nom, ape, tel, dire);
-            cn.AgregarCliente(txtNombre.Text, txtApellido.Text, int.Parse(txtTelefono.Text), txtDireccion.Text, int.Parse(txtCi.Text));
+            cn.AgregarCliente(txtNombre.Text, int.Parse(txtTelefono.Text), txtDireccion.Text, int.Parse(txtCi.Text));
             dtgvClientes.DataSource = cn.ConsultarTablaClienteDG();
             txtCi.Clear();
             txtNombre.Clear();
-            txtApellido.Clear();
             txtTelefono.Clear();
             txtDireccion.Clear();
             txtCi.Focus();
@@ -90,18 +95,18 @@ namespace SabrosoSoftware
 
         }
 
-        public int ModificarCliente(int id, string nom, string ape, int tel, string dire, int ci)
+        public int ModificarCliente(int id, string nom, int tel, string dire, int ci)
         {
 
-            return cn.ModificarCliente(id, nom, ape, tel, dire, ci);
+            return cn.ModificarCliente(id, nom, tel, dire, ci);
 
         }
 
-        public int AgregarCliente(string nom, string ape, int tel, string dire,int ci)
+        public int AgregarCliente(string nom, int tel, string dire,int ci)
         {
 
 
-            return cn.AgregarCliente(nom,ape,tel,dire,ci);
+            return cn.AgregarCliente(nom,tel,dire,ci);
         }
 
         private void dtgvClientes_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -109,11 +114,70 @@ namespace SabrosoSoftware
             ciCliente = dtgvClientes.CurrentRow.Cells[0].Value.ToString();
 
         }
+
+        private void txtCi_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 32 && e.KeyChar <=47) || (e.KeyChar >= 58 && e.KeyChar <= 255))
+            {
+                MessageBox.Show("Solo numeros", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation );
+                e.Handled = true;
+                return;
+
+            }
     }
 
+        private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
+        {
 
+            if ((e.KeyChar != 32 && e.KeyChar <= 64) || (e.KeyChar >= 91 && e.KeyChar <= 96) || (e.KeyChar >= 123 && e.KeyChar <= 255))
+            {
+                MessageBox.Show("Solo letras", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                e.Handled = true;
+                return;
 
+            }
 
+        }
+
+        private void txtCi_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtTelefono_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 32 && e.KeyChar <= 47) || (e.KeyChar >= 58 && e.KeyChar <= 255))
+            {
+                MessageBox.Show("Solo numeros", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                e.Handled = true;
+                return;
+
+            }
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+
+            if (txtBuscar.Text == "")
+            {
+
+                dtgvClientes.DataSource = cn.ConsultarTablaClienteDG();
+
+            }
+
+            else dtgvClientes.DataSource = cn.ConsultarTablaClienteBusquedaDG(txtBuscar.Text);
+        }
+
+        private void txtNombre_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtTelefono_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+    }
 
 
 }

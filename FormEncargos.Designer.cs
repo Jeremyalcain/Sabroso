@@ -32,16 +32,20 @@ namespace AppFormEncargos
             this.btnAñadir = new System.Windows.Forms.Button();
             this.lblHorario = new System.Windows.Forms.Label();
             this.lblFecha = new System.Windows.Forms.Label();
-            this.lblDescripcion = new System.Windows.Forms.Label();
+            this.lblProductos = new System.Windows.Forms.Label();
             this.lblEncargo = new System.Windows.Forms.Label();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.dtgvEncargos = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.listaProducto = new System.Windows.Forms.CheckedListBox();
+            this.lblNombreyApellido = new System.Windows.Forms.Label();
+            this.cbxCliente = new System.Windows.Forms.ComboBox();
             this.cbHorario = new System.Windows.Forms.ComboBox();
             this.dtpFecha = new System.Windows.Forms.DateTimePicker();
             this.btnConstancia = new System.Windows.Forms.Button();
-            this.txtDescripcion = new System.Windows.Forms.RichTextBox();
+            this.btnBuscar = new System.Windows.Forms.Button();
+            this.txtBuscar = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvEncargos)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -64,12 +68,13 @@ namespace AppFormEncargos
             this.lblHorario.BackColor = System.Drawing.Color.Transparent;
             this.lblHorario.Font = new System.Drawing.Font("Segoe UI", 9.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
             this.lblHorario.ForeColor = System.Drawing.Color.Black;
-            this.lblHorario.Location = new System.Drawing.Point(14, 159);
+            this.lblHorario.Location = new System.Drawing.Point(13, 199);
             this.lblHorario.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblHorario.Name = "lblHorario";
             this.lblHorario.Size = new System.Drawing.Size(58, 17);
             this.lblHorario.TabIndex = 14;
             this.lblHorario.Text = "Horario:";
+            this.lblHorario.Click += new System.EventHandler(this.lblHorario_Click);
             // 
             // lblFecha
             // 
@@ -77,25 +82,25 @@ namespace AppFormEncargos
             this.lblFecha.BackColor = System.Drawing.Color.Transparent;
             this.lblFecha.Font = new System.Drawing.Font("Segoe UI", 9.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
             this.lblFecha.ForeColor = System.Drawing.Color.Black;
-            this.lblFecha.Location = new System.Drawing.Point(27, 127);
+            this.lblFecha.Location = new System.Drawing.Point(13, 157);
             this.lblFecha.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblFecha.Name = "lblFecha";
             this.lblFecha.Size = new System.Drawing.Size(48, 17);
             this.lblFecha.TabIndex = 13;
             this.lblFecha.Text = "Fecha:";
             // 
-            // lblDescripcion
+            // lblProductos
             // 
-            this.lblDescripcion.AutoSize = true;
-            this.lblDescripcion.BackColor = System.Drawing.Color.Transparent;
-            this.lblDescripcion.Font = new System.Drawing.Font("Segoe UI", 9.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.lblDescripcion.ForeColor = System.Drawing.Color.Black;
-            this.lblDescripcion.Location = new System.Drawing.Point(14, 196);
-            this.lblDescripcion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblDescripcion.Name = "lblDescripcion";
-            this.lblDescripcion.Size = new System.Drawing.Size(83, 17);
-            this.lblDescripcion.TabIndex = 11;
-            this.lblDescripcion.Text = "Descripcion:";
+            this.lblProductos.AutoSize = true;
+            this.lblProductos.BackColor = System.Drawing.Color.Transparent;
+            this.lblProductos.Font = new System.Drawing.Font("Segoe UI", 9.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.lblProductos.ForeColor = System.Drawing.Color.Black;
+            this.lblProductos.Location = new System.Drawing.Point(15, 233);
+            this.lblProductos.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblProductos.Name = "lblProductos";
+            this.lblProductos.Size = new System.Drawing.Size(111, 17);
+            this.lblProductos.TabIndex = 11;
+            this.lblProductos.Text = "Elegir Productos:";
             // 
             // lblEncargo
             // 
@@ -103,7 +108,7 @@ namespace AppFormEncargos
             this.lblEncargo.BackColor = System.Drawing.Color.Transparent;
             this.lblEncargo.Font = new System.Drawing.Font("Segoe UI", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
             this.lblEncargo.ForeColor = System.Drawing.Color.Black;
-            this.lblEncargo.Location = new System.Drawing.Point(70, 91);
+            this.lblEncargo.Location = new System.Drawing.Point(63, 61);
             this.lblEncargo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblEncargo.Name = "lblEncargo";
             this.lblEncargo.Size = new System.Drawing.Size(119, 20);
@@ -113,7 +118,7 @@ namespace AppFormEncargos
             // btnEliminar
             // 
             this.btnEliminar.Font = new System.Drawing.Font("Segoe UI", 9.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.btnEliminar.Location = new System.Drawing.Point(120, 448);
+            this.btnEliminar.Location = new System.Drawing.Point(134, 448);
             this.btnEliminar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(88, 27);
@@ -125,7 +130,7 @@ namespace AppFormEncargos
             // btnEditar
             // 
             this.btnEditar.Font = new System.Drawing.Font("Segoe UI", 9.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.btnEditar.Location = new System.Drawing.Point(24, 448);
+            this.btnEditar.Location = new System.Drawing.Point(38, 448);
             this.btnEditar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(88, 27);
@@ -138,11 +143,11 @@ namespace AppFormEncargos
             // 
             this.dtgvEncargos.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dtgvEncargos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgvEncargos.Location = new System.Drawing.Point(24, 30);
+            this.dtgvEncargos.Location = new System.Drawing.Point(12, 55);
             this.dtgvEncargos.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.dtgvEncargos.Name = "dtgvEncargos";
             this.dtgvEncargos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgvEncargos.Size = new System.Drawing.Size(534, 412);
+            this.dtgvEncargos.Size = new System.Drawing.Size(668, 442);
             this.dtgvEncargos.TabIndex = 20;
             this.dtgvEncargos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvEncargos_CellClick);
             this.dtgvEncargos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvEncargos_CellContentClick_1);
@@ -151,21 +156,55 @@ namespace AppFormEncargos
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Goldenrod;
-            this.panel1.Controls.Add(this.txtDescripcion);
+            this.panel1.Controls.Add(this.listaProducto);
+            this.panel1.Controls.Add(this.btnEliminar);
+            this.panel1.Controls.Add(this.btnEditar);
+            this.panel1.Controls.Add(this.lblNombreyApellido);
+            this.panel1.Controls.Add(this.cbxCliente);
             this.panel1.Controls.Add(this.cbHorario);
             this.panel1.Controls.Add(this.dtpFecha);
             this.panel1.Controls.Add(this.btnAñadir);
             this.panel1.Controls.Add(this.lblHorario);
             this.panel1.Controls.Add(this.lblFecha);
-            this.panel1.Controls.Add(this.lblDescripcion);
+            this.panel1.Controls.Add(this.lblProductos);
             this.panel1.Controls.Add(this.lblEncargo);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel1.Location = new System.Drawing.Point(587, 0);
+            this.panel1.Location = new System.Drawing.Point(701, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(250, 525);
             this.panel1.TabIndex = 23;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // listaProducto
+            // 
+            this.listaProducto.FormattingEnabled = true;
+            this.listaProducto.Location = new System.Drawing.Point(23, 263);
+            this.listaProducto.Name = "listaProducto";
+            this.listaProducto.Size = new System.Drawing.Size(159, 94);
+            this.listaProducto.TabIndex = 27;
+            this.listaProducto.SelectedIndexChanged += new System.EventHandler(this.checkedListBox1_SelectedIndexChanged);
+            // 
+            // lblNombreyApellido
+            // 
+            this.lblNombreyApellido.AutoSize = true;
+            this.lblNombreyApellido.BackColor = System.Drawing.Color.Transparent;
+            this.lblNombreyApellido.Font = new System.Drawing.Font("Segoe UI", 9.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.lblNombreyApellido.ForeColor = System.Drawing.Color.Black;
+            this.lblNombreyApellido.Location = new System.Drawing.Point(23, 96);
+            this.lblNombreyApellido.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblNombreyApellido.Name = "lblNombreyApellido";
+            this.lblNombreyApellido.Size = new System.Drawing.Size(126, 17);
+            this.lblNombreyApellido.TabIndex = 25;
+            this.lblNombreyApellido.Text = "Seleccionar cliente:";
+            // 
+            // cbxCliente
+            // 
+            this.cbxCliente.FormattingEnabled = true;
+            this.cbxCliente.Location = new System.Drawing.Point(23, 116);
+            this.cbxCliente.Name = "cbxCliente";
+            this.cbxCliente.Size = new System.Drawing.Size(153, 23);
+            this.cbxCliente.TabIndex = 24;
             // 
             // cbHorario
             // 
@@ -173,7 +212,7 @@ namespace AppFormEncargos
             this.cbHorario.Items.AddRange(new object[] {
             "Mañana",
             "Tarde"});
-            this.cbHorario.Location = new System.Drawing.Point(83, 156);
+            this.cbHorario.Location = new System.Drawing.Point(78, 196);
             this.cbHorario.Name = "cbHorario";
             this.cbHorario.Size = new System.Drawing.Size(121, 23);
             this.cbHorario.TabIndex = 20;
@@ -181,7 +220,7 @@ namespace AppFormEncargos
             // dtpFecha
             // 
             this.dtpFecha.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFecha.Location = new System.Drawing.Point(83, 127);
+            this.dtpFecha.Location = new System.Drawing.Point(73, 157);
             this.dtpFecha.Name = "dtpFecha";
             this.dtpFecha.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.dtpFecha.Size = new System.Drawing.Size(93, 23);
@@ -190,7 +229,7 @@ namespace AppFormEncargos
             // btnConstancia
             // 
             this.btnConstancia.Font = new System.Drawing.Font("Segoe UI", 9.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.btnConstancia.Location = new System.Drawing.Point(470, 448);
+            this.btnConstancia.Location = new System.Drawing.Point(592, 8);
             this.btnConstancia.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnConstancia.Name = "btnConstancia";
             this.btnConstancia.Size = new System.Drawing.Size(88, 27);
@@ -199,23 +238,31 @@ namespace AppFormEncargos
             this.btnConstancia.UseVisualStyleBackColor = true;
             this.btnConstancia.Click += new System.EventHandler(this.btnConstancia_Click);
             // 
-            // txtDescripcion
+            // btnBuscar
             // 
-            this.txtDescripcion.Location = new System.Drawing.Point(14, 216);
-            this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(223, 96);
-            this.txtDescripcion.TabIndex = 21;
-            this.txtDescripcion.Text = "";
+            this.btnBuscar.Location = new System.Drawing.Point(201, 12);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(128, 23);
+            this.btnBuscar.TabIndex = 28;
+            this.btnBuscar.Text = "Buscar Encargo";
+            this.btnBuscar.UseVisualStyleBackColor = true;
+            // 
+            // txtBuscar
+            // 
+            this.txtBuscar.Location = new System.Drawing.Point(21, 12);
+            this.txtBuscar.Name = "txtBuscar";
+            this.txtBuscar.Size = new System.Drawing.Size(184, 23);
+            this.txtBuscar.TabIndex = 27;
             // 
             // FormEncargos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Goldenrod;
-            this.ClientSize = new System.Drawing.Size(837, 525);
+            this.ClientSize = new System.Drawing.Size(951, 525);
             this.Controls.Add(this.btnConstancia);
-            this.Controls.Add(this.btnEliminar);
-            this.Controls.Add(this.btnEditar);
+            this.Controls.Add(this.btnBuscar);
+            this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.dtgvEncargos);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -227,6 +274,7 @@ namespace AppFormEncargos
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -234,7 +282,7 @@ namespace AppFormEncargos
         private System.Windows.Forms.Button btnAñadir;
         private System.Windows.Forms.Label lblHorario;
         private System.Windows.Forms.Label lblFecha;
-        private System.Windows.Forms.Label lblDescripcion;
+        private System.Windows.Forms.Label lblProductos;
         private System.Windows.Forms.Label lblEncargo;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnEditar;
@@ -243,7 +291,11 @@ namespace AppFormEncargos
         private System.Windows.Forms.DateTimePicker dtpFecha;
         private System.Windows.Forms.Button btnConstancia;
         private System.Windows.Forms.ComboBox cbHorario;
-        private System.Windows.Forms.RichTextBox txtDescripcion;
+        private System.Windows.Forms.ComboBox cbxCliente;
+        private System.Windows.Forms.Label lblNombreyApellido;
+        private System.Windows.Forms.Button btnBuscar;
+        private System.Windows.Forms.TextBox txtBuscar;
+        private System.Windows.Forms.CheckedListBox listaProducto;
     }
 }
 

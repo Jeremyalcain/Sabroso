@@ -9,11 +9,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace AppFormEncargos
 {
     public partial class FormEncargos : Form
     {
+
+        static string conexionstring = "Server=localhost; Database=bdsabroso; Uid=sabroso; pwd=123456789; port=3306";
+        MySqlConnection con = new MySqlConnection(conexionstring);
+
         string idEncargos;
 
         ConexionSQL cn = new ConexionSQL();
@@ -30,17 +35,53 @@ namespace AppFormEncargos
         }
         private void btnAñadir_Click(object sender, EventArgs e)
         {
-            cn.AgregarEncargo(dtpFecha.Text, cbHorario.Text, txtDescripcion.Text);
-            dtgvEncargos.DataSource = cn.ConsultarTablaEncargosDG();
-            txtDescripcion.Clear();
+            string cliente = cbxCliente.Text;
+            con.Open();
+            string query = "select id from cliente where Nombre_y_Apellido='"+cliente+"'";
+            MySqlCommand cmd = new MySqlCommand(query, con);
+            MySqlDataAdapter data = new MySqlDataAdapter(cmd);
+            DataTable tabla = new DataTable();
+            data.FillAsync(tabla);
+            con.Close();
 
+            if (tabla.Rows.Count != 0)
+            {
+                cn.AgregarEncargo(cliente, dtpFecha.Text, cbHorario.Text, listaProducto.Text);
+                dtgvEncargos.DataSource = cn.ConsultarTablaEncargosDG();
+
+            }
+
+            else
+            {
+
+                MessageBox.Show("El cliente no existe");
+
+            }
 
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
 
+            MySqlCommand cmd1 = new MySqlCommand("Select Nombre_y_Apellido from Cliente where eliminados=0", con);
+            con.Open();
+            MySqlDataReader registro1 = cmd1.ExecuteReader();
+            while (registro1.Read())
+            {
+                cbxCliente.Items.Add(registro1["Nombre_y_Apellido"]);
+            }
+            con.Close();
+
+            MySqlCommand cmd3 = new MySqlCommand("Select Nombre, Precio from Stock where eliminados=0", con);
+            con.Open();
+            MySqlDataReader registro3 = cmd3.ExecuteReader();
+            while (registro3.Read())
+            {
+                listaProducto.Items.Add(registro3["Nombre"]);
+            }
+            con.Close();
         }
+
 
         private void dtgvEncargos_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -49,16 +90,25 @@ namespace AppFormEncargos
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            cn.ModificarEncargos(int.Parse(idEncargos), dtpFecha.Text, cbHorario.Text, txtDescripcion.Text);
+            cn.ModificarEncargos(int.Parse(idEncargos), dtpFecha.Text, cbHorario.Text, listaProducto.Text);
             dtgvEncargos.DataSource = cn.ConsultarTablaEncargosDG();
-            txtDescripcion.Clear();
+            
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            cn.EliminarEncargo(idEncargos);
+            DialogResult result = DialogResult.No;
+            result = MessageBox.Show("¿Esta seguro que quiere eliminar el encargo?", "Eliminar Encargo!", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+
+            if (result != DialogResult.No)
+            {
+
+                cn.EliminarEncargo(idEncargos);
+
+            }
+
+            
             dtgvEncargos.DataSource = cn.ConsultarTablaEncargosDG();
-            txtDescripcion.Clear();
 
         }
 
@@ -88,9 +138,19 @@ namespace AppFormEncargos
             new CrearPDF().Show(); 
         }
 
-        private void txtDescripcion_TextChanged(object sender, EventArgs e)
+        private void cbxProductos_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void lblHorario_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkedListBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+       
         }
     }
 }

@@ -17,7 +17,7 @@ namespace SabrosoSoftware
         public DataTable ConsultarTablaClienteDG()
         {
 
-            string query = "select CI, nombre, apellido, telefono, direccion from cliente where eliminados=0";
+            string query = "select CI, nombre_y_apellido, telefono, direccion from cliente where eliminados=0";
             MySqlCommand cmd = new MySqlCommand(query,con);
             MySqlDataAdapter data = new MySqlDataAdapter(cmd);
             DataTable tabla = new DataTable();
@@ -29,11 +29,42 @@ namespace SabrosoSoftware
 
           
         }
+        public DataTable ConsultarTablaClienteBusquedaDG(string nom)
+        {
+
+            string query = "select CI, nombre_y_apellido, telefono, direccion from cliente where nombre_y_apellido='" + nom + "' AND eliminados=0";
+            MySqlCommand cmd = new MySqlCommand(query, con);
+            MySqlDataAdapter data = new MySqlDataAdapter(cmd);
+            DataTable tabla = new DataTable();
+            data.FillAsync(tabla);
+
+            con.Close();
+
+            return tabla;
+
+
+        }
 
         public DataTable ConsultarTablaEncargosDG()
         {
 
-            string query = "select id, fecha, horario, descripcion from encargos where eliminados=0";
+            string query = "select id, nombre_cliente, fecha, horario, Productos from encargos where eliminado=0";
+            MySqlCommand cmd = new MySqlCommand(query,con);
+            MySqlDataAdapter data = new MySqlDataAdapter(cmd);
+            DataTable tabla = new DataTable();
+            data.FillAsync(tabla);
+
+            con.Close();
+
+            return tabla;
+
+
+        }
+
+        public DataTable ConsultarTablaProductosBusquedaDG(string nom)
+        {
+
+            string query = "select id, nombre, precio from stock where Nombre='"+nom+"' AND eliminados=0";
             MySqlCommand cmd = new MySqlCommand(query, con);
             MySqlDataAdapter data = new MySqlDataAdapter(cmd);
             DataTable tabla = new DataTable();
@@ -49,7 +80,7 @@ namespace SabrosoSoftware
         public DataTable ConsultarTablaProductosDG()
         {
 
-            string query = "select id, nombre, precio, cantidad from stock where eliminados=0";
+            string query = "select id, nombre, precio from stock where eliminados=0";
             MySqlCommand cmd = new MySqlCommand(query, con);
             MySqlDataAdapter data = new MySqlDataAdapter(cmd);
             DataTable tabla = new DataTable();
@@ -62,11 +93,11 @@ namespace SabrosoSoftware
 
         }
 
-        public int AgregarCliente(string nom, string ape, int tel, string dire, int ci)
+        public int AgregarCliente(string nom, int tel, string dire, int ci)
         {
             int flag = 0;
             con.Open();
-            string query = "insert into cliente (nombre, apellido, telefono, direccion, ci) values ('" + nom + "','" + ape + "','" + tel + "','" + dire + "', '" + ci + "')";
+            string query = "insert into cliente (nombre_y_apellido, telefono, direccion, ci) values ('" + nom + "','" + tel + "','" + dire + "', '" + ci + "')";
             MySqlCommand cmd = new MySqlCommand(query, con);
             flag = cmd.ExecuteNonQuery();
             con.Close();
@@ -74,11 +105,11 @@ namespace SabrosoSoftware
             return flag;
         }
 
-        public int AgregarProducto(string nom, int pre, string can)
+        public int AgregarProducto(string nom, string pre)
         {
             int flag = 0;
             con.Open();
-            string query = "insert into stock (nombre, precio, cantidad) values ('" + nom + "', '" + pre.ToString() + "', '" + can + "')";
+            string query = "insert into stock (nombre, precio) values ('" + nom + "', '" + pre + "')";
             MySqlCommand cmd = new MySqlCommand(query, con);
             flag = cmd.ExecuteNonQuery();
             con.Close();
@@ -87,11 +118,11 @@ namespace SabrosoSoftware
         }
 
 
-        public int AgregarEncargo(string fecha, string hora, string  desc)
+        public int AgregarEncargo(string nom, string fecha, string hora, string  pro)
         {
             int flag = 0;
             con.Open();
-            string query = "insert into encargos (fecha, horario, descripcion) values ('" + fecha + "','" + hora + "','" + desc + "')";
+            string query = "insert into encargos (nombre_cliente, fecha, horario, Productos) values ('" + nom + "', '" + fecha + "','" + hora + "','" + pro + "')";
             MySqlCommand cmd = new MySqlCommand(query, con);
             flag = cmd.ExecuteNonQuery();
             con.Close();
@@ -99,11 +130,11 @@ namespace SabrosoSoftware
             return flag;
         }
 
-        public int ModificarCliente(int ciEliminar, string nom, string ape, int tel, string dire, int ci)
+        public int ModificarCliente(int ciEliminar, string nom, int tel, string dire, int ci)
         {
             int flag = 0;
             con.Open();
-            string query = "Update cliente set Nombre ='" + nom +"', Apellido ='"+ ape +"', Telefono ='"+ tel +"', Direccion ='"+ dire + "', CI ='" + ci + "'where CI=" + ciEliminar+"";
+            string query = "Update cliente set Nombre_y_Apellido ='" + nom +"', Telefono ='"+ tel +"', Direccion ='"+ dire + "', CI ='" + ci + "'where CI=" + ciEliminar+"";
 
             MySqlCommand cmd = new MySqlCommand(query, con);
             flag = cmd.ExecuteNonQuery();
@@ -111,11 +142,11 @@ namespace SabrosoSoftware
             return flag;
         }
 
-        public int ModificarProductos(int id, string nom, string pre, string can)
+        public int ModificarProductos3(int id, string nom)
         {
             int flag = 0;
             con.Open();
-            string query = "Update stock set Nombre ='" + nom + "', Precio ='" + pre + "', Cantidad = '" + can + "', 'where id=" + id + "";
+            string query = "Update stock set Nombre ='" + nom + "' where id='" + id + "'";
 
             MySqlCommand cmd = new MySqlCommand(query, con);
             flag = cmd.ExecuteNonQuery();
@@ -123,11 +154,38 @@ namespace SabrosoSoftware
             return flag;
         }
 
-        public int ModificarEncargos(int id, string nom, string dire, string fecha)
+        public int ModificarProductos(int id, string nom, string pre)
         {
             int flag = 0;
             con.Open();
-            string query = "Update encargos set Nombre ='" + nom + "', Direccion ='" + dire + "', Fecha ='" + fecha + "'where id=" + id + "";
+            string query = "Update stock set Nombre ='" + nom + "', Precio ='" + pre + "' where id='" + id + "'";
+
+            MySqlCommand cmd = new MySqlCommand(query, con);
+            flag = cmd.ExecuteNonQuery();
+            con.Close();
+            return flag;
+        }
+
+
+
+        public int ModificarProductos2(int id, string pre)
+        {
+            int flag = 0;
+            con.Open();
+            string query = "Update stock set Precio ='" + pre + "' where id='" + id + "'";
+
+            MySqlCommand cmd = new MySqlCommand(query, con);
+            flag = cmd.ExecuteNonQuery();
+            con.Close();
+            return flag;
+        }
+
+
+        public int ModificarEncargos(int id, string fecha, string hora, string pro)
+        {
+            int flag = 0;
+            con.Open();
+            string query = "Update encargos set Fecha ='" + fecha + "', Horario ='" + hora + "', Productos ='" + pro + "', where id=" + id + "";
 
             MySqlCommand cmd = new MySqlCommand(query, con);
             flag = cmd.ExecuteNonQuery();
@@ -164,7 +222,7 @@ namespace SabrosoSoftware
         {
             int flag = 0;
             con.Open();
-            string query = "Update encargos set eliminados='1' where ID = '" + id + "'";
+            string query = "Update encargos set eliminado='1' where id = '" + id + "'";
             MySqlCommand cmd = new MySqlCommand(query, con);
             flag = cmd.ExecuteNonQuery();
             con.Close();

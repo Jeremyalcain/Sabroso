@@ -84,7 +84,7 @@ namespace SabrosoSoftware
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Goldenrod;
-            this.ClientSize = new System.Drawing.Size(837, 525);
+            this.ClientSize = new System.Drawing.Size(951, 525);
             this.Controls.Add(this.lblInformacionIngles);
             this.Controls.Add(this.lblInformacionEspañol);
             this.Controls.Add(this.picLogoUtu);
