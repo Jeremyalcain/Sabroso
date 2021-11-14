@@ -46,7 +46,7 @@ namespace AppFormEncargos
 
             if (tabla.Rows.Count != 0)
             {
-                cn.AgregarEncargo(cliente, dtpFecha.Text, cbHorario.Text, listaProducto.Text);
+                cn.AgregarEncargo(cliente, dtpFecha.Text, cbHorario.Text);
                 dtgvEncargos.DataSource = cn.ConsultarTablaEncargosDG();
 
             }
@@ -72,16 +72,16 @@ namespace AppFormEncargos
             }
             con.Close();
 
-            MySqlCommand cmd3 = new MySqlCommand("Select Nombre, Precio from Stock where eliminados=0", con);
-            con.Open();
-            MySqlDataReader registro3 = cmd3.ExecuteReader();
-            while (registro3.Read())
-            {
-                listaProducto.Items.Add(registro3["Nombre"]);
-            }
-            con.Close();
+            /*  MySqlCommand cmd3 = new MySqlCommand("Select Nombre, Precio from Stock where eliminados=0", con);
+              con.Open();
+              MySqlDataReader registro3 = cmd3.ExecuteReader();
+              while (registro3.Read())
+              {
+                  listaProducto.Items.Add(registro3["Nombre"]);
+              }
+              con.Close();*/
         }
-
+          
 
         private void dtgvEncargos_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -90,7 +90,7 @@ namespace AppFormEncargos
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            cn.ModificarEncargos(int.Parse(idEncargos), dtpFecha.Text, cbHorario.Text, listaProducto.Text);
+            cn.ModificarEncargos(int.Parse(idEncargos), dtpFecha.Text, cbHorario.Text);
             dtgvEncargos.DataSource = cn.ConsultarTablaEncargosDG();
             
         }
