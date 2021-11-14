@@ -32,7 +32,7 @@ namespace SabrosoSoftware
         public DataTable ConsultarTablaClienteBusquedaDG(string nom)
         {
 
-            string query = "select CI, nombre_y_apellido, telefono, direccion from cliente where nombre_y_apellido='" + nom + "' AND eliminados=0";
+            string query = "select CI, Nombre_Y_Apellido, Telefono, Direccion from cliente where nombre_y_apellido='" + nom + "' AND eliminados=0";
             MySqlCommand cmd = new MySqlCommand(query, con);
             MySqlDataAdapter data = new MySqlDataAdapter(cmd);
             DataTable tabla = new DataTable();

@@ -29,6 +29,7 @@ namespace AppFormEncargos
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnAñadir = new System.Windows.Forms.Button();
             this.lblHorario = new System.Windows.Forms.Label();
             this.lblFecha = new System.Windows.Forms.Label();
@@ -68,7 +69,7 @@ namespace AppFormEncargos
             this.lblHorario.BackColor = System.Drawing.Color.Transparent;
             this.lblHorario.Font = new System.Drawing.Font("Segoe UI", 9.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
             this.lblHorario.ForeColor = System.Drawing.Color.Black;
-            this.lblHorario.Location = new System.Drawing.Point(13, 199);
+            this.lblHorario.Location = new System.Drawing.Point(23, 196);
             this.lblHorario.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblHorario.Name = "lblHorario";
             this.lblHorario.Size = new System.Drawing.Size(58, 17);
@@ -82,12 +83,13 @@ namespace AppFormEncargos
             this.lblFecha.BackColor = System.Drawing.Color.Transparent;
             this.lblFecha.Font = new System.Drawing.Font("Segoe UI", 9.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
             this.lblFecha.ForeColor = System.Drawing.Color.Black;
-            this.lblFecha.Location = new System.Drawing.Point(13, 157);
+            this.lblFecha.Location = new System.Drawing.Point(29, 157);
             this.lblFecha.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblFecha.Name = "lblFecha";
             this.lblFecha.Size = new System.Drawing.Size(48, 17);
             this.lblFecha.TabIndex = 13;
             this.lblFecha.Text = "Fecha:";
+            this.lblFecha.Click += new System.EventHandler(this.lblFecha_Click);
             // 
             // lblProductos
             // 
@@ -95,7 +97,7 @@ namespace AppFormEncargos
             this.lblProductos.BackColor = System.Drawing.Color.Transparent;
             this.lblProductos.Font = new System.Drawing.Font("Segoe UI", 9.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
             this.lblProductos.ForeColor = System.Drawing.Color.Black;
-            this.lblProductos.Location = new System.Drawing.Point(15, 233);
+            this.lblProductos.Location = new System.Drawing.Point(13, 244);
             this.lblProductos.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblProductos.Name = "lblProductos";
             this.lblProductos.Size = new System.Drawing.Size(111, 17);
@@ -141,11 +143,14 @@ namespace AppFormEncargos
             // 
             // dtgvEncargos
             // 
-            this.dtgvEncargos.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dtgvEncargos.BackgroundColor = System.Drawing.Color.White;
             this.dtgvEncargos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgvEncargos.Location = new System.Drawing.Point(12, 55);
+            this.dtgvEncargos.Location = new System.Drawing.Point(11, 55);
             this.dtgvEncargos.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.dtgvEncargos.Name = "dtgvEncargos";
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Goldenrod;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 9.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.dtgvEncargos.RowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dtgvEncargos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtgvEncargos.Size = new System.Drawing.Size(668, 442);
             this.dtgvEncargos.TabIndex = 20;
@@ -179,9 +184,9 @@ namespace AppFormEncargos
             // listaProducto
             // 
             this.listaProducto.FormattingEnabled = true;
-            this.listaProducto.Location = new System.Drawing.Point(23, 263);
+            this.listaProducto.Location = new System.Drawing.Point(29, 264);
             this.listaProducto.Name = "listaProducto";
-            this.listaProducto.Size = new System.Drawing.Size(159, 94);
+            this.listaProducto.Size = new System.Drawing.Size(199, 94);
             this.listaProducto.TabIndex = 27;
             this.listaProducto.SelectedIndexChanged += new System.EventHandler(this.checkedListBox1_SelectedIndexChanged);
             // 
@@ -191,7 +196,7 @@ namespace AppFormEncargos
             this.lblNombreyApellido.BackColor = System.Drawing.Color.Transparent;
             this.lblNombreyApellido.Font = new System.Drawing.Font("Segoe UI", 9.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
             this.lblNombreyApellido.ForeColor = System.Drawing.Color.Black;
-            this.lblNombreyApellido.Location = new System.Drawing.Point(23, 96);
+            this.lblNombreyApellido.Location = new System.Drawing.Point(13, 96);
             this.lblNombreyApellido.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNombreyApellido.Name = "lblNombreyApellido";
             this.lblNombreyApellido.Size = new System.Drawing.Size(126, 17);
@@ -201,7 +206,7 @@ namespace AppFormEncargos
             // cbxCliente
             // 
             this.cbxCliente.FormattingEnabled = true;
-            this.cbxCliente.Location = new System.Drawing.Point(23, 116);
+            this.cbxCliente.Location = new System.Drawing.Point(84, 116);
             this.cbxCliente.Name = "cbxCliente";
             this.cbxCliente.Size = new System.Drawing.Size(153, 23);
             this.cbxCliente.TabIndex = 24;
@@ -212,7 +217,7 @@ namespace AppFormEncargos
             this.cbHorario.Items.AddRange(new object[] {
             "Mañana",
             "Tarde"});
-            this.cbHorario.Location = new System.Drawing.Point(78, 196);
+            this.cbHorario.Location = new System.Drawing.Point(84, 193);
             this.cbHorario.Name = "cbHorario";
             this.cbHorario.Size = new System.Drawing.Size(121, 23);
             this.cbHorario.TabIndex = 20;
@@ -220,7 +225,7 @@ namespace AppFormEncargos
             // dtpFecha
             // 
             this.dtpFecha.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFecha.Location = new System.Drawing.Point(73, 157);
+            this.dtpFecha.Location = new System.Drawing.Point(84, 151);
             this.dtpFecha.Name = "dtpFecha";
             this.dtpFecha.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.dtpFecha.Size = new System.Drawing.Size(93, 23);
@@ -229,7 +234,7 @@ namespace AppFormEncargos
             // btnConstancia
             // 
             this.btnConstancia.Font = new System.Drawing.Font("Segoe UI", 9.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.btnConstancia.Location = new System.Drawing.Point(592, 8);
+            this.btnConstancia.Location = new System.Drawing.Point(578, 10);
             this.btnConstancia.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnConstancia.Name = "btnConstancia";
             this.btnConstancia.Size = new System.Drawing.Size(88, 27);

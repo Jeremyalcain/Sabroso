@@ -29,7 +29,8 @@ namespace SabrosoSoftware
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dtgvProductos = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtPrecio = new System.Windows.Forms.TextBox();
@@ -51,13 +52,15 @@ namespace SabrosoSoftware
             this.dtgvProductos.AllowUserToAddRows = false;
             this.dtgvProductos.AllowUserToDeleteRows = false;
             this.dtgvProductos.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.dtgvProductos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.dtgvProductos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dtgvProductos.BackgroundColor = System.Drawing.Color.White;
             this.dtgvProductos.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dtgvProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgvProductos.Location = new System.Drawing.Point(12, 55);
             this.dtgvProductos.Name = "dtgvProductos";
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Goldenrod;
+            this.dtgvProductos.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dtgvProductos.RowTemplate.Height = 25;
             this.dtgvProductos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtgvProductos.Size = new System.Drawing.Size(668, 442);

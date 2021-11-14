@@ -29,6 +29,9 @@ namespace SabrosoSoftware
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -98,7 +101,7 @@ namespace SabrosoSoftware
             // txtCi
             // 
             this.txtCi.BackColor = System.Drawing.Color.White;
-            this.txtCi.Location = new System.Drawing.Point(83, 129);
+            this.txtCi.Location = new System.Drawing.Point(83, 195);
             this.txtCi.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtCi.Name = "txtCi";
             this.txtCi.Size = new System.Drawing.Size(154, 23);
@@ -112,7 +115,7 @@ namespace SabrosoSoftware
             this.lblCi.BackColor = System.Drawing.Color.Transparent;
             this.lblCi.Font = new System.Drawing.Font("Segoe UI", 9.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
             this.lblCi.ForeColor = System.Drawing.Color.Black;
-            this.lblCi.Location = new System.Drawing.Point(58, 132);
+            this.lblCi.Location = new System.Drawing.Point(58, 198);
             this.lblCi.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCi.Name = "lblCi";
             this.lblCi.Size = new System.Drawing.Size(24, 17);
@@ -147,7 +150,7 @@ namespace SabrosoSoftware
             this.lblNombre.BackColor = System.Drawing.Color.Transparent;
             this.lblNombre.Font = new System.Drawing.Font("Segoe UI", 9.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
             this.lblNombre.ForeColor = System.Drawing.Color.Black;
-            this.lblNombre.Location = new System.Drawing.Point(15, 175);
+            this.lblNombre.Location = new System.Drawing.Point(4, 136);
             this.lblNombre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(126, 17);
@@ -181,7 +184,7 @@ namespace SabrosoSoftware
             // txtNombre
             // 
             this.txtNombre.BackColor = System.Drawing.Color.White;
-            this.txtNombre.Location = new System.Drawing.Point(83, 195);
+            this.txtNombre.Location = new System.Drawing.Point(83, 156);
             this.txtNombre.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(154, 23);
@@ -216,11 +219,42 @@ namespace SabrosoSoftware
             // 
             // dtgvClientes
             // 
-            this.dtgvClientes.BackgroundColor = System.Drawing.Color.White;
-            this.dtgvClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgvClientes.GridColor = System.Drawing.Color.White;
+            this.dtgvClientes.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.dtgvClientes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dtgvClientes.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dtgvClientes.BackgroundColor = System.Drawing.Color.LemonChiffon;
+            this.dtgvClientes.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dtgvClientes.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.DarkSlateGray;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI Semibold", 13F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgvClientes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dtgvClientes.ColumnHeadersHeight = 35;
+            this.dtgvClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dtgvClientes.EnableHeadersVisualStyles = false;
+            this.dtgvClientes.GridColor = System.Drawing.Color.Black;
             this.dtgvClientes.Location = new System.Drawing.Point(12, 55);
             this.dtgvClientes.Name = "dtgvClientes";
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.Menu;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgvClientes.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dtgvClientes.RowHeadersVisible = false;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.LemonChiffon;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.LightSkyBlue;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            this.dtgvClientes.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dtgvClientes.RowTemplate.Height = 25;
             this.dtgvClientes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtgvClientes.Size = new System.Drawing.Size(668, 442);

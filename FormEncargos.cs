@@ -152,5 +152,10 @@ namespace AppFormEncargos
         {
        
         }
+
+        private void lblFecha_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
