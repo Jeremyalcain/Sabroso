@@ -104,7 +104,10 @@ namespace SabrosoSoftware
             
            CerrarForms<FormEncargos>();
            CerrarForms<FormProductos>();
+            CerrarForms<FormAbout>();
+            CerrarForms<FormResumen>();
             AbrirForms<FormClientes>();
+
 
            pictureBox3.BringToFront();
            pictureBox2.BringToFront();
@@ -129,6 +132,7 @@ namespace SabrosoSoftware
         {
             CerrarForms<FormAbout>();
             CerrarForms<FormClientes>();
+            CerrarForms<FormResumen>();
             CerrarForms<FormProductos>();
             AbrirForms<FormEncargos>();
 
@@ -142,6 +146,7 @@ namespace SabrosoSoftware
         private void btnProductos_Click(object sender, EventArgs e)
         {
             CerrarForms<FormAbout>();
+            CerrarForms<FormResumen>();
             CerrarForms<FormClientes>();
             CerrarForms<FormEncargos>();
             AbrirForms<FormProductos>();
@@ -157,6 +162,7 @@ namespace SabrosoSoftware
         {
             CerrarForms<FormClientes>();
             CerrarForms<FormEncargos>();
+            CerrarForms<FormResumen>();
             CerrarForms<FormProductos>();
             CerrarForms<FormAbout>();
 
@@ -171,6 +177,7 @@ namespace SabrosoSoftware
         private void btnClientes_Click_1(object sender, EventArgs e)
         {
             CerrarForms<FormAbout>();
+            CerrarForms<FormResumen>();
             CerrarForms<FormEncargos>();
             CerrarForms<FormProductos>();
             AbrirForms<FormClientes>();
@@ -184,6 +191,7 @@ namespace SabrosoSoftware
 
         private void btnAbout_Click(object sender, EventArgs e)
         {
+            CerrarForms<FormResumen>();
             CerrarForms<FormClientes>();
             CerrarForms<FormEncargos>();
             CerrarForms<FormProductos>();
@@ -198,6 +206,19 @@ namespace SabrosoSoftware
         private void panelMenu_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            CerrarForms<FormAbout>();
+            CerrarForms<FormClientes>();
+            CerrarForms<FormEncargos>();
+            CerrarForms<FormProductos>();
+            AbrirForms<FormResumen>();
+
+            pictureBox3.BringToFront();
+            pictureBox2.BringToFront();
+            pictureBox1.BringToFront();
         }
     }
 }

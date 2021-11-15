@@ -92,6 +92,21 @@ namespace SabrosoSoftware
 
 
         }
+        public DataTable ResumenDG()
+        {
+
+            string query = "select id, Productos from encargos where eliminado=0";
+            MySqlCommand cmd = new MySqlCommand(query, con);
+            MySqlDataAdapter data = new MySqlDataAdapter(cmd);
+            DataTable tabla = new DataTable();
+            data.FillAsync(tabla);
+
+            con.Close();
+
+            return tabla;
+
+
+        }
 
         public int AgregarCliente(string nom, int tel, string dire, int ci)
         {

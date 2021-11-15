@@ -41,6 +41,7 @@ namespace SabrosoSoftware
             this.btnAbout = new System.Windows.Forms.Button();
             this.panelForms = new System.Windows.Forms.Panel();
             this.mySqlConnection1 = new MySql.Data.MySqlClient.MySqlConnection();
+            this.btnResumen = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -84,6 +85,7 @@ namespace SabrosoSoftware
             // panelMenu
             // 
             this.panelMenu.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelMenu.BackgroundImage")));
+            this.panelMenu.Controls.Add(this.btnResumen);
             this.panelMenu.Controls.Add(this.btnClientes);
             this.panelMenu.Controls.Add(this.btnMenu);
             this.panelMenu.Controls.Add(this.btnEncargos);
@@ -185,6 +187,21 @@ namespace SabrosoSoftware
             this.panelForms.TabIndex = 9;
             this.panelForms.Paint += new System.Windows.Forms.PaintEventHandler(this.panelForms_Paint);
             // 
+            // btnResumen
+            // 
+            this.btnResumen.BackColor = System.Drawing.Color.Goldenrod;
+            this.btnResumen.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnResumen.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
+            this.btnResumen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnResumen.ForeColor = System.Drawing.Color.White;
+            this.btnResumen.Location = new System.Drawing.Point(31, 308);
+            this.btnResumen.Name = "btnResumen";
+            this.btnResumen.Size = new System.Drawing.Size(134, 39);
+            this.btnResumen.TabIndex = 11;
+            this.btnResumen.Text = "Resumen";
+            this.btnResumen.UseVisualStyleBackColor = false;
+            this.btnResumen.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -222,5 +239,6 @@ namespace SabrosoSoftware
         private MySql.Data.MySqlClient.MySqlConnection mySqlConnection1;
         private System.Windows.Forms.Button btnMenu;
         private System.Windows.Forms.Button btnClientes;
+        private System.Windows.Forms.Button btnResumen;
     }
 }
