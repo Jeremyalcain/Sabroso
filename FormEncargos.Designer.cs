@@ -41,6 +41,7 @@ namespace AppFormEncargos
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.txtCantidad1 = new System.Windows.Forms.TextBox();
             this.cbxProducto6 = new System.Windows.Forms.ComboBox();
             this.cbxProducto5 = new System.Windows.Forms.ComboBox();
             this.cbxProducto4 = new System.Windows.Forms.ComboBox();
@@ -55,6 +56,11 @@ namespace AppFormEncargos
             this.btnBuscar = new System.Windows.Forms.Button();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.dtgvEncargos = new System.Windows.Forms.DataGridView();
+            this.txtCantidad2 = new System.Windows.Forms.TextBox();
+            this.txtCantidad3 = new System.Windows.Forms.TextBox();
+            this.txtCantidad4 = new System.Windows.Forms.TextBox();
+            this.txtCantidad5 = new System.Windows.Forms.TextBox();
+            this.txtCantidad6 = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvEncargos)).BeginInit();
@@ -178,21 +184,34 @@ namespace AppFormEncargos
             // panel2
             // 
             this.panel2.AutoScroll = true;
+            this.panel2.Controls.Add(this.txtCantidad6);
+            this.panel2.Controls.Add(this.txtCantidad5);
+            this.panel2.Controls.Add(this.txtCantidad4);
+            this.panel2.Controls.Add(this.txtCantidad3);
+            this.panel2.Controls.Add(this.txtCantidad2);
+            this.panel2.Controls.Add(this.txtCantidad1);
             this.panel2.Controls.Add(this.cbxProducto6);
             this.panel2.Controls.Add(this.cbxProducto5);
             this.panel2.Controls.Add(this.cbxProducto4);
             this.panel2.Controls.Add(this.cbxProducto3);
             this.panel2.Controls.Add(this.cbxProducto2);
             this.panel2.Controls.Add(this.cbxProducto1);
-            this.panel2.Location = new System.Drawing.Point(23, 271);
+            this.panel2.Location = new System.Drawing.Point(13, 271);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(220, 89);
+            this.panel2.Size = new System.Drawing.Size(230, 89);
             this.panel2.TabIndex = 38;
+            // 
+            // txtCantidad1
+            // 
+            this.txtCantidad1.Location = new System.Drawing.Point(3, 3);
+            this.txtCantidad1.Name = "txtCantidad1";
+            this.txtCantidad1.Size = new System.Drawing.Size(18, 23);
+            this.txtCantidad1.TabIndex = 40;
             // 
             // cbxProducto6
             // 
             this.cbxProducto6.FormattingEnabled = true;
-            this.cbxProducto6.Location = new System.Drawing.Point(3, 149);
+            this.cbxProducto6.Location = new System.Drawing.Point(25, 148);
             this.cbxProducto6.Name = "cbxProducto6";
             this.cbxProducto6.Size = new System.Drawing.Size(184, 23);
             this.cbxProducto6.TabIndex = 5;
@@ -200,7 +219,7 @@ namespace AppFormEncargos
             // cbxProducto5
             // 
             this.cbxProducto5.FormattingEnabled = true;
-            this.cbxProducto5.Location = new System.Drawing.Point(3, 120);
+            this.cbxProducto5.Location = new System.Drawing.Point(25, 119);
             this.cbxProducto5.Name = "cbxProducto5";
             this.cbxProducto5.Size = new System.Drawing.Size(184, 23);
             this.cbxProducto5.TabIndex = 4;
@@ -208,7 +227,7 @@ namespace AppFormEncargos
             // cbxProducto4
             // 
             this.cbxProducto4.FormattingEnabled = true;
-            this.cbxProducto4.Location = new System.Drawing.Point(3, 91);
+            this.cbxProducto4.Location = new System.Drawing.Point(25, 90);
             this.cbxProducto4.Name = "cbxProducto4";
             this.cbxProducto4.Size = new System.Drawing.Size(184, 23);
             this.cbxProducto4.TabIndex = 3;
@@ -216,7 +235,7 @@ namespace AppFormEncargos
             // cbxProducto3
             // 
             this.cbxProducto3.FormattingEnabled = true;
-            this.cbxProducto3.Location = new System.Drawing.Point(3, 62);
+            this.cbxProducto3.Location = new System.Drawing.Point(25, 61);
             this.cbxProducto3.Name = "cbxProducto3";
             this.cbxProducto3.Size = new System.Drawing.Size(184, 23);
             this.cbxProducto3.TabIndex = 2;
@@ -224,7 +243,7 @@ namespace AppFormEncargos
             // cbxProducto2
             // 
             this.cbxProducto2.FormattingEnabled = true;
-            this.cbxProducto2.Location = new System.Drawing.Point(3, 33);
+            this.cbxProducto2.Location = new System.Drawing.Point(25, 32);
             this.cbxProducto2.Name = "cbxProducto2";
             this.cbxProducto2.Size = new System.Drawing.Size(184, 23);
             this.cbxProducto2.TabIndex = 1;
@@ -232,7 +251,7 @@ namespace AppFormEncargos
             // cbxProducto1
             // 
             this.cbxProducto1.FormattingEnabled = true;
-            this.cbxProducto1.Location = new System.Drawing.Point(3, 4);
+            this.cbxProducto1.Location = new System.Drawing.Point(25, 3);
             this.cbxProducto1.Name = "cbxProducto1";
             this.cbxProducto1.Size = new System.Drawing.Size(184, 23);
             this.cbxProducto1.TabIndex = 0;
@@ -353,6 +372,41 @@ namespace AppFormEncargos
             this.dtgvEncargos.TabIndex = 29;
             this.dtgvEncargos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvEncargos_CellClick_1);
             // 
+            // txtCantidad2
+            // 
+            this.txtCantidad2.Location = new System.Drawing.Point(3, 32);
+            this.txtCantidad2.Name = "txtCantidad2";
+            this.txtCantidad2.Size = new System.Drawing.Size(18, 23);
+            this.txtCantidad2.TabIndex = 41;
+            // 
+            // txtCantidad3
+            // 
+            this.txtCantidad3.Location = new System.Drawing.Point(3, 61);
+            this.txtCantidad3.Name = "txtCantidad3";
+            this.txtCantidad3.Size = new System.Drawing.Size(18, 23);
+            this.txtCantidad3.TabIndex = 42;
+            // 
+            // txtCantidad4
+            // 
+            this.txtCantidad4.Location = new System.Drawing.Point(3, 90);
+            this.txtCantidad4.Name = "txtCantidad4";
+            this.txtCantidad4.Size = new System.Drawing.Size(18, 23);
+            this.txtCantidad4.TabIndex = 43;
+            // 
+            // txtCantidad5
+            // 
+            this.txtCantidad5.Location = new System.Drawing.Point(3, 119);
+            this.txtCantidad5.Name = "txtCantidad5";
+            this.txtCantidad5.Size = new System.Drawing.Size(18, 23);
+            this.txtCantidad5.TabIndex = 44;
+            // 
+            // txtCantidad6
+            // 
+            this.txtCantidad6.Location = new System.Drawing.Point(3, 148);
+            this.txtCantidad6.Name = "txtCantidad6";
+            this.txtCantidad6.Size = new System.Drawing.Size(18, 23);
+            this.txtCantidad6.TabIndex = 45;
+            // 
             // FormEncargos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -372,6 +426,7 @@ namespace AppFormEncargos
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvEncargos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -402,6 +457,12 @@ namespace AppFormEncargos
         private System.Windows.Forms.ComboBox cbxProducto2;
         private System.Windows.Forms.ComboBox cbxProducto1;
         private System.Windows.Forms.DataGridView dtgvEncargos;
+        private System.Windows.Forms.TextBox txtCantidad1;
+        private System.Windows.Forms.TextBox txtCantidad6;
+        private System.Windows.Forms.TextBox txtCantidad5;
+        private System.Windows.Forms.TextBox txtCantidad4;
+        private System.Windows.Forms.TextBox txtCantidad3;
+        private System.Windows.Forms.TextBox txtCantidad2;
     }
 }
 

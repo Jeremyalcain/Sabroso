@@ -130,7 +130,7 @@ namespace SabrosoSoftware
             return flag;
         }
 
-        public int ModificarCliente(int ciEliminar, string nom, int tel, string dire, int ci)
+        public int ModificarCliente1(int ciEliminar, string nom, int tel, string dire, int ci)
         {
             int flag = 0;
             con.Open();
@@ -140,6 +140,121 @@ namespace SabrosoSoftware
             flag = cmd.ExecuteNonQuery();
             con.Close();
             return flag;
+
+            //Se edita todo
+        }
+
+        public int ModificarCliente2(int ciEliminar, int tel, string dire, int ci)
+        {
+            int flag = 0;
+            con.Open();
+            string query = "Update cliente set Telefono ='" + tel + "', Direccion ='" + dire + "', CI ='" + ci + "'where CI=" + ciEliminar + "";
+
+            MySqlCommand cmd = new MySqlCommand(query, con);
+            flag = cmd.ExecuteNonQuery();
+            con.Close();
+            return flag;
+
+            //Se edita todo menos nombre
+        }
+
+        public int ModificarCliente3(int ciEliminar, string nom, int tel, string dire)
+        {
+            int flag = 0;
+            con.Open();
+            string query = "Update cliente set Nombre_y_Apellido ='" + nom + "', Telefono ='" + tel + "', Direccion ='" + dire + "' where CI=" + ciEliminar + "";
+
+            MySqlCommand cmd = new MySqlCommand(query, con);
+            flag = cmd.ExecuteNonQuery();
+            con.Close();
+            return flag;
+
+            //Se edita todo menos ci
+        }
+
+        public int ModificarCliente4(int ciEliminar, string nom, string dire, int ci)
+        {
+            int flag = 0;
+            con.Open();
+            string query = "Update cliente set Nombre_y_Apellido ='" + nom + "', Direccion ='" + dire + "', CI ='" + ci + "' where CI=" + ciEliminar + "";
+
+            MySqlCommand cmd = new MySqlCommand(query, con);
+            flag = cmd.ExecuteNonQuery();
+            con.Close();
+            return flag;
+
+            //Se edita todo menos tel
+        }
+
+        public int ModificarCliente5(int ciEliminar, string nom, int tel, int ci)
+        {
+            int flag = 0;
+            con.Open();
+            string query = "Update cliente set Nombre_y_Apellido ='" + nom + "', Telefono ='" + tel + "', CI ='" + ci + "' where CI=" + ciEliminar + "";
+
+            MySqlCommand cmd = new MySqlCommand(query, con);
+            flag = cmd.ExecuteNonQuery();
+            con.Close();
+            return flag;
+
+            //Se edita todo menos dire
+        }
+
+
+        public int ModificarCliente6(int ciEliminar, string nom)
+        {
+            int flag = 0;
+            con.Open();
+            string query = "Update cliente set Nombre_y_Apellido ='" + nom + "' where CI=" + ciEliminar + "";
+
+            MySqlCommand cmd = new MySqlCommand(query, con);
+            flag = cmd.ExecuteNonQuery();
+            con.Close();
+            return flag;
+
+            //Se edita solo nom
+        }
+
+        public int ModificarCliente7(int ciEliminar, int ci)
+        {
+            int flag = 0;
+            con.Open();
+            string query = "Update cliente set CI ='" + ci + "' where CI=" + ciEliminar + "";
+
+            MySqlCommand cmd = new MySqlCommand(query, con);
+            flag = cmd.ExecuteNonQuery();
+            con.Close();
+            return flag;
+
+            //Se edita solo ci
+        }
+
+        public int ModificarCliente8(int ciEliminar, int tel)
+        {
+            int flag = 0;
+            con.Open();
+            string query = "Update cliente set Telefono ='" + tel + "' where CI=" + ciEliminar + "";
+
+            MySqlCommand cmd = new MySqlCommand(query, con);
+            flag = cmd.ExecuteNonQuery();
+            con.Close();
+            return flag;
+
+            //Se edita solo tel
+        }
+
+        public int ModificarCliente9(int ciEliminar, string dire)
+        {
+            int flag = 0;
+            con.Open();
+            string query = "Update cliente set Direccion ='" + dire + "' where CI=" + ciEliminar + "";
+
+            MySqlCommand cmd = new MySqlCommand(query, con);
+            flag = cmd.ExecuteNonQuery();
+            con.Close();
+            return flag;
+
+            //Se edita solo tel
         }
 
         public int ModificarProductos3(int id, string nom)

@@ -34,7 +34,7 @@ namespace AppFormEncargos
         }
         private void btnAñadir_Click(object sender, EventArgs e)
         {
-            string Productos = (cbxProducto1.Text + cbxProducto2.Text + cbxProducto3.Text + cbxProducto4.Text + cbxProducto5.Text + cbxProducto6.Text);
+            string Productos = (txtCantidad1.Text + " " + cbxProducto1.Text + " " + txtCantidad2.Text + " " + cbxProducto2.Text + " " + txtCantidad3.Text + " " + cbxProducto3.Text + " " + txtCantidad4.Text + " " + cbxProducto4.Text + " " + txtCantidad5.Text + " " + cbxProducto5.Text + " " + txtCantidad6.Text + " " + cbxProducto6.Text);
             string cliente = cbxCliente.Text;
             con.Open();
             string query = "select id from cliente where Nombre_y_Apellido='"+cliente+"'";

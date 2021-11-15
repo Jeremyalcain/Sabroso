@@ -41,7 +41,81 @@ namespace SabrosoSoftware
 
             }
 
-            else cn.ModificarCliente(int.Parse(ciCliente), txtNombre.Text, int.Parse(txtTelefono.Text), txtDireccion.Text, int.Parse(txtCi.Text));
+            else if (txtNombre.Text == "" && txtTelefono.Text != "" && txtCi.Text != "" && txtDireccion.Text != "")
+            {
+
+                cn.ModificarCliente2(int.Parse(ciCliente), int.Parse(txtTelefono.Text), txtDireccion.Text, int.Parse(txtCi.Text));
+
+
+                //Se edita todo menos nombre
+            }
+
+            else if (txtCi.Text == "" && txtTelefono.Text != "" && txtNombre.Text != "" && txtDireccion.Text != "")
+            {
+
+                cn.ModificarCliente3(int.Parse(ciCliente), txtNombre.Text, int.Parse(txtTelefono.Text), txtDireccion.Text);
+
+
+                //Se edita todo menos ci
+            }
+
+            else if (txtTelefono.Text == "" && txtNombre.Text != "" && txtCi.Text != "" && txtDireccion.Text != "")
+            {
+
+                cn.ModificarCliente4(int.Parse(ciCliente), txtNombre.Text, txtDireccion.Text, int.Parse(txtCi.Text));
+
+
+                //Se edita todo menos tel
+            }
+
+            else if (txtDireccion.Text == "" && txtTelefono.Text != "" && txtCi.Text != "" && txtNombre.Text != "")
+            {
+
+                cn.ModificarCliente5(int.Parse(ciCliente), txtNombre.Text, int.Parse(txtTelefono.Text), int.Parse(txtCi.Text));
+
+
+                //Se edita todo menos dire
+            }
+
+            else if (txtNombre.Text != "" && txtDireccion.Text == "" && txtTelefono.Text == "" && txtCi.Text == "")
+            {
+
+                cn.ModificarCliente6(int.Parse(ciCliente), txtNombre.Text);
+
+
+                //Se edita solo nombre
+            }
+
+            else if (txtCi.Text != "" && txtDireccion.Text == "" && txtTelefono.Text == "" && txtNombre.Text == "")
+            {
+
+                cn.ModificarCliente7(int.Parse(ciCliente), int.Parse(txtCi.Text));
+
+
+                //Se edita solo ci
+            }
+
+            else if (txtTelefono.Text != "" && txtDireccion.Text == "" && txtCi.Text == "" && txtNombre.Text == "")
+            {
+
+                cn.ModificarCliente8(int.Parse(ciCliente), int.Parse(txtTelefono.Text));
+
+
+                //Se edita solo telefono
+            }
+
+            else if (txtDireccion.Text != "" && txtTelefono.Text == "" && txtCi.Text == "" && txtNombre.Text == "")
+            {
+
+                cn.ModificarCliente9(int.Parse(ciCliente), txtDireccion.Text);
+
+
+                //Se edita solo direccion
+            }
+
+
+
+            else cn.ModificarCliente1(int.Parse(ciCliente), txtNombre.Text, int.Parse(txtTelefono.Text), txtDireccion.Text, int.Parse(txtCi.Text));
             dtgvClientes.DataSource = cn.ConsultarTablaClienteDG();
             txtCi.Clear();
             txtNombre.Clear();
@@ -109,11 +183,44 @@ namespace SabrosoSoftware
 
         }
 
-        public int ModificarCliente(int id, string nom, int tel, string dire, int ci)
+        public int ModificarCliente1(int id, string nom, int tel, string dire, int ci)
         {
 
-            return cn.ModificarCliente(id, nom, tel, dire, ci);
+            return cn.ModificarCliente1(id, nom, tel, dire, ci);
 
+            //Se edita todo
+        }
+
+        public int ModificarCliente2(int id, int tel, string dire, int ci)
+        {
+
+            return cn.ModificarCliente2(id, tel, dire, ci);
+
+            //Se edita todo menos nombre
+        }
+
+        public int ModificarCliente3(int id, string nom, int tel, string dire)
+        {
+
+            return cn.ModificarCliente3(id, nom, tel, dire);
+
+            //Se edita todo menos ci
+        }
+
+        public int ModificarCliente4(int id, string nom, string dire, int ci)
+        {
+
+            return cn.ModificarCliente4(id, nom, dire, ci);
+
+            //Se edita todo menos tel
+        }
+
+        public int ModificarCliente5(int id, string nom, int tel, int ci)
+        {
+
+            return cn.ModificarCliente5(id, nom, tel, ci);
+
+            //Se edita todo menos dire
         }
 
         public int AgregarCliente(string nom, int tel, string dire,int ci)
@@ -121,6 +228,7 @@ namespace SabrosoSoftware
 
 
             return cn.AgregarCliente(nom,tel,dire,ci);
+
         }
 
         private void dtgvClientes_CellClick(object sender, DataGridViewCellEventArgs e)
