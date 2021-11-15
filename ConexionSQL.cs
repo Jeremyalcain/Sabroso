@@ -118,11 +118,11 @@ namespace SabrosoSoftware
         }
 
 
-        public int AgregarEncargo(string nom, string fecha, string hora)
+        public int AgregarEncargo(string nom, string fecha, string hora, string  pro)
         {
             int flag = 0;
             con.Open();
-            string query = "insert into encargos (nombre_cliente, fecha, horario) values ('" + nom + "', '" + fecha + "','" + hora + "')";
+            string query = "insert into encargos (nombre_cliente, fecha, horario, Productos) values ('" + nom + "', '" + fecha + "','" + hora + "','" + pro + "')";
             MySqlCommand cmd = new MySqlCommand(query, con);
             flag = cmd.ExecuteNonQuery();
             con.Close();
@@ -181,11 +181,11 @@ namespace SabrosoSoftware
         }
 
 
-        public int ModificarEncargos(int id, string fecha, string hora)
+        public int ModificarEncargos(int id, string fecha, string hora, string pro)
         {
             int flag = 0;
             con.Open();
-            string query = "Update encargos set Fecha ='" + fecha + "', Horario ='" + hora + "', where id=" + id + "";
+            string query = "Update encargos set Fecha ='" + fecha + "', Horario ='" + hora + "', Productos ='" + pro + "', where id=" + id + "";
 
             MySqlCommand cmd = new MySqlCommand(query, con);
             flag = cmd.ExecuteNonQuery();
