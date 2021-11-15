@@ -122,7 +122,7 @@ namespace SabrosoSoftware
         {
             int flag = 0;
             con.Open();
-            string query = "insert into encargos (nombre_cliente, fecha, horario) values ('" + nom + "', '" + fecha + "','" + hora + "')";
+            string query = "insert into encargos (nombre_cliente, fecha, horario) values ('" + nom + "', '" + fecha + "', '" + hora + "')";
             MySqlCommand cmd = new MySqlCommand(query, con);
             flag = cmd.ExecuteNonQuery();
             con.Close();

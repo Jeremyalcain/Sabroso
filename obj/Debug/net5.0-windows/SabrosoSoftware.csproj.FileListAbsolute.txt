@@ -67,7 +67,6 @@ C:\Users\59896\Source\Repos\Jeremyalcain\Sabroso\obj\Debug\net5.0-windows\Sabros
 C:\Users\59896\Source\Repos\Jeremyalcain\Sabroso\obj\Debug\net5.0-windows\SabrosoSoftware.AssemblyInfoInputs.cache
 C:\Users\59896\Source\Repos\Jeremyalcain\Sabroso\obj\Debug\net5.0-windows\SabrosoSoftware.AssemblyInfo.cs
 C:\Users\59896\Source\Repos\Jeremyalcain\Sabroso\obj\Debug\net5.0-windows\SabrosoSoftware.csproj.CoreCompileInputs.cache
-C:\Users\59896\Source\Repos\Jeremyalcain\Sabroso\obj\Debug\net5.0-windows\SabrosoSoftware.csproj.CopyComplete
 C:\Users\59896\Source\Repos\Jeremyalcain\Sabroso\obj\Debug\net5.0-windows\SabrosoSoftware.dll
 C:\Users\59896\Source\Repos\Jeremyalcain\Sabroso\obj\Debug\net5.0-windows\ref\SabrosoSoftware.dll
 C:\Users\59896\Source\Repos\Jeremyalcain\Sabroso\obj\Debug\net5.0-windows\SabrosoSoftware.pdb
