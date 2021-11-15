@@ -43,7 +43,15 @@ namespace SabrosoSoftware
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            if(txtPrecio.Text == "")
+
+            if (txtNombre.Text == "" && txtPrecio.Text == "")
+            {
+
+                MessageBox.Show("No se ha ingresado ningun dato.");
+
+            }
+
+            else if (txtPrecio.Text == "")
             {
 
                 cn.ModificarProductos3(int.Parse(idProducto), txtNombre.Text);
@@ -75,7 +83,14 @@ namespace SabrosoSoftware
 
         private void btnAñadir_Click(object sender, EventArgs e)
         {
-            cn.AgregarProducto(txtNombre.Text, txtPrecio.Text);
+            if (txtNombre.Text == "" && txtPrecio.Text == "")
+            {
+
+                MessageBox.Show("No se ha ingresado ningun dato.");
+
+            }
+
+            else cn.AgregarProducto(txtNombre.Text, txtPrecio.Text);
             dtgvProductos.DataSource = cn.ConsultarTablaProductosDG();
             txtNombre.Clear();
             txtPrecio.Clear();
@@ -118,9 +133,7 @@ namespace SabrosoSoftware
         }
 
         private void dtgvProductos_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-            idProducto = dtgvProductos.CurrentRow.Cells[0].Value.ToString();
+        { 
             
 
         }
@@ -173,6 +186,18 @@ namespace SabrosoSoftware
                 return;
 
             }
+        }
+
+        private void dtgvProductos_CellClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dtgvProductos_CellClick_2(object sender, DataGridViewCellEventArgs e)
+        {
+
+            idProducto = dtgvProductos.CurrentRow.Cells[0].Value.ToString();
+
         }
     }
 }

@@ -44,9 +44,16 @@ namespace AppFormEncargos
             data.FillAsync(tabla);
             con.Close();
 
+            if (cbxCliente.Text == "" && cbxHorario.Text == "" && cbxProducto1.Text == "" && cbxProducto2.Text == "" && cbxProducto3.Text == "" && cbxProducto4.Text == "" && cbxProducto5.Text == "" && cbxProducto6.Text == "")
+            {
+
+                MessageBox.Show("No se ha ingresado ningun dato.");
+
+            }
+
             if (tabla.Rows.Count != 0)
             {
-                cn.AgregarEncargo(cliente, dtpFecha.Text, cbHorario.Text, listaProducto.Text);
+                cn.AgregarEncargo(cliente, dtpFecha.Text, cbxHorario.Text, cbxProducto1.Text);
                 dtgvEncargos.DataSource = cn.ConsultarTablaEncargosDG();
 
             }
@@ -72,12 +79,62 @@ namespace AppFormEncargos
             }
             con.Close();
 
+            MySqlCommand cmd2 = new MySqlCommand("Select Nombre, Precio from Stock where eliminados=0", con);
+            con.Open();
+            MySqlDataReader registro2 = cmd2.ExecuteReader();
+            while (registro2.Read())
+            {
+                cbxProducto1.Items.Add(registro2["Nombre"]);
+            }
+
+            con.Close();
+
             MySqlCommand cmd3 = new MySqlCommand("Select Nombre, Precio from Stock where eliminados=0", con);
             con.Open();
             MySqlDataReader registro3 = cmd3.ExecuteReader();
             while (registro3.Read())
             {
-                listaProducto.Items.Add(registro3["Nombre"]);
+                cbxProducto2.Items.Add(registro3["Nombre"]);
+            }
+
+            con.Close();
+
+            MySqlCommand cmd4 = new MySqlCommand("Select Nombre, Precio from Stock where eliminados=0", con);
+            con.Open();
+            MySqlDataReader registro4 = cmd4.ExecuteReader();
+            while (registro4.Read())
+            {
+                cbxProducto3.Items.Add(registro4["Nombre"]);
+            }
+
+            con.Close();
+
+            MySqlCommand cmd5 = new MySqlCommand("Select Nombre, Precio from Stock where eliminados=0", con);
+            con.Open();
+            MySqlDataReader registro5 = cmd5.ExecuteReader();
+            while (registro5.Read())
+            {
+                cbxProducto4.Items.Add(registro5["Nombre"]);
+            }
+
+            con.Close();
+
+            MySqlCommand cmd6 = new MySqlCommand("Select Nombre, Precio from Stock where eliminados=0", con);
+            con.Open();
+            MySqlDataReader registro6 = cmd6.ExecuteReader();
+            while (registro6.Read())
+            {
+                cbxProducto5.Items.Add(registro6["Nombre"]);
+            }
+
+            con.Close();
+
+            MySqlCommand cmd7 = new MySqlCommand("Select Nombre, Precio from Stock where eliminados=0", con);
+            con.Open();
+            MySqlDataReader registro7 = cmd7.ExecuteReader();
+            while (registro7.Read())
+            {
+                cbxProducto6.Items.Add(registro7["Nombre"]);
             }
             con.Close();
         }
@@ -90,7 +147,7 @@ namespace AppFormEncargos
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            cn.ModificarEncargos(int.Parse(idEncargos), dtpFecha.Text, cbHorario.Text, listaProducto.Text);
+            cn.ModificarEncargos(int.Parse(idEncargos), dtpFecha.Text, cbxHorario.Text, cbxProducto1.Text);
             dtgvEncargos.DataSource = cn.ConsultarTablaEncargosDG();
             
         }
@@ -119,7 +176,7 @@ namespace AppFormEncargos
 
         private void dtgvEncargos_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            idEncargos = dtgvEncargos.CurrentRow.Cells[0].Value.ToString();
+            
 
         }
 
@@ -155,6 +212,13 @@ namespace AppFormEncargos
 
         private void lblFecha_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void dtgvEncargos_CellClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+
+            idEncargos = dtgvEncargos.CurrentRow.Cells[0].Value.ToString();
 
         }
     }

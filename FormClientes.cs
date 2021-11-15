@@ -34,7 +34,14 @@ namespace SabrosoSoftware
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            cn.ModificarCliente(int.Parse(ciCliente), txtNombre.Text, int.Parse(txtTelefono.Text), txtDireccion.Text, int.Parse(txtCi.Text));
+            if (txtNombre.Text == "" && txtTelefono.Text == "" && txtCi.Text == "" && txtDireccion.Text == "")
+            {
+
+                MessageBox.Show("No se ha ingresado ningun dato.");
+
+            }
+
+            else cn.ModificarCliente(int.Parse(ciCliente), txtNombre.Text, int.Parse(txtTelefono.Text), txtDireccion.Text, int.Parse(txtCi.Text));
             dtgvClientes.DataSource = cn.ConsultarTablaClienteDG();
             txtCi.Clear();
             txtNombre.Clear();
@@ -73,7 +80,14 @@ namespace SabrosoSoftware
         private void btnAñadir_Click(object sender, EventArgs e)
         {
             //(ci, nom, ape, tel, dire);
-            cn.AgregarCliente(txtNombre.Text, int.Parse(txtTelefono.Text), txtDireccion.Text, int.Parse(txtCi.Text));
+            if (txtNombre.Text == "" && txtTelefono.Text == "" && txtDireccion.Text == "" && txtCi.Text == "")
+            {
+
+                MessageBox.Show("No se ha ingresado ningun dato.");
+
+            }
+
+            else cn.AgregarCliente(txtNombre.Text, int.Parse(txtTelefono.Text), txtDireccion.Text, int.Parse(txtCi.Text));
             dtgvClientes.DataSource = cn.ConsultarTablaClienteDG();
             txtCi.Clear();
             txtNombre.Clear();
