@@ -18,7 +18,6 @@ namespace AppFormEncargos
 
         static string conexionstring = "Server=localhost; Database=bdsabroso; Uid=sabroso; pwd=123456789; port=3306";
         MySqlConnection con = new MySqlConnection(conexionstring);
-
         string idEncargos;
 
         ConexionSQL cn = new ConexionSQL();
@@ -35,6 +34,7 @@ namespace AppFormEncargos
         }
         private void btnAñadir_Click(object sender, EventArgs e)
         {
+            string Productos = (cbxProducto1.Text + cbxProducto2.Text + cbxProducto3.Text + cbxProducto4.Text + cbxProducto5.Text + cbxProducto6.Text);
             string cliente = cbxCliente.Text;
             con.Open();
             string query = "select id from cliente where Nombre_y_Apellido='"+cliente+"'";
@@ -53,7 +53,7 @@ namespace AppFormEncargos
 
             if (tabla.Rows.Count != 0)
             {
-                cn.AgregarEncargo(cliente, dtpFecha.Text, cbxHorario.Text, cbxProducto1.Text);
+                cn.AgregarEncargo(cliente, dtpFecha.Text, cbxHorario.Text, Productos);
                 dtgvEncargos.DataSource = cn.ConsultarTablaEncargosDG();
 
             }
@@ -147,7 +147,8 @@ namespace AppFormEncargos
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            cn.ModificarEncargos(int.Parse(idEncargos), dtpFecha.Text, cbxHorario.Text, cbxProducto1.Text);
+            string Productos = (cbxProducto1.Text + cbxProducto2.Text + cbxProducto3.Text + cbxProducto4.Text + cbxProducto5.Text + cbxProducto6.Text);
+            cn.ModificarEncargos(int.Parse(idEncargos), dtpFecha.Text, cbxHorario.Text, Productos);
             dtgvEncargos.DataSource = cn.ConsultarTablaEncargosDG();
             
         }

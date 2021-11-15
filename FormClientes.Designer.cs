@@ -130,6 +130,7 @@ namespace SabrosoSoftware
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.Size = new System.Drawing.Size(154, 23);
             this.txtDireccion.TabIndex = 33;
+            this.txtDireccion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDireccion_KeyPress);
             // 
             // lblTelefono
             // 

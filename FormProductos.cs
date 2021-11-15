@@ -107,11 +107,6 @@ namespace SabrosoSoftware
 
         }
 
-        private void lblID_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnEliminar_Click(object sender, EventArgs e)
         {
 
@@ -124,7 +119,6 @@ namespace SabrosoSoftware
                 cn.EliminarProducto(idProducto);
 
             }
-
 
             dtgvProductos.DataSource = cn.ConsultarTablaProductosDG();
             txtNombre.Clear();
@@ -155,15 +149,11 @@ namespace SabrosoSoftware
 
             else dtgvProductos.DataSource = cn.ConsultarTablaProductosBusquedaDG(txtBuscar.Text);
 
-
-
-
-
         }
 
         private void txtPrecio_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if ((e.KeyChar >= 32 && e.KeyChar <= 47) || (e.KeyChar >= 58 && e.KeyChar <= 255))
+            if ((e.KeyChar > 127 && e.KeyChar <= 255) || (e.KeyChar >= 32 && e.KeyChar <= 47) || (e.KeyChar >= 58 && e.KeyChar <= 126))
             {
                 MessageBox.Show("Solo numeros", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 e.Handled = true;
@@ -179,7 +169,7 @@ namespace SabrosoSoftware
 
         private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if ((e.KeyChar != 32 && e.KeyChar <= 64) || (e.KeyChar >= 91 && e.KeyChar <= 96) || (e.KeyChar >= 123 && e.KeyChar <= 255))
+            if (!(char.IsLetter(e.KeyChar)) && (e.KeyChar != (char)Keys.Back && e.KeyChar != 32))
             {
                 MessageBox.Show("Solo letras", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 e.Handled = true;
@@ -195,9 +185,7 @@ namespace SabrosoSoftware
 
         private void dtgvProductos_CellClick_2(object sender, DataGridViewCellEventArgs e)
         {
-
             idProducto = dtgvProductos.CurrentRow.Cells[0].Value.ToString();
-
         }
     }
 }
