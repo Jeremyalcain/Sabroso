@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using System.Globalization;
 
 namespace AppFormEncargos
 {
@@ -65,10 +66,17 @@ namespace AppFormEncargos
 
             }
 
+      
+            
+
+
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
+
+            dtgvEncargos.Columns[4].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
 
             MySqlCommand cmd1 = new MySqlCommand("Select Nombre_y_Apellido from Cliente where eliminados=0", con);
             con.Open();

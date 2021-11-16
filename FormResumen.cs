@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -50,7 +51,11 @@ namespace SabrosoSoftware
 
         private void FormResumen_Load(object sender, EventArgs e)
         {
-         
+            
+
+            {
+                
+            }
         }
 
         private void dtgvResumen_CellContentClick(object sender, DataGridViewCellEventArgs e)

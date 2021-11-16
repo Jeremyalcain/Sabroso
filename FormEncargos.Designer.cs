@@ -41,6 +41,11 @@ namespace AppFormEncargos
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.txtCantidad6 = new System.Windows.Forms.TextBox();
+            this.txtCantidad5 = new System.Windows.Forms.TextBox();
+            this.txtCantidad4 = new System.Windows.Forms.TextBox();
+            this.txtCantidad3 = new System.Windows.Forms.TextBox();
+            this.txtCantidad2 = new System.Windows.Forms.TextBox();
             this.txtCantidad1 = new System.Windows.Forms.TextBox();
             this.cbxProducto6 = new System.Windows.Forms.ComboBox();
             this.cbxProducto5 = new System.Windows.Forms.ComboBox();
@@ -56,11 +61,6 @@ namespace AppFormEncargos
             this.btnBuscar = new System.Windows.Forms.Button();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.dtgvEncargos = new System.Windows.Forms.DataGridView();
-            this.txtCantidad2 = new System.Windows.Forms.TextBox();
-            this.txtCantidad3 = new System.Windows.Forms.TextBox();
-            this.txtCantidad4 = new System.Windows.Forms.TextBox();
-            this.txtCantidad5 = new System.Windows.Forms.TextBox();
-            this.txtCantidad6 = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvEncargos)).BeginInit();
@@ -201,6 +201,41 @@ namespace AppFormEncargos
             this.panel2.Size = new System.Drawing.Size(230, 89);
             this.panel2.TabIndex = 38;
             // 
+            // txtCantidad6
+            // 
+            this.txtCantidad6.Location = new System.Drawing.Point(3, 148);
+            this.txtCantidad6.Name = "txtCantidad6";
+            this.txtCantidad6.Size = new System.Drawing.Size(18, 23);
+            this.txtCantidad6.TabIndex = 45;
+            // 
+            // txtCantidad5
+            // 
+            this.txtCantidad5.Location = new System.Drawing.Point(3, 119);
+            this.txtCantidad5.Name = "txtCantidad5";
+            this.txtCantidad5.Size = new System.Drawing.Size(18, 23);
+            this.txtCantidad5.TabIndex = 44;
+            // 
+            // txtCantidad4
+            // 
+            this.txtCantidad4.Location = new System.Drawing.Point(3, 90);
+            this.txtCantidad4.Name = "txtCantidad4";
+            this.txtCantidad4.Size = new System.Drawing.Size(18, 23);
+            this.txtCantidad4.TabIndex = 43;
+            // 
+            // txtCantidad3
+            // 
+            this.txtCantidad3.Location = new System.Drawing.Point(3, 61);
+            this.txtCantidad3.Name = "txtCantidad3";
+            this.txtCantidad3.Size = new System.Drawing.Size(18, 23);
+            this.txtCantidad3.TabIndex = 42;
+            // 
+            // txtCantidad2
+            // 
+            this.txtCantidad2.Location = new System.Drawing.Point(3, 32);
+            this.txtCantidad2.Name = "txtCantidad2";
+            this.txtCantidad2.Size = new System.Drawing.Size(18, 23);
+            this.txtCantidad2.TabIndex = 41;
+            // 
             // txtCantidad1
             // 
             this.txtCantidad1.Location = new System.Drawing.Point(3, 3);
@@ -331,7 +366,6 @@ namespace AppFormEncargos
             this.dtgvEncargos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dtgvEncargos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtgvEncargos.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dtgvEncargos.BackgroundColor = System.Drawing.Color.LemonChiffon;
             this.dtgvEncargos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
@@ -371,41 +405,6 @@ namespace AppFormEncargos
             this.dtgvEncargos.Size = new System.Drawing.Size(668, 442);
             this.dtgvEncargos.TabIndex = 29;
             this.dtgvEncargos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvEncargos_CellClick_1);
-            // 
-            // txtCantidad2
-            // 
-            this.txtCantidad2.Location = new System.Drawing.Point(3, 32);
-            this.txtCantidad2.Name = "txtCantidad2";
-            this.txtCantidad2.Size = new System.Drawing.Size(18, 23);
-            this.txtCantidad2.TabIndex = 41;
-            // 
-            // txtCantidad3
-            // 
-            this.txtCantidad3.Location = new System.Drawing.Point(3, 61);
-            this.txtCantidad3.Name = "txtCantidad3";
-            this.txtCantidad3.Size = new System.Drawing.Size(18, 23);
-            this.txtCantidad3.TabIndex = 42;
-            // 
-            // txtCantidad4
-            // 
-            this.txtCantidad4.Location = new System.Drawing.Point(3, 90);
-            this.txtCantidad4.Name = "txtCantidad4";
-            this.txtCantidad4.Size = new System.Drawing.Size(18, 23);
-            this.txtCantidad4.TabIndex = 43;
-            // 
-            // txtCantidad5
-            // 
-            this.txtCantidad5.Location = new System.Drawing.Point(3, 119);
-            this.txtCantidad5.Name = "txtCantidad5";
-            this.txtCantidad5.Size = new System.Drawing.Size(18, 23);
-            this.txtCantidad5.TabIndex = 44;
-            // 
-            // txtCantidad6
-            // 
-            this.txtCantidad6.Location = new System.Drawing.Point(3, 148);
-            this.txtCantidad6.Name = "txtCantidad6";
-            this.txtCantidad6.Size = new System.Drawing.Size(18, 23);
-            this.txtCantidad6.TabIndex = 45;
             // 
             // FormEncargos
             // 

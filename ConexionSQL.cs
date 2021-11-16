@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Text;
+using System.Windows.Forms;
 
 namespace SabrosoSoftware
 {
@@ -17,7 +18,7 @@ namespace SabrosoSoftware
         public DataTable ConsultarTablaClienteDG()
         {
 
-            string query = "select CI, nombre_y_apellido, telefono, direccion from cliente where eliminados=0";
+            string query = "select CI, Nombre_y_Apellido, Telefono, Direccion from cliente where eliminados=0";
             MySqlCommand cmd = new MySqlCommand(query,con);
             MySqlDataAdapter data = new MySqlDataAdapter(cmd);
             DataTable tabla = new DataTable();
@@ -48,7 +49,7 @@ namespace SabrosoSoftware
         public DataTable ConsultarTablaEncargosDG()
         {
 
-            string query = "select id, nombre_cliente, fecha, horario, Productos from encargos where eliminado=0";
+            string query = "select ID, Cliente, Fecha, Horario, Productos from encargos where eliminado=0";
             MySqlCommand cmd = new MySqlCommand(query,con);
             MySqlDataAdapter data = new MySqlDataAdapter(cmd);
             DataTable tabla = new DataTable();
@@ -64,7 +65,7 @@ namespace SabrosoSoftware
         public DataTable ConsultarTablaProductosBusquedaDG(string nom)
         {
 
-            string query = "select id, nombre, precio from stock where Nombre='"+nom+"' AND eliminados=0";
+            string query = "select ID, Nombre, Precio from stock where Nombre='"+nom+"' AND eliminados=0";
             MySqlCommand cmd = new MySqlCommand(query, con);
             MySqlDataAdapter data = new MySqlDataAdapter(cmd);
             DataTable tabla = new DataTable();
@@ -95,16 +96,17 @@ namespace SabrosoSoftware
         public DataTable ResumenDG()
         {
 
-            string query = "select id, Productos from encargos where eliminado=0";
+            string query = "select count(id) from Encargos where substring(fecha, 4, 2) = '11' where eliminado=0";
             MySqlCommand cmd = new MySqlCommand(query, con);
             MySqlDataAdapter data = new MySqlDataAdapter(cmd);
             DataTable tabla = new DataTable();
             data.FillAsync(tabla);
 
-            con.Close();
+            MessageBox.Show(query.ToString());
+
+            con.Close(); 
 
             return tabla;
-
 
         }
 
@@ -137,7 +139,7 @@ namespace SabrosoSoftware
         {
             int flag = 0;
             con.Open();
-            string query = "insert into encargos (nombre_cliente, fecha, horario, Productos) values ('" + nom + "', '" + fecha + "','" + hora + "','" + pro + "')";
+            string query = "insert into encargos (Cliente, fecha, horario, Productos) values ('" + nom + "', '" + fecha + "','" + hora + "','" + pro + "')";
             MySqlCommand cmd = new MySqlCommand(query, con);
             flag = cmd.ExecuteNonQuery();
             con.Close();

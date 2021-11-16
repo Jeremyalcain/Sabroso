@@ -116,12 +116,6 @@ namespace SabrosoSoftware
          
         }
 
-
-        private void pcbImagenMenu_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void panelForms_Paint(object sender, PaintEventArgs e)
         {
 

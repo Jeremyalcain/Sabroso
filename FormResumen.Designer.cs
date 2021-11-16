@@ -33,6 +33,7 @@ namespace SabrosoSoftware
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dtgvResumen = new System.Windows.Forms.DataGridView();
+            this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvResumen)).BeginInit();
             this.SuspendLayout();
             // 
@@ -101,5 +102,6 @@ namespace SabrosoSoftware
         #endregion
 
         private System.Windows.Forms.DataGridView dtgvResumen;
+        private System.Windows.Forms.ColorDialog colorDialog1;
     }
 }
