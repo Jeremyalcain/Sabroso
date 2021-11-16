@@ -35,6 +35,7 @@ namespace AppFormEncargos
         }
         private void btnAñadir_Click(object sender, EventArgs e)
         {
+
             string Productos = (txtCantidad1.Text + " " + cbxProducto1.Text + " " + txtCantidad2.Text + " " + cbxProducto2.Text + " " + txtCantidad3.Text + " " + cbxProducto3.Text + " " + txtCantidad4.Text + " " + cbxProducto4.Text + " " + txtCantidad5.Text + " " + cbxProducto5.Text + " " + txtCantidad6.Text + " " + cbxProducto6.Text);
             string cliente = cbxCliente.Text;
             con.Open();
@@ -65,10 +66,6 @@ namespace AppFormEncargos
                 MessageBox.Show("El cliente no existe");
 
             }
-
-      
-            
-
 
 
         }
@@ -155,8 +152,8 @@ namespace AppFormEncargos
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            string Productos = (cbxProducto1.Text + cbxProducto2.Text + cbxProducto3.Text + cbxProducto4.Text + cbxProducto5.Text + cbxProducto6.Text);
-            cn.ModificarEncargos(int.Parse(idEncargos), dtpFecha.Text, cbxHorario.Text, Productos);
+            string Productos = (txtCantidad1.Text + " " + cbxProducto1.Text + " " + txtCantidad2.Text + " " + cbxProducto2.Text + " " + txtCantidad3.Text + " " + cbxProducto3.Text + " " + txtCantidad4.Text + " " + cbxProducto4.Text + " " + txtCantidad5.Text + " " + cbxProducto5.Text + " " + txtCantidad6.Text + " " + cbxProducto6.Text);
+            cn.ModificarEncargos(int.Parse(idEncargos), cbxCliente.Text, dtpFecha.Text, cbxHorario.Text, Productos);
             dtgvEncargos.DataSource = cn.ConsultarTablaEncargosDG();
             
         }
@@ -229,6 +226,18 @@ namespace AppFormEncargos
 
             idEncargos = dtgvEncargos.CurrentRow.Cells[0].Value.ToString();
 
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            if (txtBuscar.Text == "")
+            {
+
+                dtgvEncargos.DataSource = cn.ConsultarTablaEncargosDG();
+
+            }
+
+            else dtgvEncargos.DataSource = cn.ConsultarTablaEncargosBusquedaDG(txtBuscar.Text);
         }
     }
 }

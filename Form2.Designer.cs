@@ -34,14 +34,13 @@ namespace SabrosoSoftware
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panelMenu = new System.Windows.Forms.Panel();
+            this.btnResumen = new System.Windows.Forms.Button();
             this.btnClientes = new System.Windows.Forms.Button();
             this.btnMenu = new System.Windows.Forms.Button();
             this.btnEncargos = new System.Windows.Forms.Button();
             this.btnProductos = new System.Windows.Forms.Button();
             this.btnAbout = new System.Windows.Forms.Button();
             this.panelForms = new System.Windows.Forms.Panel();
-            this.mySqlConnection1 = new MySql.Data.MySqlClient.MySqlConnection();
-            this.btnResumen = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -98,12 +97,28 @@ namespace SabrosoSoftware
             this.panelMenu.TabIndex = 8;
             this.panelMenu.Paint += new System.Windows.Forms.PaintEventHandler(this.panelMenu_Paint);
             // 
+            // btnResumen
+            // 
+            this.btnResumen.BackColor = System.Drawing.Color.Goldenrod;
+            this.btnResumen.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnResumen.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
+            this.btnResumen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnResumen.ForeColor = System.Drawing.Color.White;
+            this.btnResumen.Location = new System.Drawing.Point(31, 308);
+            this.btnResumen.Name = "btnResumen";
+            this.btnResumen.Size = new System.Drawing.Size(134, 39);
+            this.btnResumen.TabIndex = 11;
+            this.btnResumen.Text = "Resumen";
+            this.btnResumen.UseVisualStyleBackColor = false;
+            this.btnResumen.Click += new System.EventHandler(this.button1_Click);
+            // 
             // btnClientes
             // 
             this.btnClientes.BackColor = System.Drawing.Color.Goldenrod;
             this.btnClientes.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnClientes.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
             this.btnClientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClientes.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnClientes.ForeColor = System.Drawing.Color.White;
             this.btnClientes.Location = new System.Drawing.Point(31, 136);
             this.btnClientes.Name = "btnClientes";
@@ -187,21 +202,6 @@ namespace SabrosoSoftware
             this.panelForms.TabIndex = 9;
             this.panelForms.Paint += new System.Windows.Forms.PaintEventHandler(this.panelForms_Paint);
             // 
-            // btnResumen
-            // 
-            this.btnResumen.BackColor = System.Drawing.Color.Goldenrod;
-            this.btnResumen.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnResumen.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
-            this.btnResumen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnResumen.ForeColor = System.Drawing.Color.White;
-            this.btnResumen.Location = new System.Drawing.Point(31, 308);
-            this.btnResumen.Name = "btnResumen";
-            this.btnResumen.Size = new System.Drawing.Size(134, 39);
-            this.btnResumen.TabIndex = 11;
-            this.btnResumen.Text = "Resumen";
-            this.btnResumen.UseVisualStyleBackColor = false;
-            this.btnResumen.Click += new System.EventHandler(this.button1_Click);
-            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -236,7 +236,6 @@ namespace SabrosoSoftware
         private System.Windows.Forms.Button btnProductos;
         private System.Windows.Forms.Button btnAbout;
         private System.Windows.Forms.Panel panelForms;
-        private MySql.Data.MySqlClient.MySqlConnection mySqlConnection1;
         private System.Windows.Forms.Button btnMenu;
         private System.Windows.Forms.Button btnClientes;
         private System.Windows.Forms.Button btnResumen;

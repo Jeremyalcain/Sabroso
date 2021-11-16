@@ -302,13 +302,7 @@ namespace SabrosoSoftware
 
         private void txtDireccion_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!(char.IsLetter(e.KeyChar)) && (e.KeyChar != (char)Keys.Back && e.KeyChar != 32))
-            {
-                MessageBox.Show("Solo letras", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                e.Handled = true;
-                return;
-
-            }
+            
         }
     }
 

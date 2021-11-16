@@ -41,7 +41,7 @@ namespace SabrosoSoftware
             // picLogoUtu
             // 
             this.picLogoUtu.Image = ((System.Drawing.Image)(resources.GetObject("picLogoUtu.Image")));
-            this.picLogoUtu.Location = new System.Drawing.Point(492, 35);
+            this.picLogoUtu.Location = new System.Drawing.Point(555, 35);
             this.picLogoUtu.Name = "picLogoUtu";
             this.picLogoUtu.Size = new System.Drawing.Size(202, 128);
             this.picLogoUtu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -63,7 +63,7 @@ namespace SabrosoSoftware
             // 
             this.lblInformacionIngles.AutoSize = true;
             this.lblInformacionIngles.Font = new System.Drawing.Font("Segoe UI", 11F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.lblInformacionIngles.Location = new System.Drawing.Point(368, 237);
+            this.lblInformacionIngles.Location = new System.Drawing.Point(431, 237);
             this.lblInformacionIngles.Name = "lblInformacionIngles";
             this.lblInformacionIngles.Size = new System.Drawing.Size(472, 200);
             this.lblInformacionIngles.TabIndex = 9;

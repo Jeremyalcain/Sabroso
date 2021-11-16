@@ -46,6 +46,70 @@ namespace SabrosoSoftware
 
         }
 
+        public DataTable ConsultarTablaEncargosBusquedaResumenDiaDG(int Fecha)
+        {
+
+            string query = "select ID, Cliente, Fecha, Horario, Productos from encargos where substring(fecha, 1, 2) ='" + Fecha + "' AND eliminado=0";
+            MySqlCommand cmd = new MySqlCommand(query, con);
+            MySqlDataAdapter data = new MySqlDataAdapter(cmd);
+            DataTable tabla = new DataTable();
+            data.FillAsync(tabla);
+
+            con.Close();
+
+            return tabla;
+
+
+        }
+
+        public DataTable ConsultarTablaEncargosBusquedaResumenMesDG(int Fecha)
+        {
+
+            string query = "select ID, Cliente, Fecha, Horario, Productos from encargos where substring(fecha, 4, 2) ='" + Fecha + "' AND eliminado=0";
+            MySqlCommand cmd = new MySqlCommand(query, con);
+            MySqlDataAdapter data = new MySqlDataAdapter(cmd);
+            DataTable tabla = new DataTable();
+            data.FillAsync(tabla);
+
+            con.Close();
+
+            return tabla;
+
+
+        }
+
+        public DataTable ConsultarTablaEncargosBusquedaResumenAñoDG(int Fecha)
+        {
+
+            string query = "select ID, Cliente, Fecha, Horario, Productos from encargos where substring(fecha, 7, 4) ='" + Fecha + "' AND eliminado=0";
+            MySqlCommand cmd = new MySqlCommand(query, con);
+            MySqlDataAdapter data = new MySqlDataAdapter(cmd);
+            DataTable tabla = new DataTable();
+            data.FillAsync(tabla);
+
+            con.Close();
+
+            return tabla;
+
+
+        }
+
+        public DataTable ConsultarTablaEncargosBusquedaDG(string nom)
+        {
+
+            string query = "select ID, Cliente, Fecha, Horario, Productos from encargos where Cliente='" + nom + "' AND eliminado=0";
+            MySqlCommand cmd = new MySqlCommand(query, con);
+            MySqlDataAdapter data = new MySqlDataAdapter(cmd);
+            DataTable tabla = new DataTable();
+            data.FillAsync(tabla);
+
+            con.Close();
+
+            return tabla;
+
+
+        }
+
         public DataTable ConsultarTablaEncargosDG()
         {
 
@@ -93,19 +157,21 @@ namespace SabrosoSoftware
 
             
         }
-        public DataTable ResumenDG()
+        public int ResumenMesDG(int mes)
         {
-            string query = "select count(id) As Encargos_del_Mes from Encargos where substring(fecha, 4, 2) = '11'";
-            MySqlCommand cmd = new MySqlCommand(query, con);
-            MySqlDataAdapter data = new MySqlDataAdapter(cmd);
-            DataTable tabla = new DataTable();
-            data.FillAsync(tabla);
+            MySqlConnection connection = new MySqlConnection(conexionstring);
+            MySqlCommand cmd = connection.CreateCommand();
+            cmd.CommandText = "select count(id) As Encargos_del_Mes from Encargos where substring(fecha, 4, 2) = '" + mes + "'";
 
-            con.Close(); 
+            int EncargoMes = (int)cmd.ExecuteScalar();
 
-            return tabla;
+            con.Close();
+
+            return EncargoMes;
+
 
         }
+
 
         public int AgregarCliente(string nom, int tel, string dire, int ci)
         {
@@ -310,11 +376,11 @@ namespace SabrosoSoftware
         }
 
 
-        public int ModificarEncargos(int id, string fecha, string hora, string pro)
+        public int ModificarEncargos(int id, string cli, string fecha, string hora, string pro)
         {
             int flag = 0;
             con.Open();
-            string query = "Update encargos set Fecha ='" + fecha + "', Horario ='" + hora + "', Productos ='" + pro + "', where id=" + id + "";
+            string query = "Update encargos set Cliente ='" + cli + "',Fecha ='" + fecha + "', Horario ='" + hora + "', Productos ='" + pro + "' where id='" + id + "'";
 
             MySqlCommand cmd = new MySqlCommand(query, con);
             flag = cmd.ExecuteNonQuery();
