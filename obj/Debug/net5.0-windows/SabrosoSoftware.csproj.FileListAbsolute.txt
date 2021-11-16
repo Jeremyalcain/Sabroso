@@ -72,3 +72,4 @@ C:\Users\59896\Source\Repos\Jeremyalcain\Sabroso\obj\Debug\net5.0-windows\ref\Sa
 C:\Users\59896\Source\Repos\Jeremyalcain\Sabroso\obj\Debug\net5.0-windows\SabrosoSoftware.pdb
 C:\Users\59896\Source\Repos\Jeremyalcain\Sabroso\obj\Debug\net5.0-windows\SabrosoSoftware.genruntimeconfig.cache
 C:\Users\Jeremy\Source\Repos\Jeremyalcain\Sabroso\obj\Debug\net5.0-windows\SabrosoSoftware.FormResumen.resources
+C:\Users\59896\Source\Repos\Jeremyalcain\Sabroso\obj\Debug\net5.0-windows\SabrosoSoftware.FormResumen.resources

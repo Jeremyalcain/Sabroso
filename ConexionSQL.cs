@@ -91,18 +91,15 @@ namespace SabrosoSoftware
 
             return tabla;
 
-
+            
         }
         public DataTable ResumenDG()
         {
-
-            string query = "select count(id) from Encargos where substring(fecha, 4, 2) = '11' where eliminado=0";
+            string query = "select count(id) As Encargos_del_Mes from Encargos where substring(fecha, 4, 2) = '11'";
             MySqlCommand cmd = new MySqlCommand(query, con);
             MySqlDataAdapter data = new MySqlDataAdapter(cmd);
             DataTable tabla = new DataTable();
             data.FillAsync(tabla);
-
-            MessageBox.Show(query.ToString());
 
             con.Close(); 
 
