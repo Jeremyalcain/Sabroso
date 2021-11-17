@@ -41,7 +41,7 @@ namespace SabrosoSoftware
             // picLogoUtu
             // 
             this.picLogoUtu.Image = ((System.Drawing.Image)(resources.GetObject("picLogoUtu.Image")));
-            this.picLogoUtu.Location = new System.Drawing.Point(555, 35);
+            this.picLogoUtu.Location = new System.Drawing.Point(603, 35);
             this.picLogoUtu.Name = "picLogoUtu";
             this.picLogoUtu.Size = new System.Drawing.Size(202, 128);
             this.picLogoUtu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -51,10 +51,10 @@ namespace SabrosoSoftware
             // lblInformacionEspañol
             // 
             this.lblInformacionEspañol.AutoSize = true;
-            this.lblInformacionEspañol.Font = new System.Drawing.Font("Segoe UI", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.lblInformacionEspañol.Location = new System.Drawing.Point(58, 237);
+            this.lblInformacionEspañol.Font = new System.Drawing.Font("Segoe UI", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.lblInformacionEspañol.Location = new System.Drawing.Point(42, 237);
             this.lblInformacionEspañol.Name = "lblInformacionEspañol";
-            this.lblInformacionEspañol.Size = new System.Drawing.Size(357, 180);
+            this.lblInformacionEspañol.Size = new System.Drawing.Size(441, 225);
             this.lblInformacionEspañol.TabIndex = 8;
             this.lblInformacionEspañol.Text = resources.GetString("lblInformacionEspañol.Text");
             this.lblInformacionEspañol.Click += new System.EventHandler(this.label7_Click);
@@ -62,12 +62,13 @@ namespace SabrosoSoftware
             // lblInformacionIngles
             // 
             this.lblInformacionIngles.AutoSize = true;
-            this.lblInformacionIngles.Font = new System.Drawing.Font("Segoe UI", 11F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.lblInformacionIngles.Location = new System.Drawing.Point(431, 237);
+            this.lblInformacionIngles.Font = new System.Drawing.Font("Segoe UI", 13F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.lblInformacionIngles.Location = new System.Drawing.Point(413, 237);
             this.lblInformacionIngles.Name = "lblInformacionIngles";
-            this.lblInformacionIngles.Size = new System.Drawing.Size(472, 200);
+            this.lblInformacionIngles.Size = new System.Drawing.Size(572, 250);
             this.lblInformacionIngles.TabIndex = 9;
             this.lblInformacionIngles.Text = resources.GetString("lblInformacionIngles.Text");
+            this.lblInformacionIngles.Click += new System.EventHandler(this.lblInformacionIngles_Click);
             // 
             // picLogoUDE
             // 
@@ -84,9 +85,9 @@ namespace SabrosoSoftware
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Goldenrod;
-            this.ClientSize = new System.Drawing.Size(951, 525);
-            this.Controls.Add(this.lblInformacionIngles);
+            this.ClientSize = new System.Drawing.Size(1031, 571);
             this.Controls.Add(this.lblInformacionEspañol);
+            this.Controls.Add(this.lblInformacionIngles);
             this.Controls.Add(this.picLogoUtu);
             this.Controls.Add(this.picLogoUDE);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

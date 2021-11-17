@@ -153,9 +153,9 @@ namespace SabrosoSoftware
             this.panelForms.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelForms.BackgroundImage")));
             this.panelForms.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panelForms.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panelForms.Location = new System.Drawing.Point(189, 0);
+            this.panelForms.Location = new System.Drawing.Point(191, 0);
             this.panelForms.Name = "panelForms";
-            this.panelForms.Size = new System.Drawing.Size(951, 525);
+            this.panelForms.Size = new System.Drawing.Size(1031, 525);
             this.panelForms.TabIndex = 9;
             this.panelForms.Paint += new System.Windows.Forms.PaintEventHandler(this.panelForms_Paint);
             // 
@@ -166,7 +166,7 @@ namespace SabrosoSoftware
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1140, 525);
+            this.ClientSize = new System.Drawing.Size(1222, 525);
             this.Controls.Add(this.panelMenu);
             this.Controls.Add(this.panelForms);
             this.Name = "Main";

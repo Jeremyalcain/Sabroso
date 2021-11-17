@@ -167,10 +167,10 @@ namespace AppFormEncargos
             this.panelEncargo.Controls.Add(this.lblHorario);
             this.panelEncargo.Controls.Add(this.lblFecha);
             this.panelEncargo.Controls.Add(this.lblEncargo);
-            this.panelEncargo.Location = new System.Drawing.Point(701, 0);
+            this.panelEncargo.Location = new System.Drawing.Point(774, 1);
             this.panelEncargo.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panelEncargo.Name = "panelEncargo";
-            this.panelEncargo.Size = new System.Drawing.Size(250, 525);
+            this.panelEncargo.Size = new System.Drawing.Size(256, 571);
             this.panelEncargo.TabIndex = 23;
             this.panelEncargo.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -401,7 +401,7 @@ namespace AppFormEncargos
             this.dtgvEncargos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dtgvEncargos.EnableHeadersVisualStyles = false;
             this.dtgvEncargos.GridColor = System.Drawing.Color.Black;
-            this.dtgvEncargos.Location = new System.Drawing.Point(12, 55);
+            this.dtgvEncargos.Location = new System.Drawing.Point(-16, 41);
             this.dtgvEncargos.Name = "dtgvEncargos";
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.Black;
@@ -421,7 +421,7 @@ namespace AppFormEncargos
             this.dtgvEncargos.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dtgvEncargos.RowTemplate.Height = 25;
             this.dtgvEncargos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgvEncargos.Size = new System.Drawing.Size(668, 442);
+            this.dtgvEncargos.Size = new System.Drawing.Size(748, 488);
             this.dtgvEncargos.TabIndex = 29;
             this.dtgvEncargos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvEncargos_CellClick_1);
             // 
@@ -430,7 +430,7 @@ namespace AppFormEncargos
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Goldenrod;
-            this.ClientSize = new System.Drawing.Size(951, 525);
+            this.ClientSize = new System.Drawing.Size(1031, 571);
             this.Controls.Add(this.dtgvEncargos);
             this.Controls.Add(this.btnConstancia);
             this.Controls.Add(this.btnBuscar);

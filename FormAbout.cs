@@ -49,5 +49,10 @@ namespace SabrosoSoftware
         {
 
         }
+
+        private void lblInformacionIngles_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
