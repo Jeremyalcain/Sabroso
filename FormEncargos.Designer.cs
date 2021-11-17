@@ -29,9 +29,9 @@ namespace AppFormEncargos
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnAñadir = new System.Windows.Forms.Button();
             this.lblHorario = new System.Windows.Forms.Label();
             this.lblFecha = new System.Windows.Forms.Label();
@@ -251,6 +251,7 @@ namespace AppFormEncargos
             // 
             // cbxProducto6
             // 
+            this.cbxProducto6.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxProducto6.FormattingEnabled = true;
             this.cbxProducto6.Location = new System.Drawing.Point(25, 148);
             this.cbxProducto6.Name = "cbxProducto6";
@@ -259,6 +260,7 @@ namespace AppFormEncargos
             // 
             // cbxProducto5
             // 
+            this.cbxProducto5.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxProducto5.FormattingEnabled = true;
             this.cbxProducto5.Location = new System.Drawing.Point(25, 119);
             this.cbxProducto5.Name = "cbxProducto5";
@@ -267,6 +269,7 @@ namespace AppFormEncargos
             // 
             // cbxProducto4
             // 
+            this.cbxProducto4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxProducto4.FormattingEnabled = true;
             this.cbxProducto4.Location = new System.Drawing.Point(25, 90);
             this.cbxProducto4.Name = "cbxProducto4";
@@ -275,6 +278,7 @@ namespace AppFormEncargos
             // 
             // cbxProducto3
             // 
+            this.cbxProducto3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxProducto3.FormattingEnabled = true;
             this.cbxProducto3.Location = new System.Drawing.Point(25, 61);
             this.cbxProducto3.Name = "cbxProducto3";
@@ -283,6 +287,7 @@ namespace AppFormEncargos
             // 
             // cbxProducto2
             // 
+            this.cbxProducto2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxProducto2.FormattingEnabled = true;
             this.cbxProducto2.Location = new System.Drawing.Point(25, 32);
             this.cbxProducto2.Name = "cbxProducto2";
@@ -291,6 +296,7 @@ namespace AppFormEncargos
             // 
             // cbxProducto1
             // 
+            this.cbxProducto1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxProducto1.FormattingEnabled = true;
             this.cbxProducto1.Location = new System.Drawing.Point(25, 3);
             this.cbxProducto1.Name = "cbxProducto1";
@@ -312,6 +318,7 @@ namespace AppFormEncargos
             // 
             // cbxCliente
             // 
+            this.cbxCliente.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxCliente.FormattingEnabled = true;
             this.cbxCliente.Location = new System.Drawing.Point(101, 116);
             this.cbxCliente.Name = "cbxCliente";
@@ -320,6 +327,7 @@ namespace AppFormEncargos
             // 
             // cbxHorario
             // 
+            this.cbxHorario.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxHorario.FormattingEnabled = true;
             this.cbxHorario.Items.AddRange(new object[] {
             "Mañana",
@@ -381,36 +389,36 @@ namespace AppFormEncargos
             this.dtgvEncargos.BackgroundColor = System.Drawing.Color.LemonChiffon;
             this.dtgvEncargos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dtgvEncargos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.DarkSlateGray;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI Semibold", 13F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgvEncargos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.DarkSlateGray;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI Semibold", 13F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgvEncargos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dtgvEncargos.ColumnHeadersHeight = 35;
             this.dtgvEncargos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dtgvEncargos.EnableHeadersVisualStyles = false;
             this.dtgvEncargos.GridColor = System.Drawing.Color.Black;
             this.dtgvEncargos.Location = new System.Drawing.Point(12, 55);
             this.dtgvEncargos.Name = "dtgvEncargos";
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.Menu;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgvEncargos.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.Menu;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgvEncargos.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dtgvEncargos.RowHeadersVisible = false;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.LemonChiffon;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 10.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.LightSkyBlue;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
-            this.dtgvEncargos.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.LemonChiffon;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.LightSkyBlue;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            this.dtgvEncargos.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dtgvEncargos.RowTemplate.Height = 25;
             this.dtgvEncargos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtgvEncargos.Size = new System.Drawing.Size(668, 442);

@@ -186,5 +186,10 @@ namespace SabrosoSoftware
             CerrarForms<FormProductos>();
             AbrirForms<FormResumen>();
         }
+
+        private void Main_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

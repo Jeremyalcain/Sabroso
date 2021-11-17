@@ -173,6 +173,7 @@ namespace SabrosoSoftware
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Tag = "Menu";
             this.Text = "Sabroso Software";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Main_FormClosing);
             this.Load += new System.EventHandler(this.Form2_Load);
             this.panelMenu.ResumeLayout(false);
             this.ResumeLayout(false);

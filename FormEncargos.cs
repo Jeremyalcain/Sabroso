@@ -67,6 +67,32 @@ namespace AppFormEncargos
 
             }
 
+            cbxCliente.DataSource = null;
+            cbxHorario.DataSource = null;
+            cbxProducto1.DataSource = null;
+            cbxProducto2.DataSource = null;
+            cbxProducto3.DataSource = null;
+            cbxProducto4.DataSource = null;
+            cbxProducto5.DataSource = null;
+            cbxProducto6.DataSource = null;
+
+            cbxCliente.Items.Clear();
+            cbxHorario.Items.Clear();
+            cbxProducto1.Items.Clear();
+            cbxProducto2.Items.Clear();
+            cbxProducto3.Items.Clear();
+            cbxProducto4.Items.Clear();
+            cbxProducto5.Items.Clear();
+            cbxProducto6.Items.Clear();
+
+            txtCantidad1.Clear();
+            txtCantidad2.Clear();
+            txtCantidad3.Clear();
+            txtCantidad4.Clear();
+            txtCantidad5.Clear();
+            txtCantidad6.Clear();
+
+
 
         }
 
