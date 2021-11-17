@@ -32,7 +32,7 @@ namespace SabrosoSoftware
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.panelProducto = new System.Windows.Forms.Panel();
             this.txtPrecio = new System.Windows.Forms.TextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.btnEliminar = new System.Windows.Forms.Button();
@@ -44,27 +44,27 @@ namespace SabrosoSoftware
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.dtgvProductos = new System.Windows.Forms.DataGridView();
-            this.panel1.SuspendLayout();
+            this.panelProducto.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvProductos)).BeginInit();
             this.SuspendLayout();
             // 
-            // panel1
+            // panelProducto
             // 
-            this.panel1.BackColor = System.Drawing.Color.Transparent;
-            this.panel1.Controls.Add(this.txtPrecio);
-            this.panel1.Controls.Add(this.txtNombre);
-            this.panel1.Controls.Add(this.btnEliminar);
-            this.panel1.Controls.Add(this.btnEditar);
-            this.panel1.Controls.Add(this.btnAñadir);
-            this.panel1.Controls.Add(this.lblNombre);
-            this.panel1.Controls.Add(this.lblPrecio);
-            this.panel1.Controls.Add(this.lblProductos);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel1.Location = new System.Drawing.Point(695, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(256, 525);
-            this.panel1.TabIndex = 1;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            this.panelProducto.BackColor = System.Drawing.Color.Transparent;
+            this.panelProducto.Controls.Add(this.txtPrecio);
+            this.panelProducto.Controls.Add(this.txtNombre);
+            this.panelProducto.Controls.Add(this.btnEliminar);
+            this.panelProducto.Controls.Add(this.btnEditar);
+            this.panelProducto.Controls.Add(this.btnAñadir);
+            this.panelProducto.Controls.Add(this.lblNombre);
+            this.panelProducto.Controls.Add(this.lblPrecio);
+            this.panelProducto.Controls.Add(this.lblProductos);
+            this.panelProducto.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panelProducto.Location = new System.Drawing.Point(695, 0);
+            this.panelProducto.Name = "panelProducto";
+            this.panelProducto.Size = new System.Drawing.Size(256, 525);
+            this.panelProducto.TabIndex = 1;
+            this.panelProducto.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // txtPrecio
             // 
@@ -241,13 +241,13 @@ namespace SabrosoSoftware
             this.Controls.Add(this.dtgvProductos);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.txtBuscar);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panelProducto);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormProductos";
             this.Text = "FormProductos";
             this.Load += new System.EventHandler(this.FormProductos_Load);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.panelProducto.ResumeLayout(false);
+            this.panelProducto.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvProductos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -255,7 +255,7 @@ namespace SabrosoSoftware
         }
 
         #endregion
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panelProducto;
         private System.Windows.Forms.TextBox txtPrecio;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Button btnAñadir;

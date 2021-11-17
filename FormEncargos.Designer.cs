@@ -29,17 +29,17 @@ namespace AppFormEncargos
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnAñadir = new System.Windows.Forms.Button();
             this.lblHorario = new System.Windows.Forms.Label();
             this.lblFecha = new System.Windows.Forms.Label();
             this.lblEncargo = new System.Windows.Forms.Label();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.panelEncargo = new System.Windows.Forms.Panel();
+            this.lblSeleccionarProducto = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.txtCantidad6 = new System.Windows.Forms.TextBox();
             this.txtCantidad5 = new System.Windows.Forms.TextBox();
@@ -53,7 +53,7 @@ namespace AppFormEncargos
             this.cbxProducto3 = new System.Windows.Forms.ComboBox();
             this.cbxProducto2 = new System.Windows.Forms.ComboBox();
             this.cbxProducto1 = new System.Windows.Forms.ComboBox();
-            this.lblNombreyApellido = new System.Windows.Forms.Label();
+            this.lblSeleccionarCliente = new System.Windows.Forms.Label();
             this.cbxCliente = new System.Windows.Forms.ComboBox();
             this.cbxHorario = new System.Windows.Forms.ComboBox();
             this.dtpFecha = new System.Windows.Forms.DateTimePicker();
@@ -61,7 +61,7 @@ namespace AppFormEncargos
             this.btnBuscar = new System.Windows.Forms.Button();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.dtgvEncargos = new System.Windows.Forms.DataGridView();
-            this.panel1.SuspendLayout();
+            this.panelEncargo.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvEncargos)).BeginInit();
             this.SuspendLayout();
@@ -149,43 +149,43 @@ namespace AppFormEncargos
             this.btnEditar.UseVisualStyleBackColor = false;
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
-            // panel1
+            // panelEncargo
             // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.panelEncargo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.BackColor = System.Drawing.Color.Goldenrod;
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.panel2);
-            this.panel1.Controls.Add(this.btnEliminar);
-            this.panel1.Controls.Add(this.btnEditar);
-            this.panel1.Controls.Add(this.lblNombreyApellido);
-            this.panel1.Controls.Add(this.cbxCliente);
-            this.panel1.Controls.Add(this.cbxHorario);
-            this.panel1.Controls.Add(this.dtpFecha);
-            this.panel1.Controls.Add(this.btnAñadir);
-            this.panel1.Controls.Add(this.lblHorario);
-            this.panel1.Controls.Add(this.lblFecha);
-            this.panel1.Controls.Add(this.lblEncargo);
-            this.panel1.Location = new System.Drawing.Point(701, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(250, 525);
-            this.panel1.TabIndex = 23;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            this.panelEncargo.BackColor = System.Drawing.Color.Goldenrod;
+            this.panelEncargo.Controls.Add(this.lblSeleccionarProducto);
+            this.panelEncargo.Controls.Add(this.panel2);
+            this.panelEncargo.Controls.Add(this.btnEliminar);
+            this.panelEncargo.Controls.Add(this.btnEditar);
+            this.panelEncargo.Controls.Add(this.lblSeleccionarCliente);
+            this.panelEncargo.Controls.Add(this.cbxCliente);
+            this.panelEncargo.Controls.Add(this.cbxHorario);
+            this.panelEncargo.Controls.Add(this.dtpFecha);
+            this.panelEncargo.Controls.Add(this.btnAñadir);
+            this.panelEncargo.Controls.Add(this.lblHorario);
+            this.panelEncargo.Controls.Add(this.lblFecha);
+            this.panelEncargo.Controls.Add(this.lblEncargo);
+            this.panelEncargo.Location = new System.Drawing.Point(701, 0);
+            this.panelEncargo.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.panelEncargo.Name = "panelEncargo";
+            this.panelEncargo.Size = new System.Drawing.Size(250, 525);
+            this.panelEncargo.TabIndex = 23;
+            this.panelEncargo.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // label1
+            // lblSeleccionarProducto
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(13, 238);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(169, 20);
-            this.label1.TabIndex = 39;
-            this.label1.Text = "Seleccionar Productos:";
+            this.lblSeleccionarProducto.AutoSize = true;
+            this.lblSeleccionarProducto.BackColor = System.Drawing.Color.Transparent;
+            this.lblSeleccionarProducto.Font = new System.Drawing.Font("Segoe UI", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.lblSeleccionarProducto.ForeColor = System.Drawing.Color.Black;
+            this.lblSeleccionarProducto.Location = new System.Drawing.Point(13, 238);
+            this.lblSeleccionarProducto.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblSeleccionarProducto.Name = "lblSeleccionarProducto";
+            this.lblSeleccionarProducto.Size = new System.Drawing.Size(169, 20);
+            this.lblSeleccionarProducto.TabIndex = 39;
+            this.lblSeleccionarProducto.Text = "Seleccionar Productos:";
             // 
             // panel2
             // 
@@ -297,18 +297,18 @@ namespace AppFormEncargos
             this.cbxProducto1.Size = new System.Drawing.Size(184, 23);
             this.cbxProducto1.TabIndex = 0;
             // 
-            // lblNombreyApellido
+            // lblSeleccionarCliente
             // 
-            this.lblNombreyApellido.AutoSize = true;
-            this.lblNombreyApellido.BackColor = System.Drawing.Color.Transparent;
-            this.lblNombreyApellido.Font = new System.Drawing.Font("Segoe UI", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.lblNombreyApellido.ForeColor = System.Drawing.Color.Black;
-            this.lblNombreyApellido.Location = new System.Drawing.Point(4, 99);
-            this.lblNombreyApellido.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblNombreyApellido.Name = "lblNombreyApellido";
-            this.lblNombreyApellido.Size = new System.Drawing.Size(94, 40);
-            this.lblNombreyApellido.TabIndex = 25;
-            this.lblNombreyApellido.Text = "Seleccionar \r\ncliente:";
+            this.lblSeleccionarCliente.AutoSize = true;
+            this.lblSeleccionarCliente.BackColor = System.Drawing.Color.Transparent;
+            this.lblSeleccionarCliente.Font = new System.Drawing.Font("Segoe UI", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.lblSeleccionarCliente.ForeColor = System.Drawing.Color.Black;
+            this.lblSeleccionarCliente.Location = new System.Drawing.Point(4, 99);
+            this.lblSeleccionarCliente.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblSeleccionarCliente.Name = "lblSeleccionarCliente";
+            this.lblSeleccionarCliente.Size = new System.Drawing.Size(94, 40);
+            this.lblSeleccionarCliente.TabIndex = 25;
+            this.lblSeleccionarCliente.Text = "Seleccionar \r\ncliente:";
             // 
             // cbxCliente
             // 
@@ -381,36 +381,36 @@ namespace AppFormEncargos
             this.dtgvEncargos.BackgroundColor = System.Drawing.Color.LemonChiffon;
             this.dtgvEncargos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dtgvEncargos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.DarkSlateGray;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI Semibold", 13F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgvEncargos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.DarkSlateGray;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI Semibold", 13F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgvEncargos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dtgvEncargos.ColumnHeadersHeight = 35;
             this.dtgvEncargos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dtgvEncargos.EnableHeadersVisualStyles = false;
             this.dtgvEncargos.GridColor = System.Drawing.Color.Black;
             this.dtgvEncargos.Location = new System.Drawing.Point(12, 55);
             this.dtgvEncargos.Name = "dtgvEncargos";
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.Menu;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgvEncargos.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.Menu;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgvEncargos.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dtgvEncargos.RowHeadersVisible = false;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.LemonChiffon;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 10.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.LightSkyBlue;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.Black;
-            this.dtgvEncargos.RowsDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.LemonChiffon;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 10.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.LightSkyBlue;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
+            this.dtgvEncargos.RowsDefaultCellStyle = dataGridViewCellStyle6;
             this.dtgvEncargos.RowTemplate.Height = 25;
             this.dtgvEncargos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtgvEncargos.Size = new System.Drawing.Size(668, 442);
@@ -427,14 +427,14 @@ namespace AppFormEncargos
             this.Controls.Add(this.btnConstancia);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.txtBuscar);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panelEncargo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "FormEncargos";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.panelEncargo.ResumeLayout(false);
+            this.panelEncargo.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvEncargos)).EndInit();
@@ -450,15 +450,15 @@ namespace AppFormEncargos
         private System.Windows.Forms.Label lblEncargo;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnEditar;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panelEncargo;
         private System.Windows.Forms.DateTimePicker dtpFecha;
         private System.Windows.Forms.Button btnConstancia;
         private System.Windows.Forms.ComboBox cbxHorario;
         private System.Windows.Forms.ComboBox cbxCliente;
-        private System.Windows.Forms.Label lblNombreyApellido;
+        private System.Windows.Forms.Label lblSeleccionarCliente;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.TextBox txtBuscar;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblSeleccionarProducto;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.ComboBox cbxProducto6;
         private System.Windows.Forms.ComboBox cbxProducto5;

@@ -109,10 +109,6 @@ namespace SabrosoSoftware
             AbrirForms<FormClientes>();
 
 
-           pictureBox3.BringToFront();
-           pictureBox2.BringToFront();
-            pictureBox1.BringToFront();
-
          
         }
 
@@ -130,9 +126,6 @@ namespace SabrosoSoftware
             CerrarForms<FormProductos>();
             AbrirForms<FormEncargos>();
 
-            pictureBox3.BringToFront();
-            pictureBox2.BringToFront();
-            pictureBox1.BringToFront();
 
             //AbrirForm(new FormEncargos());
         }
@@ -144,10 +137,6 @@ namespace SabrosoSoftware
             CerrarForms<FormClientes>();
             CerrarForms<FormEncargos>();
             AbrirForms<FormProductos>();
-
-            pictureBox3.BringToFront();
-            pictureBox2.BringToFront();
-            pictureBox1.BringToFront();
 
             //AbrirForm(new FormProductos());
         }
@@ -161,11 +150,6 @@ namespace SabrosoSoftware
             CerrarForms<FormAbout>();
 
 
-            pictureBox3.BringToFront();
-            pictureBox2.BringToFront();
-            pictureBox1.BringToFront();
-
-
         }
 
         private void btnClientes_Click_1(object sender, EventArgs e)
@@ -175,10 +159,6 @@ namespace SabrosoSoftware
             CerrarForms<FormEncargos>();
             CerrarForms<FormProductos>();
             AbrirForms<FormClientes>();
-
-            pictureBox3.BringToFront();
-            pictureBox2.BringToFront();
-            pictureBox1.BringToFront();
 
 
         }
@@ -190,10 +170,6 @@ namespace SabrosoSoftware
             CerrarForms<FormEncargos>();
             CerrarForms<FormProductos>();
             AbrirForms<FormAbout>();
-
-            pictureBox3.BringToFront();
-            pictureBox2.BringToFront();
-            pictureBox1.BringToFront();
 
         }
 
@@ -209,10 +185,6 @@ namespace SabrosoSoftware
             CerrarForms<FormEncargos>();
             CerrarForms<FormProductos>();
             AbrirForms<FormResumen>();
-
-            pictureBox3.BringToFront();
-            pictureBox2.BringToFront();
-            pictureBox1.BringToFront();
         }
     }
 }

@@ -29,12 +29,12 @@ namespace SabrosoSoftware
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.panelCliente = new System.Windows.Forms.Panel();
             this.txtCi = new System.Windows.Forms.TextBox();
             this.lblCi = new System.Windows.Forms.Label();
             this.txtDireccion = new System.Windows.Forms.TextBox();
@@ -48,7 +48,7 @@ namespace SabrosoSoftware
             this.dtgvClientes = new System.Windows.Forms.DataGridView();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.txtBuscar = new System.Windows.Forms.TextBox();
-            this.panel1.SuspendLayout();
+            this.panelCliente.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvClientes)).BeginInit();
             this.SuspendLayout();
             // 
@@ -80,27 +80,27 @@ namespace SabrosoSoftware
             this.btnEditar.UseVisualStyleBackColor = false;
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
-            // panel1
+            // panelCliente
             // 
-            this.panel1.BackColor = System.Drawing.Color.Transparent;
-            this.panel1.Controls.Add(this.btnEliminar);
-            this.panel1.Controls.Add(this.txtCi);
-            this.panel1.Controls.Add(this.lblCi);
-            this.panel1.Controls.Add(this.txtDireccion);
-            this.panel1.Controls.Add(this.btnEditar);
-            this.panel1.Controls.Add(this.lblTelefono);
-            this.panel1.Controls.Add(this.lblNombre);
-            this.panel1.Controls.Add(this.txtTelefono);
-            this.panel1.Controls.Add(this.lblDireccion);
-            this.panel1.Controls.Add(this.txtNombre);
-            this.panel1.Controls.Add(this.btnAñadir);
-            this.panel1.Controls.Add(this.lblClientes);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel1.Location = new System.Drawing.Point(695, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(256, 525);
-            this.panel1.TabIndex = 26;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            this.panelCliente.BackColor = System.Drawing.Color.Transparent;
+            this.panelCliente.Controls.Add(this.btnEliminar);
+            this.panelCliente.Controls.Add(this.txtCi);
+            this.panelCliente.Controls.Add(this.lblCi);
+            this.panelCliente.Controls.Add(this.txtDireccion);
+            this.panelCliente.Controls.Add(this.btnEditar);
+            this.panelCliente.Controls.Add(this.lblTelefono);
+            this.panelCliente.Controls.Add(this.lblNombre);
+            this.panelCliente.Controls.Add(this.txtTelefono);
+            this.panelCliente.Controls.Add(this.lblDireccion);
+            this.panelCliente.Controls.Add(this.txtNombre);
+            this.panelCliente.Controls.Add(this.btnAñadir);
+            this.panelCliente.Controls.Add(this.lblClientes);
+            this.panelCliente.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panelCliente.Location = new System.Drawing.Point(695, 0);
+            this.panelCliente.Name = "panelCliente";
+            this.panelCliente.Size = new System.Drawing.Size(256, 525);
+            this.panelCliente.TabIndex = 26;
+            this.panelCliente.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // txtCi
             // 
@@ -234,36 +234,36 @@ namespace SabrosoSoftware
             this.dtgvClientes.BackgroundColor = System.Drawing.Color.LemonChiffon;
             this.dtgvClientes.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dtgvClientes.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle13.BackColor = System.Drawing.Color.DarkSlateGray;
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("Segoe UI Semibold", 13F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgvClientes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.DarkSlateGray;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI Semibold", 13F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgvClientes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dtgvClientes.ColumnHeadersHeight = 35;
             this.dtgvClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dtgvClientes.EnableHeadersVisualStyles = false;
             this.dtgvClientes.GridColor = System.Drawing.Color.Black;
             this.dtgvClientes.Location = new System.Drawing.Point(12, 55);
             this.dtgvClientes.Name = "dtgvClientes";
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle14.BackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.Menu;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgvClientes.RowHeadersDefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.Menu;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgvClientes.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dtgvClientes.RowHeadersVisible = false;
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle15.BackColor = System.Drawing.Color.LemonChiffon;
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("Segoe UI", 10.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.LightSkyBlue;
-            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.Black;
-            this.dtgvClientes.RowsDefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.LemonChiffon;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 10.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.LightSkyBlue;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
+            this.dtgvClientes.RowsDefaultCellStyle = dataGridViewCellStyle6;
             this.dtgvClientes.RowTemplate.Height = 25;
             this.dtgvClientes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtgvClientes.Size = new System.Drawing.Size(668, 442);
@@ -298,15 +298,15 @@ namespace SabrosoSoftware
             this.ClientSize = new System.Drawing.Size(951, 525);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.txtBuscar);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panelCliente);
             this.Controls.Add(this.dtgvClientes);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormClientes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormClientes";
             this.Load += new System.EventHandler(this.FormClientes_Load);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.panelCliente.ResumeLayout(false);
+            this.panelCliente.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvClientes)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -317,7 +317,7 @@ namespace SabrosoSoftware
 
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnEditar;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panelCliente;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Button btnAñadir;
         private System.Windows.Forms.Label lblNombre;

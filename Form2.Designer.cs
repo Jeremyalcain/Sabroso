@@ -30,9 +30,6 @@ namespace SabrosoSoftware
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panelMenu = new System.Windows.Forms.Panel();
             this.btnResumen = new System.Windows.Forms.Button();
             this.btnClientes = new System.Windows.Forms.Button();
@@ -41,45 +38,8 @@ namespace SabrosoSoftware
             this.btnProductos = new System.Windows.Forms.Button();
             this.btnAbout = new System.Windows.Forms.Button();
             this.panelForms = new System.Windows.Forms.Panel();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panelMenu.SuspendLayout();
-            this.panelForms.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(916, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(35, 35);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 7;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(884, 0);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(35, 35);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 7;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(852, 0);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(35, 35);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 7;
-            this.pictureBox3.TabStop = false;
-            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
             // panelMenu
             // 
@@ -108,7 +68,7 @@ namespace SabrosoSoftware
             this.btnResumen.Name = "btnResumen";
             this.btnResumen.Size = new System.Drawing.Size(134, 39);
             this.btnResumen.TabIndex = 11;
-            this.btnResumen.Text = "Resumen";
+            this.btnResumen.Text = "Resumen de Encargos";
             this.btnResumen.UseVisualStyleBackColor = false;
             this.btnResumen.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -192,9 +152,6 @@ namespace SabrosoSoftware
             // 
             this.panelForms.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelForms.BackgroundImage")));
             this.panelForms.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panelForms.Controls.Add(this.pictureBox3);
-            this.panelForms.Controls.Add(this.pictureBox2);
-            this.panelForms.Controls.Add(this.pictureBox1);
             this.panelForms.Dock = System.Windows.Forms.DockStyle.Right;
             this.panelForms.Location = new System.Drawing.Point(189, 0);
             this.panelForms.Name = "panelForms";
@@ -212,25 +169,17 @@ namespace SabrosoSoftware
             this.ClientSize = new System.Drawing.Size(1140, 525);
             this.Controls.Add(this.panelMenu);
             this.Controls.Add(this.panelForms);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Tag = "Menu";
             this.Text = "Sabroso Software";
             this.Load += new System.EventHandler(this.Form2_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panelMenu.ResumeLayout(false);
-            this.panelForms.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Panel panelMenu;
         private System.Windows.Forms.Button btnEncargos;
         private System.Windows.Forms.Button btnProductos;
