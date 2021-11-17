@@ -78,6 +78,21 @@ namespace SabrosoSoftware
 
         private void btnMes_Click(object sender, EventArgs e)
         {
+            panelGrafica.Hide();
+            panelEnero.Hide();
+            panelFebrero.Hide();
+            panelMarzo.Hide();
+            panelAbril.Hide();
+            panelMayo.Hide();
+            panelJunio.Hide();
+            panelJulio.Hide();
+            panelAgosto.Hide();
+            panelSeptiembre.Hide();
+            panelOctubre.Hide();
+            panelNoviembre.Hide();
+            panelDiciembre.Hide();
+            dtgvResumenEncargos.Show();
+
             CultureInfo ci = new CultureInfo("es-ES");
 
             DateTime fecha = DateTime.Now;
@@ -117,6 +132,21 @@ namespace SabrosoSoftware
 
         private void btnDia_Click(object sender, EventArgs e)
         {
+            panelGrafica.Hide();
+            panelEnero.Hide();
+            panelFebrero.Hide();
+            panelMarzo.Hide();
+            panelAbril.Hide();
+            panelMayo.Hide();
+            panelJunio.Hide();
+            panelJulio.Hide();
+            panelAgosto.Hide();
+            panelSeptiembre.Hide();
+            panelOctubre.Hide();
+            panelNoviembre.Hide();
+            panelDiciembre.Hide();
+            dtgvResumenEncargos.Show();
+
             CultureInfo ci = new CultureInfo("es-ES");
 
             DateTime fecha = DateTime.Now;
@@ -144,6 +174,21 @@ namespace SabrosoSoftware
 
         private void btnAño_Click(object sender, EventArgs e)
         {
+            panelGrafica.Hide();
+            panelEnero.Hide();
+            panelFebrero.Hide();
+            panelMarzo.Hide();
+            panelAbril.Hide();
+            panelMayo.Hide();
+            panelJunio.Hide();
+            panelJulio.Hide();
+            panelAgosto.Hide();
+            panelSeptiembre.Hide();
+            panelOctubre.Hide();
+            panelNoviembre.Hide();
+            panelDiciembre.Hide();
+            dtgvResumenEncargos.Show();
+
             CultureInfo ci = new CultureInfo("es-ES");
 
             DateTime fecha = DateTime.Now;
