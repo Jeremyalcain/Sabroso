@@ -401,7 +401,7 @@ namespace AppFormEncargos
             this.dtgvEncargos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dtgvEncargos.EnableHeadersVisualStyles = false;
             this.dtgvEncargos.GridColor = System.Drawing.Color.Black;
-            this.dtgvEncargos.Location = new System.Drawing.Point(-16, 41);
+            this.dtgvEncargos.Location = new System.Drawing.Point(12, 55);
             this.dtgvEncargos.Name = "dtgvEncargos";
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.Black;

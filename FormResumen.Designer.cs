@@ -61,7 +61,7 @@ namespace SabrosoSoftware
             // btnMes
             // 
             this.btnMes.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.btnMes.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnMes.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnMes.ForeColor = System.Drawing.Color.White;
             this.btnMes.Location = new System.Drawing.Point(29, 154);
             this.btnMes.Name = "btnMes";
@@ -133,7 +133,7 @@ namespace SabrosoSoftware
             // btnGrafica
             // 
             this.btnGrafica.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.btnGrafica.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnGrafica.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnGrafica.ForeColor = System.Drawing.Color.White;
             this.btnGrafica.Location = new System.Drawing.Point(29, 367);
             this.btnGrafica.Name = "btnGrafica";
@@ -147,7 +147,7 @@ namespace SabrosoSoftware
             // 
             this.lblEncargos.AutoSize = true;
             this.lblEncargos.BackColor = System.Drawing.Color.Transparent;
-            this.lblEncargos.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblEncargos.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
             this.lblEncargos.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.lblEncargos.Location = new System.Drawing.Point(29, 92);
             this.lblEncargos.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -158,7 +158,7 @@ namespace SabrosoSoftware
             // btnAño
             // 
             this.btnAño.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.btnAño.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnAño.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnAño.ForeColor = System.Drawing.Color.White;
             this.btnAño.Location = new System.Drawing.Point(29, 296);
             this.btnAño.Name = "btnAño";
@@ -171,7 +171,7 @@ namespace SabrosoSoftware
             // btnDia
             // 
             this.btnDia.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.btnDia.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnDia.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnDia.ForeColor = System.Drawing.Color.White;
             this.btnDia.Location = new System.Drawing.Point(29, 225);
             this.btnDia.Name = "btnDia";

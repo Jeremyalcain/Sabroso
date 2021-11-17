@@ -53,7 +53,7 @@ namespace SabrosoSoftware
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(191, 525);
+            this.panelMenu.Size = new System.Drawing.Size(191, 571);
             this.panelMenu.TabIndex = 8;
             this.panelMenu.Paint += new System.Windows.Forms.PaintEventHandler(this.panelMenu_Paint);
             // 
@@ -63,10 +63,11 @@ namespace SabrosoSoftware
             this.btnResumen.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnResumen.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
             this.btnResumen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnResumen.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnResumen.ForeColor = System.Drawing.Color.White;
-            this.btnResumen.Location = new System.Drawing.Point(31, 308);
+            this.btnResumen.Location = new System.Drawing.Point(30, 359);
             this.btnResumen.Name = "btnResumen";
-            this.btnResumen.Size = new System.Drawing.Size(134, 39);
+            this.btnResumen.Size = new System.Drawing.Size(131, 53);
             this.btnResumen.TabIndex = 11;
             this.btnResumen.Text = "Resumen de Encargos";
             this.btnResumen.UseVisualStyleBackColor = false;
@@ -78,11 +79,11 @@ namespace SabrosoSoftware
             this.btnClientes.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnClientes.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
             this.btnClientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClientes.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnClientes.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnClientes.ForeColor = System.Drawing.Color.White;
-            this.btnClientes.Location = new System.Drawing.Point(31, 136);
+            this.btnClientes.Location = new System.Drawing.Point(30, 133);
             this.btnClientes.Name = "btnClientes";
-            this.btnClientes.Size = new System.Drawing.Size(134, 39);
+            this.btnClientes.Size = new System.Drawing.Size(131, 47);
             this.btnClientes.TabIndex = 10;
             this.btnClientes.Text = "Clientes";
             this.btnClientes.UseVisualStyleBackColor = false;
@@ -95,9 +96,9 @@ namespace SabrosoSoftware
             this.btnMenu.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
             this.btnMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMenu.ForeColor = System.Drawing.Color.White;
-            this.btnMenu.Location = new System.Drawing.Point(60, 499);
+            this.btnMenu.Location = new System.Drawing.Point(65, 535);
             this.btnMenu.Name = "btnMenu";
-            this.btnMenu.Size = new System.Drawing.Size(80, 23);
+            this.btnMenu.Size = new System.Drawing.Size(80, 24);
             this.btnMenu.TabIndex = 9;
             this.btnMenu.Text = " Menu";
             this.btnMenu.UseVisualStyleBackColor = false;
@@ -109,10 +110,11 @@ namespace SabrosoSoftware
             this.btnEncargos.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnEncargos.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
             this.btnEncargos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEncargos.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnEncargos.ForeColor = System.Drawing.Color.White;
-            this.btnEncargos.Location = new System.Drawing.Point(31, 254);
+            this.btnEncargos.Location = new System.Drawing.Point(30, 282);
             this.btnEncargos.Name = "btnEncargos";
-            this.btnEncargos.Size = new System.Drawing.Size(134, 39);
+            this.btnEncargos.Size = new System.Drawing.Size(131, 47);
             this.btnEncargos.TabIndex = 7;
             this.btnEncargos.Text = "Encargos";
             this.btnEncargos.UseVisualStyleBackColor = false;
@@ -124,10 +126,11 @@ namespace SabrosoSoftware
             this.btnProductos.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnProductos.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
             this.btnProductos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnProductos.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnProductos.ForeColor = System.Drawing.Color.White;
-            this.btnProductos.Location = new System.Drawing.Point(31, 195);
+            this.btnProductos.Location = new System.Drawing.Point(30, 206);
             this.btnProductos.Name = "btnProductos";
-            this.btnProductos.Size = new System.Drawing.Size(134, 39);
+            this.btnProductos.Size = new System.Drawing.Size(131, 47);
             this.btnProductos.TabIndex = 5;
             this.btnProductos.Text = "Productos";
             this.btnProductos.UseVisualStyleBackColor = false;
@@ -140,9 +143,9 @@ namespace SabrosoSoftware
             this.btnAbout.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
             this.btnAbout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAbout.ForeColor = System.Drawing.Color.White;
-            this.btnAbout.Location = new System.Drawing.Point(3, 499);
+            this.btnAbout.Location = new System.Drawing.Point(8, 535);
             this.btnAbout.Name = "btnAbout";
-            this.btnAbout.Size = new System.Drawing.Size(51, 23);
+            this.btnAbout.Size = new System.Drawing.Size(51, 24);
             this.btnAbout.TabIndex = 3;
             this.btnAbout.Text = "About";
             this.btnAbout.UseVisualStyleBackColor = false;
@@ -153,9 +156,9 @@ namespace SabrosoSoftware
             this.panelForms.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelForms.BackgroundImage")));
             this.panelForms.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panelForms.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panelForms.Location = new System.Drawing.Point(191, 0);
+            this.panelForms.Location = new System.Drawing.Point(189, 0);
             this.panelForms.Name = "panelForms";
-            this.panelForms.Size = new System.Drawing.Size(1031, 525);
+            this.panelForms.Size = new System.Drawing.Size(1033, 571);
             this.panelForms.TabIndex = 9;
             this.panelForms.Paint += new System.Windows.Forms.PaintEventHandler(this.panelForms_Paint);
             // 
@@ -166,7 +169,7 @@ namespace SabrosoSoftware
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1222, 525);
+            this.ClientSize = new System.Drawing.Size(1222, 571);
             this.Controls.Add(this.panelMenu);
             this.Controls.Add(this.panelForms);
             this.Name = "Main";

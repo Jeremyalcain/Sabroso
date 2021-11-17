@@ -111,12 +111,21 @@ namespace SabrosoSoftware
 
             do
             {
+                string resultadostring;
                 int resultado = 0;
                 if (numero != 0)
                 {
-                   
-                        resultado = Convert.ToInt32(Interaction.InputBox("Ingrese el codigo de verificacion ", "Verificacion"));
-                }
+
+                    resultadostring = Interaction.InputBox("Ingrese el codigo de verificacion ", "Verificacion");
+                    if (resultadostring == "")
+                    {
+                        MessageBox.Show("No se ha ingresado un codigo");
+                        
+
+                    }
+                    else resultado = int.Parse(resultadostring);
+
+                 }
                 
               if (numero == resultado)
                   {
