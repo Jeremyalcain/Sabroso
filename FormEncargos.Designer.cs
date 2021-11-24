@@ -341,11 +341,12 @@ namespace AppFormEncargos
             // 
             this.dtpFecha.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpFecha.Location = new System.Drawing.Point(101, 151);
-            this.dtpFecha.MinDate = new System.DateTime(2021, 11, 15, 0, 0, 0, 0);
+            this.dtpFecha.MinDate = new System.DateTime(2021, 11, 25, 0, 0, 0, 0);
             this.dtpFecha.Name = "dtpFecha";
             this.dtpFecha.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.dtpFecha.Size = new System.Drawing.Size(93, 23);
             this.dtpFecha.TabIndex = 19;
+            this.dtpFecha.Value = new System.DateTime(2021, 11, 25, 0, 0, 0, 0);
             // 
             // btnConstancia
             // 

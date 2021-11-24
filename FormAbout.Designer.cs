@@ -34,6 +34,7 @@ namespace SabrosoSoftware
             this.lblInformacionEspañol = new System.Windows.Forms.Label();
             this.lblInformacionIngles = new System.Windows.Forms.Label();
             this.picLogoUDE = new System.Windows.Forms.PictureBox();
+            this.linkManual = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.picLogoUtu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picLogoUDE)).BeginInit();
             this.SuspendLayout();
@@ -80,12 +81,24 @@ namespace SabrosoSoftware
             this.picLogoUDE.TabIndex = 3;
             this.picLogoUDE.TabStop = false;
             // 
+            // linkManual
+            // 
+            this.linkManual.AutoSize = true;
+            this.linkManual.Location = new System.Drawing.Point(913, 547);
+            this.linkManual.Name = "linkManual";
+            this.linkManual.Size = new System.Drawing.Size(106, 15);
+            this.linkManual.TabIndex = 11;
+            this.linkManual.TabStop = true;
+            this.linkManual.Text = "Manual de Usuario";
+            this.linkManual.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkManual_LinkClicked);
+            // 
             // FormAbout
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Goldenrod;
             this.ClientSize = new System.Drawing.Size(1031, 571);
+            this.Controls.Add(this.linkManual);
             this.Controls.Add(this.lblInformacionEspañol);
             this.Controls.Add(this.lblInformacionIngles);
             this.Controls.Add(this.picLogoUtu);
@@ -107,5 +120,6 @@ namespace SabrosoSoftware
         private System.Windows.Forms.Label lblInformacionEspañol;
         private System.Windows.Forms.Label lblInformacionIngles;
         private System.Windows.Forms.PictureBox picLogoUDE;
+        private System.Windows.Forms.LinkLabel linkManual;
     }
 }

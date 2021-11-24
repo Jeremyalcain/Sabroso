@@ -334,7 +334,7 @@ namespace SabrosoSoftware
             con.Close();
             return flag;
 
-            //Se edita solo tel
+            //Se edita solo direccion
         }
 
         public int ModificarProductos3(int id, string nom)
@@ -376,7 +376,7 @@ namespace SabrosoSoftware
         }
 
 
-        public int ModificarEncargos(int id, string cli, string fecha, string hora, string pro)
+        public int ModificarEncargos1(int id, string cli, string fecha, string hora, string pro)
         {
             int flag = 0;
             con.Open();
@@ -385,7 +385,65 @@ namespace SabrosoSoftware
             MySqlCommand cmd = new MySqlCommand(query, con);
             flag = cmd.ExecuteNonQuery();
             con.Close();
-            return flag; 
+            return flag;
+            
+            //Se edita todo
+        }
+
+        public int ModificarEncargos2(int id, string cli, string fecha)
+        {
+            int flag = 0;
+            con.Open();
+            string query = "Update encargos set Cliente ='" + cli + "',Fecha ='" + fecha + "' where id='" + id + "'";
+
+            MySqlCommand cmd = new MySqlCommand(query, con);
+            flag = cmd.ExecuteNonQuery();
+            con.Close();
+            return flag;
+
+            //Se edita solo nombre y fecha
+        }
+
+        public int ModificarEncargos3(int id, string fecha, string hora)
+        {
+            int flag = 0;
+            con.Open();
+            string query = "Update encargos set Fecha ='" + fecha + "', Horario ='" + hora + "' where id='" + id + "'";
+
+            MySqlCommand cmd = new MySqlCommand(query, con);
+            flag = cmd.ExecuteNonQuery();
+            con.Close();
+            return flag;
+
+            //Se edita solo horario y fecha
+        }
+
+        public int ModificarEncargos4(int id, string fecha, string pro)
+        {
+            int flag = 0;
+            con.Open();
+            string query = "Update encargos set Fecha ='" + fecha + "', Productos ='" + pro + "' where id='" + id + "'";
+
+            MySqlCommand cmd = new MySqlCommand(query, con);
+            flag = cmd.ExecuteNonQuery();
+            con.Close();
+            return flag;
+
+            //Se edita solo productos y fecha
+        }
+
+        public int ModificarEncargos5(int id, string cli, string fecha, string hora)
+        {
+            int flag = 0;
+            con.Open();
+            string query = "Update encargos set Cliente ='" + cli + "',Fecha ='" + fecha + "', Horario ='" + hora + "' where id='" + id + "'";
+
+            MySqlCommand cmd = new MySqlCommand(query, con);
+            flag = cmd.ExecuteNonQuery();
+            con.Close();
+            return flag;
+
+            //Se edita todo menos producto
         }
 
         public int EliminarCliente(int ci)

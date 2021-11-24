@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+using System.Diagnostics;
 
 namespace SabrosoSoftware
 {
@@ -53,6 +54,17 @@ namespace SabrosoSoftware
         private void lblInformacionIngles_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void linkManual_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+
+            var Abrir = new Process();
+            Abrir.StartInfo = new ProcessStartInfo("https://drive.google.com/file/d/1YSr0Q5Bg6KwmBHJohA6_5qivHBjKgEss/view?usp=sharing")
+            {
+                UseShellExecute = true
+            };
+            Abrir.Start();
         }
     }
 }

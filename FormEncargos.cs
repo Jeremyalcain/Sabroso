@@ -67,23 +67,6 @@ namespace AppFormEncargos
 
             }
 
-            cbxCliente.DataSource = null;
-            cbxHorario.DataSource = null;
-            cbxProducto1.DataSource = null;
-            cbxProducto2.DataSource = null;
-            cbxProducto3.DataSource = null;
-            cbxProducto4.DataSource = null;
-            cbxProducto5.DataSource = null;
-            cbxProducto6.DataSource = null;
-
-            cbxCliente.Items.Clear();
-            cbxHorario.Items.Clear();
-            cbxProducto1.Items.Clear();
-            cbxProducto2.Items.Clear();
-            cbxProducto3.Items.Clear();
-            cbxProducto4.Items.Clear();
-            cbxProducto5.Items.Clear();
-            cbxProducto6.Items.Clear();
 
             txtCantidad1.Clear();
             txtCantidad2.Clear();
@@ -178,9 +161,48 @@ namespace AppFormEncargos
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            string Productos = (txtCantidad1.Text + " " + cbxProducto1.Text + " " + txtCantidad2.Text + " " + cbxProducto2.Text + " " + txtCantidad3.Text + " " + cbxProducto3.Text + " " + txtCantidad4.Text + " " + cbxProducto4.Text + " " + txtCantidad5.Text + " " + cbxProducto5.Text + " " + txtCantidad6.Text + " " + cbxProducto6.Text);
-            cn.ModificarEncargos(int.Parse(idEncargos), cbxCliente.Text, dtpFecha.Text, cbxHorario.Text, Productos);
-            dtgvEncargos.DataSource = cn.ConsultarTablaEncargosDG();
+            string Productos;
+            string horario = cbxHorario.Text;
+            string cliente = cbxCliente.Text;
+            string cantidad = txtCantidad1.Text + txtCantidad2.Text + txtCantidad3.Text + txtCantidad4.Text + txtCantidad5.Text + txtCantidad6.Text;
+            string producto = cbxProducto1.Text + cbxProducto2.Text + cbxProducto3.Text + cbxProducto4.Text + cbxProducto5.Text + cbxProducto6.Text;
+            if (cantidad == "" && producto == "")
+            {
+                Productos = "";
+            }
+
+          else Productos = (txtCantidad1.Text + " " + cbxProducto1.Text + " " + txtCantidad2.Text + " " + cbxProducto2.Text + " " + txtCantidad3.Text + " " + cbxProducto3.Text + " " + txtCantidad4.Text + " " + cbxProducto4.Text + " " + txtCantidad5.Text + " " + cbxProducto5.Text + " " + txtCantidad6.Text + " " + cbxProducto6.Text);
+
+            if (cliente != "" && horario == "" && Productos == "")
+            {
+
+                cn.ModificarEncargos2(int.Parse(idEncargos), cbxCliente.Text, dtpFecha.Text);
+
+                //Se eidta solo cliente y fecha
+            }
+
+            else if (cliente == "" && Productos == "" && horario != "")
+            {
+
+                cn.ModificarEncargos3(int.Parse(idEncargos), dtpFecha.Text, cbxHorario.Text);
+                //Se edita solo horario y fecha
+            }
+
+            else if (cliente == "" && horario == "" && Productos != "")
+            {
+
+                cn.ModificarEncargos4(int.Parse(idEncargos),  dtpFecha.Text, Productos);
+                //Se edita solo productos y fecha
+            }
+
+            else if (Productos == "" && cliente != "" && horario != "")
+            {
+                cn.ModificarEncargos5(int.Parse(idEncargos), cbxCliente.Text, dtpFecha.Text, cbxHorario.Text);
+                //Se edita todo menos productos
+            }
+            
+          else cn.ModificarEncargos1(int.Parse(idEncargos), cbxCliente.Text, dtpFecha.Text, cbxHorario.Text, Productos);
+          dtgvEncargos.DataSource = cn.ConsultarTablaEncargosDG();
             
         }
 
