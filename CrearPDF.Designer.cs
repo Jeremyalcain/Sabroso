@@ -34,17 +34,17 @@
             this.btndescargar = new System.Windows.Forms.Button();
             this.dgvproductos = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtnombres = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lblCI = new System.Windows.Forms.Label();
+            this.cbxCliente = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtdocumento = new System.Windows.Forms.TextBox();
-            this.txtdescripcion = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.txtprecio = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txtcantidad = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.txtdescripcion = new System.Windows.Forms.TextBox();
             this.btnagregar = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvproductos)).BeginInit();
@@ -107,28 +107,20 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(298, 30);
+            this.label1.Location = new System.Drawing.Point(2, 27);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(59, 15);
             this.label1.TabIndex = 87;
             this.label1.Text = "Nombres:";
             // 
-            // txtnombres
-            // 
-            this.txtnombres.Location = new System.Drawing.Point(365, 27);
-            this.txtnombres.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.txtnombres.Name = "txtnombres";
-            this.txtnombres.Size = new System.Drawing.Size(167, 23);
-            this.txtnombres.TabIndex = 88;
-            // 
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox1.Controls.Add(this.lblCI);
+            this.groupBox1.Controls.Add(this.cbxCliente);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.txtdocumento);
-            this.groupBox1.Controls.Add(this.txtnombres);
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.groupBox1.Location = new System.Drawing.Point(15, 14);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -139,31 +131,34 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Detalle Cliente";
             // 
+            // lblCI
+            // 
+            this.lblCI.AutoSize = true;
+            this.lblCI.Location = new System.Drawing.Point(378, 27);
+            this.lblCI.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblCI.Name = "lblCI";
+            this.lblCI.Size = new System.Drawing.Size(0, 15);
+            this.lblCI.TabIndex = 95;
+            // 
+            // cbxCliente
+            // 
+            this.cbxCliente.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxCliente.FormattingEnabled = true;
+            this.cbxCliente.Location = new System.Drawing.Point(68, 22);
+            this.cbxCliente.Name = "cbxCliente";
+            this.cbxCliente.Size = new System.Drawing.Size(185, 23);
+            this.cbxCliente.TabIndex = 94;
+            this.cbxCliente.SelectedIndexChanged += new System.EventHandler(this.cbxCliente_SelectedIndexChanged);
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(7, 29);
+            this.label2.Location = new System.Drawing.Point(271, 28);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(99, 15);
             this.label2.TabIndex = 89;
             this.label2.Text = "Nro. Documento:";
-            // 
-            // txtdocumento
-            // 
-            this.txtdocumento.Location = new System.Drawing.Point(117, 25);
-            this.txtdocumento.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.txtdocumento.Name = "txtdocumento";
-            this.txtdocumento.Size = new System.Drawing.Size(167, 23);
-            this.txtdocumento.TabIndex = 88;
-            // 
-            // txtdescripcion
-            // 
-            this.txtdescripcion.Location = new System.Drawing.Point(92, 30);
-            this.txtdescripcion.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.txtdescripcion.Name = "txtdescripcion";
-            this.txtdescripcion.Size = new System.Drawing.Size(162, 23);
-            this.txtdescripcion.TabIndex = 90;
             // 
             // groupBox2
             // 
@@ -229,6 +224,14 @@
             this.label3.TabIndex = 0;
             this.label3.Text = "Descripcion:";
             // 
+            // txtdescripcion
+            // 
+            this.txtdescripcion.Location = new System.Drawing.Point(92, 30);
+            this.txtdescripcion.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtdescripcion.Name = "txtdescripcion";
+            this.txtdescripcion.Size = new System.Drawing.Size(162, 23);
+            this.txtdescripcion.TabIndex = 90;
+            // 
             // btnagregar
             // 
             this.btnagregar.BackColor = System.Drawing.Color.MidnightBlue;
@@ -292,11 +295,8 @@
         private System.Windows.Forms.Button btndescargar;
         private System.Windows.Forms.DataGridView dgvproductos;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtnombres;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtdocumento;
-        private System.Windows.Forms.TextBox txtdescripcion;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.TextBox txtprecio;
         private System.Windows.Forms.Label label5;
@@ -305,6 +305,9 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnagregar;
         private System.Windows.Forms.Button btnSalir;
+        private System.Windows.Forms.ComboBox cbxCliente;
+        private System.Windows.Forms.TextBox txtdescripcion;
+        private System.Windows.Forms.Label lblCI;
     }
 }
 

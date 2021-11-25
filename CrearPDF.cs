@@ -15,11 +15,14 @@ using iTextSharp.text.pdf;
 using iTextSharp.tool.xml;
 using System.util;
 using SabrosoSoftware.Properties;
+using MySql.Data.MySqlClient;
 
 namespace Proyecto
 {
     public partial class CrearPDF : Form
     {
+        static string conexionstring = "Server=localhost; Database=bdsabroso; Uid=sabroso; pwd=123456789; port=3306";
+        MySqlConnection con = new MySqlConnection(conexionstring);
         public CrearPDF()
         {
             InitializeComponent();
@@ -32,8 +35,8 @@ namespace Proyecto
 
             
             string PaginaHTML_Texto = Resources.Plantilla.ToString();
-            PaginaHTML_Texto = PaginaHTML_Texto.Replace("@CLIENTE", txtnombres.Text);
-            PaginaHTML_Texto = PaginaHTML_Texto.Replace("@DOCUMENTO", txtdocumento.Text);
+            PaginaHTML_Texto = PaginaHTML_Texto.Replace("@CLIENTE", cbxCliente.Text);
+            PaginaHTML_Texto = PaginaHTML_Texto.Replace("@DOCUMENTO", lblCI.Text);
             PaginaHTML_Texto = PaginaHTML_Texto.Replace("@FECHA", DateTime.Now.ToString("dd/MM/yyyy"));
 
             string filas = string.Empty;
@@ -90,10 +93,21 @@ namespace Proyecto
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            MySqlCommand cmd1 = new MySqlCommand("Select Nombre_y_Apellido from Cliente where eliminados=0", con);
+            con.Open();
+            MySqlDataReader registro1 = cmd1.ExecuteReader();
+            while (registro1.Read())
+            {
+                cbxCliente.Items.Add(registro1["Nombre_y_Apellido"]);
+            }
+            con.Close();
+
             dgvproductos.Columns.Add("Cantidad", "Cantidad");
             dgvproductos.Columns.Add("Descripcion", "Descripcion");
             dgvproductos.Columns.Add("PrecioUnitario", "Precio Unitario");
             dgvproductos.Columns.Add("Importe", "Importe");
+
+
         }
 
         private void btnagregar_Click(object sender, EventArgs e)
@@ -110,6 +124,23 @@ namespace Proyecto
         private void btnMenu_Click(object sender, EventArgs e)
         {
             this.Hide();
+        }
+
+        private void cbxCliente_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string nombre = cbxCliente.Text;
+
+            MySqlCommand cmd2 = new MySqlCommand("Select CI from Cliente where eliminados=0 AND Nombre_y_Apellido ='"+nombre+"'", con);
+            con.Open();
+            MySqlDataReader registro2 = cmd2.ExecuteReader();
+            while (registro2.Read())
+            {
+                lblCI.Text = registro2["CI"].ToString();
+            }
+            con.Close();
+
+
+
         }
     }
 }
