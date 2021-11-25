@@ -102,6 +102,16 @@ namespace Proyecto
             }
             con.Close();
 
+            MySqlCommand cmd2 = new MySqlCommand("Select Nombre, Precio from Stock where eliminados=0", con);
+            con.Open();
+            MySqlDataReader registro2 = cmd2.ExecuteReader();
+            while (registro2.Read())
+            {
+                cbxProducto.Items.Add(registro2["Nombre"]);
+            }
+
+            con.Close();
+
             dgvproductos.Columns.Add("Cantidad", "Cantidad");
             dgvproductos.Columns.Add("Descripcion", "Descripcion");
             dgvproductos.Columns.Add("PrecioUnitario", "Precio Unitario");
@@ -116,9 +126,9 @@ namespace Proyecto
             DataGridViewRow row = dgvproductos.Rows[indice_fila];
 
             row.Cells["Cantidad"].Value = txtcantidad.Text;
-            row.Cells["Descripcion"].Value = txtdescripcion.Text;
-            row.Cells["PrecioUnitario"].Value = txtprecio.Text;
-            row.Cells["Importe"].Value = decimal.Parse(txtcantidad.Text) * decimal.Parse(txtprecio.Text);
+            row.Cells["Descripcion"].Value = cbxProducto.Text;
+            row.Cells["PrecioUnitario"].Value = lblPrecio.Text;
+            row.Cells["Importe"].Value = decimal.Parse(txtcantidad.Text) * decimal.Parse(lblPrecio.Text);
         }
 
         private void btnMenu_Click(object sender, EventArgs e)
@@ -130,16 +140,31 @@ namespace Proyecto
         {
             string nombre = cbxCliente.Text;
 
-            MySqlCommand cmd2 = new MySqlCommand("Select CI from Cliente where eliminados=0 AND Nombre_y_Apellido ='"+nombre+"'", con);
+            MySqlCommand cmd1 = new MySqlCommand("Select CI from Cliente where eliminados=0 AND Nombre_y_Apellido ='"+nombre+"'", con);
             con.Open();
-            MySqlDataReader registro2 = cmd2.ExecuteReader();
-            while (registro2.Read())
+            MySqlDataReader registro1 = cmd1.ExecuteReader();
+            while (registro1.Read())
             {
-                lblCI.Text = registro2["CI"].ToString();
+                lblCI.Text = registro1["CI"].ToString();
             }
             con.Close();
 
 
+        }
+
+        private void cbxProducto_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+            string producto = cbxProducto.Text;
+
+            MySqlCommand cmd1 = new MySqlCommand("Select Precio from Stock where eliminados=0 AND Nombre='" + producto + "'", con);
+            con.Open();
+            MySqlDataReader registro1 = cmd1.ExecuteReader();
+            while (registro1.Read())
+            {
+                lblPrecio.Text = registro1["Precio"].ToString();
+            }
+            con.Close();
 
         }
     }

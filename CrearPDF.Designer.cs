@@ -39,14 +39,15 @@
             this.cbxCliente = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.txtprecio = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txtcantidad = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtdescripcion = new System.Windows.Forms.TextBox();
             this.btnagregar = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
+            this.cbxProducto = new System.Windows.Forms.ComboBox();
+            this.mySqlCommand1 = new MySql.Data.MySqlClient.MySqlCommand();
+            this.lblPrecio = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvproductos)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -107,12 +108,12 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(2, 27);
+            this.label1.Location = new System.Drawing.Point(8, 27);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(59, 15);
+            this.label1.Size = new System.Drawing.Size(54, 15);
             this.label1.TabIndex = 87;
-            this.label1.Text = "Nombres:";
+            this.label1.Text = "Nombre:";
             // 
             // groupBox1
             // 
@@ -163,12 +164,12 @@
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox2.Controls.Add(this.txtprecio);
+            this.groupBox2.Controls.Add(this.lblPrecio);
+            this.groupBox2.Controls.Add(this.cbxProducto);
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.txtcantidad);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Controls.Add(this.txtdescripcion);
             this.groupBox2.Location = new System.Drawing.Point(14, 88);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.groupBox2.Name = "groupBox2";
@@ -177,14 +178,6 @@
             this.groupBox2.TabIndex = 91;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Detalle Producto";
-            // 
-            // txtprecio
-            // 
-            this.txtprecio.Location = new System.Drawing.Point(327, 30);
-            this.txtprecio.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.txtprecio.Name = "txtprecio";
-            this.txtprecio.Size = new System.Drawing.Size(68, 23);
-            this.txtprecio.TabIndex = 92;
             // 
             // label5
             // 
@@ -220,17 +213,9 @@
             this.label3.Location = new System.Drawing.Point(8, 33);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(72, 15);
+            this.label3.Size = new System.Drawing.Size(54, 15);
             this.label3.TabIndex = 0;
-            this.label3.Text = "Descripcion:";
-            // 
-            // txtdescripcion
-            // 
-            this.txtdescripcion.Location = new System.Drawing.Point(92, 30);
-            this.txtdescripcion.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.txtdescripcion.Name = "txtdescripcion";
-            this.txtdescripcion.Size = new System.Drawing.Size(162, 23);
-            this.txtdescripcion.TabIndex = 90;
+            this.label3.Text = "Nombre:";
             // 
             // btnagregar
             // 
@@ -261,6 +246,32 @@
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = false;
             this.btnSalir.Click += new System.EventHandler(this.btnMenu_Click);
+            // 
+            // cbxProducto
+            // 
+            this.cbxProducto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxProducto.FormattingEnabled = true;
+            this.cbxProducto.Location = new System.Drawing.Point(69, 30);
+            this.cbxProducto.Name = "cbxProducto";
+            this.cbxProducto.Size = new System.Drawing.Size(185, 23);
+            this.cbxProducto.TabIndex = 96;
+            this.cbxProducto.SelectedIndexChanged += new System.EventHandler(this.cbxProducto_SelectedIndexChanged);
+            // 
+            // mySqlCommand1
+            // 
+            this.mySqlCommand1.CacheAge = 0;
+            this.mySqlCommand1.Connection = null;
+            this.mySqlCommand1.EnableCaching = false;
+            this.mySqlCommand1.Transaction = null;
+            // 
+            // lblPrecio
+            // 
+            this.lblPrecio.AutoSize = true;
+            this.lblPrecio.Location = new System.Drawing.Point(324, 33);
+            this.lblPrecio.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblPrecio.Name = "lblPrecio";
+            this.lblPrecio.Size = new System.Drawing.Size(0, 15);
+            this.lblPrecio.TabIndex = 97;
             // 
             // CrearPDF
             // 
@@ -298,7 +309,6 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TextBox txtprecio;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtcantidad;
         private System.Windows.Forms.Label label4;
@@ -306,8 +316,10 @@
         private System.Windows.Forms.Button btnagregar;
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.ComboBox cbxCliente;
-        private System.Windows.Forms.TextBox txtdescripcion;
         private System.Windows.Forms.Label lblCI;
+        private System.Windows.Forms.ComboBox cbxProducto;
+        private MySql.Data.MySqlClient.MySqlCommand mySqlCommand1;
+        private System.Windows.Forms.Label lblPrecio;
     }
 }
 
