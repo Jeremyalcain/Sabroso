@@ -1,0 +1,15 @@
+C:\Users\Jeremy\Desktop\SabrosoSoftware.exe
+C:\Users\Jeremy\Desktop\SabrosoSoftware.dll
+C:\Users\Jeremy\Desktop\SabrosoSoftware.deps.json
+C:\Users\Jeremy\Desktop\SabrosoSoftware.runtimeconfig.json
+C:\Users\Jeremy\Desktop\SabrosoSoftware.pdb
+C:\Users\Jeremy\Desktop\BouncyCastle.Crypto.dll
+C:\Users\Jeremy\Desktop\Google.Protobuf.dll
+C:\Users\Jeremy\Desktop\itextsharp.dll
+C:\Users\Jeremy\Desktop\itextsharp.xmlworker.dll
+C:\Users\Jeremy\Desktop\K4os.Compression.LZ4.dll
+C:\Users\Jeremy\Desktop\K4os.Compression.LZ4.Streams.dll
+C:\Users\Jeremy\Desktop\K4os.Hash.xxHash.dll
+C:\Users\Jeremy\Desktop\MySql.Data.dll
+C:\Users\Jeremy\Desktop\Ubiety.Dns.Core.dll
+C:\Users\Jeremy\Desktop\Zstandard.Net.dll
